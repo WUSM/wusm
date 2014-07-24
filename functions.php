@@ -4,7 +4,6 @@ if(!defined('WP_LOCAL_INSTALL')) {
 	require_once( get_template_directory() . '/_/php/acf_fields.php' );
 }
 
-
 require_once( get_template_directory() . '/_/php/custom_post_types.php' );
 require_once( get_template_directory() . '/_/php/load_js.php' );
 require_once( get_template_directory() . '/_/php/left-nav.php' );
