@@ -982,6 +982,8 @@ article.search-results {
 
     #main {
         background-color: #f4f4f4;
+        top: -2px;
+        margin-bottom: -2px;
     }
 
     #page-background {
