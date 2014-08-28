@@ -1142,14 +1142,20 @@ article.search-results {
 
 /* Print Styles */
 @media print {
-    #utility-bar, #search-form, #main-nav, #page-background, #page-background-inner, #left-col {
+    #utility-bar, #search-form, #main-nav, #page-background, #page-background-inner, #left-col, #right-col, #site-footer-top, #site-footer-bottom #col2, #site-footer-bottom #col3, #wusm-footer {
         display: none;
     }
 
-    article {
+    article, #site-footer {
         background-color: #fff;
     }
 
+    article.notch {
+        margin-top: 0;
+        border-top: none;
+    }
 
-
+    #site-footer-bottom {
+        margin-left: 35px;
+    }
 }
