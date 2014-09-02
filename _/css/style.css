@@ -439,6 +439,31 @@ article .disclaimer p {
     line-height: 17px;
 }
 
+article .call-to-action {
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+article .call-to-action p {
+    line-height: 17px;
+    margin: 0;
+}
+
+article .call-to-action a {
+    color: #fff;
+    background: #990000;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background 0.1s ease;
+}
+
+article .call-to-action a:hover {
+    color: #fff;
+    background: #720000;
+}
+
 article tr:nth-child(odd) {
     background-color: #e4e3e3;
 }

@@ -195,6 +195,12 @@ function customize_mce( $settings ) {
 					'block'		=> 'div',
 					'classes'	=> 'disclaimer',
 					'wrapper'	=> 'true'
+				),
+				array(
+					'title'		=> 'Call to Action',
+					'block'		=> 'div',
+					'classes'	=> 'call-to-action',
+					'wrapper'	=> 'true'
 				)
 			)
 		)

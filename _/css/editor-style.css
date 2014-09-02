@@ -127,6 +127,29 @@ body#tinymce.wp-editor .disclaimer p {
     line-height: 17px;
 }
 
+body#tinymce.wp-editor .call-to-action {
+	font-size: 16px;
+    display: inline-block;
+}
+
+body#tinymce.wp-editor .call-to-action p {
+	margin: 0;
+	line-height: 17px;
+}
+
+body#tinymce.wp-editor .call-to-action a {
+	color: #fff;
+    background: #990000;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background 0.1s ease;
+}
+
+body#tinymce.wp-editor .call-to-action a:hover {
+	background: #720000;
+}
+
 .mceItemTable {
 	border: none;
 }
