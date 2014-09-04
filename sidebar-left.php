@@ -60,7 +60,7 @@
     <ul id="mobile-nav">
         <li>
             <form method="get" id="mobile-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <input type="text" name="s" id="mobile-search-box" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
+                <input type="text" name="s" id="mobile-search-box" autocapitalize="off" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
                 <input type="image" class="submit" name="submit" id="mobile-search-btn" src="<?php echo get_template_directory_uri(); ?>/_/img/mobile-search.png">
             </form>
         </li>
