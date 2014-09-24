@@ -753,16 +753,19 @@ a#wusm-google-plus:hover {
     margin-top: 10px;
 }
 
+#wusm-footer a {
+    color: #dedede;
+}
+
 #wusm-footer-right nav a {
     text-transform: uppercase;
     font-size: 11px;
-    color: #dedede;
     display: inline-block;
     padding: 9px 12px;
     border-left: 1px solid #191919;
 }
 
-#wusm-footer-right nav a:hover {
+#wusm-footer a:hover {
     color: #999;
 }
 
