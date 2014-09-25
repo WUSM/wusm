@@ -25,6 +25,22 @@ function theme_init() {
 
 	register_sidebar();
 
+	// Thumbnails
+	add_theme_support( 'post-thumbnails' );
+
+	// Manual excerpts for pages as well as posts
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'theme_init' );
+
+
+/**
+ * Create the default header menu.  Moved this to after_theme_switch
+ * because when it was in init it ran everytime a page loaded so you
+ * could never delete the Header menu, it would just get automatically
+ * recreated on the next page load
+ */
+function create_default_wusm_menus() {
 	if ( !is_nav_menu( 'Header' )) {
 		// Create Header menu, if it doesn't already exist
 		$menu_id = wp_create_nav_menu( 'Header', array( 'slug' => 'header' ) );
@@ -53,14 +69,8 @@ function theme_init() {
 		$locations['header-menu'] = $menu_id;
 		set_theme_mod('nav_menu_locations', $locations);
 	}
-
-	// Thumbnails
-	add_theme_support( 'post-thumbnails' );
-
-	// Manual excerpts for pages as well as posts
-	add_post_type_support( 'page', 'excerpt' );
 }
-add_action( 'init', 'theme_init' );
+add_action( 'after_theme_switch', 'create_default_wusm_menus');
 
 
 // Set default timezone
