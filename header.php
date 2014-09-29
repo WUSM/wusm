@@ -7,11 +7,11 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head id="sitename-wustl-edu" data-template-set="html5-reset">
+<head>
     <meta charset="utf-8">
 
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Always force latest IE rendering engine (even in intranet) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title><?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? 'Washington University School of Medicine in St. Louis' : bloginfo('name'); ?></title>
 
