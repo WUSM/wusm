@@ -70,7 +70,7 @@ function create_default_wusm_menus() {
 		set_theme_mod('nav_menu_locations', $locations);
 	}
 }
-add_action( 'after_theme_switch', 'create_default_wusm_menus');
+add_action( 'after_switch_theme', 'create_default_wusm_menus');
 
 
 // Set default timezone
