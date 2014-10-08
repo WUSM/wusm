@@ -1,14 +1,30 @@
 <?php get_header(); ?>
 
-    <div id="main" class="clearfix">
+    <div id="main" class="homepage clearfix">
 
-        <div class="wrapper">
+        <?php if (have_posts()) :
+			while (have_posts()) :
+			the_post(); ?>
 
-            <?php get_sidebar( 'left' ); ?>
+		<div id="featured-image-home">
+			<?php the_post_thumbnail(); ?>
+		</div>
 
-            Custom-designed front page
+		<div class="wrapper">
 
-        </div>
+        	<?php get_sidebar( 'left' ); ?>
+
+			<div class="homepage-content">
+
+				<?php the_title('<h1>', '</h1>'); ?>
+
+        		<?php the_content(); ?>
+
+        	</div>
+
+    	</div>
+
+    	<?php endwhile; endif; ?>
 
     </div>
 

@@ -34,23 +34,97 @@ function theme_init() {
 add_action( 'init', 'theme_init' );
 
 
-/**
- * Create the default header menu.  Moved this to after_theme_switch
- * because when it was in init it ran everytime a page loaded so you
- * could never delete the Header menu, it would just get automatically
- * recreated on the next page load
- */
-function create_default_wusm_menus() {
+function create_default_wusm_settings() {
+
+	// Create default homepage on theme activation
+	function the_slug_exists($post_name) {
+		global $wpdb;
+		if($wpdb->get_row("SELECT post_name FROM wp_posts WHERE post_name = '" . $post_name . "'", 'ARRAY_A')) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if (isset($_GET['activated']) && is_admin()){
+	    $home_page_title = 'Headline capturing the value or service you provide';
+	    $home_page_content = 'Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. It should link to the most important action or information on your website. (273 characters max) <div class="call-to-action"><p><a href="#">Important Link</a></p></div>';
+	    $home_page_check = get_page_by_title($home_page_title);
+	    $home_page = array(
+		    'post_type' => 'page',
+		    'post_title' => $home_page_title,
+		    'post_content' => $home_page_content,
+		    'post_status' => 'publish',
+		    'post_name' => 'home'
+	    );
+	    if(!isset($home_page_check->ID) && !the_slug_exists('home')){
+	        $home_page_id = wp_insert_post($home_page);
+	    }
+	}
+	if (isset($_GET['activated']) && is_admin()){
+		// Use a static front page
+		$homepage = get_page_by_title($home_page_title);
+		if ( $homepage )
+		{
+		    update_option( 'page_on_front', $homepage->ID );
+		    update_option( 'show_on_front', 'page' );
+		}
+	}
+
+	// Add Featured Image to Post
+	$image_url  = 'http://mpaweb1.wustl.edu/~medschool/tierone-default.jpg';
+	$upload_dir = wp_upload_dir();
+	$image_data = file_get_contents($image_url);
+	$filename   = basename($image_url);
+
+	// Check folder permission and define file location
+	if( wp_mkdir_p( $upload_dir['path'] ) ) {
+	    $file = $upload_dir['path'] . '/' . $filename;
+	} else {
+	    $file = $upload_dir['basedir'] . '/' . $filename;
+	}
+
+	// Create the image file on the server
+	file_put_contents( $file, $image_data );
+
+	// Check image file type
+	$wp_filetype = wp_check_filetype( $filename, null );
+
+	// Set attachment data
+	$attachment = array(
+	    'post_mime_type' => $wp_filetype['type'],
+	    'post_title'     => sanitize_file_name( $filename ),
+	    'post_content'   => '',
+	    'post_status'    => 'inherit'
+	);
+
+	// Create the attachment
+	$attach_id = wp_insert_attachment( $attachment, $file, $post_id );
+
+	// Include image.php
+	require_once(ABSPATH . 'wp-admin/includes/image.php');
+
+	// Define attachment metadata
+	$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+
+	// Assign metadata to attachment
+	wp_update_attachment_metadata( $attach_id, $attach_data );
+
+	$post_id = get_page_by_title($home_page_title);
+	// And finally assign featured image to post
+	set_post_thumbnail( $post_id, $attach_id );
+
+
 	if ( !is_nav_menu( 'Header' )) {
 		// Create Header menu, if it doesn't already exist
 		$menu_id = wp_create_nav_menu( 'Header', array( 'slug' => 'header' ) );
 
 		// Add Home to the Header menu
 		$menu_item = array(
-			'menu-item-type' => 'custom',
-			'menu-item-url' => get_home_url('/'),
-			'menu-item-title' => 'Home',
-			'menu-item-status' => 'publish',
+			'menu-item-object-id' => get_option('page_on_front'),
+			'menu-item-object'    => 'page',
+			'menu-item-type'      => 'post_type',
+			'menu-item-status'    => 'publish',
+			'menu-item-title'	  => 'Home'
 		);
 		wp_update_nav_menu_item( $menu_id, 0, $menu_item );
 
@@ -70,7 +144,7 @@ function create_default_wusm_menus() {
 		set_theme_mod('nav_menu_locations', $locations);
 	}
 }
-add_action( 'after_switch_theme', 'create_default_wusm_menus');
+add_action( 'after_switch_theme', 'create_default_wusm_settings');
 
 
 // Set default timezone
