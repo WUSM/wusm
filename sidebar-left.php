@@ -67,9 +67,11 @@
         <li class="page_item<?php echo is_front_page() ? ' current_page_item' : '' ?>"><a href="<?php echo home_url(); ?>">Home</a></li>
 
         <?php
+        $frontpage_id = get_option('page_on_front');
         wp_list_pages( array(
             'sort_column'  => 'menu_order',
             'title_li' => '',
+            'exclude'      => $frontpage_id
         ) );
         ?>
 
