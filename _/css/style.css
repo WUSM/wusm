@@ -913,7 +913,7 @@ article.search-results {
 }
 
 .admin-bar #jPanelMenu-menu {
-    top: 28px;
+    top: 32px;
 }
 
 #jPanelMenu-menu .current_page_item a {
@@ -1154,6 +1154,12 @@ article.search-results {
 
     #wusm-footer-right nav a.last-child {
         padding-right: 12px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .admin-bar #jPanelMenu-menu {
+        top: 46px;
     }
 }
 

@@ -20,7 +20,8 @@ $(document).ready(function (){
     var jPM = $.jPanelMenu({
         menu: '#mobile-nav',
         trigger: '#mobile-menu-icon',
-        direction: 'right'
+        direction: 'right',
+        excludedPanelContent: '#wpadminbar'
     });
     jPM.on();
 
