@@ -34,6 +34,22 @@ function theme_init() {
 add_action( 'init', 'theme_init' );
 
 
+/**
+ * Enqueue scripts and styles.
+ */
+function wusm_scripts() {
+	/**
+	 * The admin bar enqueues these two when a user is logged in, we need manually include
+	 * them if they aren't logged in
+	 */
+	if ( !is_user_logged_in() ) {
+		wp_enqueue_style( 'open-sans-css', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&subset=latin%2Clatin-ext' );
+		wp_enqueue_style( 'dashicons-css', '/wp-includes/css/dashicons.min.css' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
+
+
 function create_default_wusm_settings() {
 
 	// Create default homepage on theme activation
