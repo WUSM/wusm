@@ -97,6 +97,8 @@ function create_default_wusm_settings() {
 	    'post_status'    => 'inherit'
 	);
 
+	$post_id = get_page_by_title($home_page_title);
+	
 	// Create the attachment
 	$attach_id = wp_insert_attachment( $attachment, $file, $post_id );
 
@@ -109,7 +111,6 @@ function create_default_wusm_settings() {
 	// Assign metadata to attachment
 	wp_update_attachment_metadata( $attach_id, $attach_data );
 
-	$post_id = get_page_by_title($home_page_title);
 	// And finally assign featured image to post
 	set_post_thumbnail( $post_id, $attach_id );
 
