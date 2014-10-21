@@ -905,6 +905,7 @@ article.search-results {
 
 #mobile-search-btn {
     width: 5%;
+    max-width: 20px;
     border: 0;
 }
 
