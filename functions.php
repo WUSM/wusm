@@ -40,9 +40,10 @@ add_action( 'init', 'theme_init' );
 function wusm_scripts() {
 	/**
 	 * The admin bar enqueues these two when a user is logged in, we need manually include
-	 * them if they aren't logged in
+	 * them if they aren't logged in.  Actually, need to check if dashicons is enqueued
+	 * because even if a user is logged in it won't enqueue if the admin bar isn't displayed
 	 */
-	if ( !is_user_logged_in() ) {
+	if ( !wp_style_is( 'dashicons-css' ) ) {
 		wp_enqueue_style( 'open-sans-css', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&subset=latin%2Clatin-ext' );
 		wp_enqueue_style( 'dashicons-css', '/wp-includes/css/dashicons.min.css' );
 	}
