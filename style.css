@@ -1086,11 +1086,13 @@ article.search-results {
 
 #jPanelMenu-menu a, #jPanelMenu-menu .current_page_item .children a {
     color: #ddd;
+    padding-right: 44px;
+    display: inline-block;
 }
 
 #jPanelMenu-menu .page_item {
     text-transform: uppercase;
-    padding       : 14px 58px 14px 18px;
+    padding       : 14px 0 14px 18px;
     border-bottom : 1px solid #454545;
     box-shadow    : 0 1px 0 0 #252525;
     position      : relative;
@@ -1098,7 +1100,7 @@ article.search-results {
 
 #jPanelMenu-menu .page_item .children .page_item {
     text-transform: none;
-    padding: 14px 18px 0 14px;
+    padding: 14px 44px 0 14px;
     border-bottom: none;
     box-shadow: none;
 }
