@@ -61,7 +61,7 @@
         <li>
             <form method="get" id="mobile-search-form" autocapitalize="none" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <input type="text" name="s" id="mobile-search-box" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
-                <input type="image" class="submit" name="submit" id="mobile-search-btn" src="<?php echo get_template_directory_uri(); ?>/_/img/mobile-search.png">
+                <input type="image" class="submit" name="submit" id="mobile-search-btn" src="<?php echo get_template_directory_uri(); ?>/_/img/search.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/search.png';this.onerror=null;">
             </form>
         </li>
         <li class="page_item<?php echo is_front_page() ? ' current_page_item' : '' ?>"><a href="<?php echo home_url(); ?>">Home</a></li>

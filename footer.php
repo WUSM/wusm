@@ -18,13 +18,13 @@ if (isset($_GET['post_type']) && $_GET['post_type'] == 'event' && is_search()) {
         <div class="wrapper clearfix">
 
             <div id="wusm-footer-left">
-                <a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','http://medicine.wustl.edu/']);" href="http://medicine.wustl.edu/"><img src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo-footer.png" alt="Washington University School of Medicine in St. Louis"></a>
+                <a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','http://medicine.wustl.edu/']);" href="http://medicine.wustl.edu/"><img width="147" height="31" src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo-footer.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo-footer.png';this.onerror=null;" alt="Washington University School of Medicine in St. Louis"></a>
                 <div id="copyright"><a href="http://www.wustl.edu/policies/copyright.html">&copy; <?php echo date("Y") ?> Washington University in St. Louis</a></div>
             </div>
 
             <div id="wusm-footer-right">
                 <div id="wusm-social">
-                    <a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','Facebook']);" id="wusm-facebook" title="Facebook" href="https://www.facebook.com/WUSTLmedicine.health"></a><a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','Twitter']);" id="wusm-twitter" title="Twitter" href="http://twitter.com/WUSTLmed"></a><a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','Google+']);" id="wusm-google-plus" title="Google+" href="https://plus.google.com/106914955616933360045/"></a>
+                    <a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','Facebook']);" id="wusm-facebook" title="Facebook" href="https://www.facebook.com/WUSTLmedicine.health"><img src="<?php echo get_template_directory_uri(); ?>/_/img/facebook.svg" width="23" height="23" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/facebook.png';this.onerror=null;"></a><a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','Twitter']);" id="wusm-twitter" title="Twitter" href="http://twitter.com/WUSTLmed"><img src="<?php echo get_template_directory_uri(); ?>/_/img/twitter.svg" width="23" height="23" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/twitter.png';this.onerror=null;"></a><a onclick="javascript:_gaq.push(['_trackEvent','wusm-footer','Google+']);" id="wusm-google-plus" title="Google+" href="https://plus.google.com/106914955616933360045/"><img src="<?php echo get_template_directory_uri(); ?>/_/img/google-plus.svg" width="23" height="23" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/google-plus.png';this.onerror=null;"></a>
                 </div>
 
                 <nav>

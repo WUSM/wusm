@@ -23,20 +23,7 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon.ico">
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/_/img/apple-touch-icon.png">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
-
-    <!-- concatenate and minify for production -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_/css/reset.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_/css/style.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-
-    <!--[if gte IE 9]>
-    <style type="text/css">
-        .gradient {
-            filter: none;
-        }
-    </style>
-    <![endif]-->
 
     <?php
     /* Always have wp_head() just before the closing </head>
@@ -56,7 +43,7 @@
 
         <div class="wrapper clearfix">
 
-            <div id="header-logo"><a onclick="javascript:_gaq.push(['_trackEvent','header-logo','http://medicine.wustl.edu/']);" href="http://medicine.wustl.edu/"><img src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.png" alt="Washington University School of Medicine in St. Louis"></a></div>
+            <div id="header-logo"><a onclick="javascript:_gaq.push(['_trackEvent','header-logo','http://medicine.wustl.edu/']);" href="http://medicine.wustl.edu/"><img width="435" height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.png';this.onerror=null;" alt="Washington University School of Medicine in St. Louis"></a></div>
 
             <nav id="utility-bar">
                 <ul id="utility-nav">
