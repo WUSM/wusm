@@ -173,7 +173,7 @@ add_action( 'init', 'set_timezone' );
 
 
 function enable_editor_styles() {
-	add_editor_style( '_/css/editor-style.css' );
+	add_editor_style( 'editor-style.css' );
 }
 add_action( 'init', 'enable_editor_styles' );
 
