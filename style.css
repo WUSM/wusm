@@ -1032,7 +1032,7 @@ article.search-results {
 /* Mobile navigation
 -------------------------------------------------------------------------------*/
 #mobile-search-form {
-    width: 214px;
+    width: 100%;
     height: 20px;
     padding: 20px 18px;
     margin: 0;
@@ -1043,7 +1043,7 @@ article.search-results {
 }
 
 #mobile-search-box {
-    width: 195px;
+    width: 80%;
     font-family: Arial, sans-serif;
     font-style: italic;
     font-size: 14px;
@@ -1067,7 +1067,8 @@ article.search-results {
 }
 
 #mobile-search-btn {
-    width: 13px;
+    width: 5%;
+    max-width: 13px;
     border: 0;
 }
 
@@ -1089,9 +1090,10 @@ article.search-results {
 
 #jPanelMenu-menu .page_item {
     text-transform: uppercase;
-    padding: 14px 18px;
-    border-bottom: 1px solid #454545;
-    box-shadow: 0 1px 0 0 #252525;
+    padding       : 14px 58px 14px 18px;
+    border-bottom : 1px solid #454545;
+    box-shadow    : 0 1px 0 0 #252525;
+    position      : relative;
 }
 
 #jPanelMenu-menu .page_item .children .page_item {
@@ -1109,6 +1111,26 @@ article.search-results {
     box-shadow: 4px 0 10px 0 #252525;
 }
 
+#jPanelMenu-menu ul.children { 
+    display: none;
+}
+.jpm-expand {
+    float           : right;
+    background-color: #222;
+    border-left     : 1px solid #454545;
+    padding         : 12px 10px;
+    cursor          : pointer;
+    position        : absolute;
+    right           : 0;
+    top             : 0;
+    box-sizing      : border-box;
+}
+
+.jpm-expand.dashicons {
+    height : 100%;
+    width  : 44px;
+    color  : #fff;
+}
 
 
 /* Media queries
