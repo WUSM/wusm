@@ -63,8 +63,8 @@ function create_default_wusm_settings() {
 		}
 	}
 	if (isset($_GET['activated']) && is_admin()){
-	    $home_page_title = 'Headline capturing the value or service you provide';
-	    $home_page_content = 'Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. It should link to the most important action or information on your website. (273 characters max) <div class="call-to-action"><p><a href="#">Important Link</a></p></div>';
+	    $home_page_title = 'Headline capturing the value or service your group provides';
+	    $home_page_content = 'Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max) <div class="call-to-action"><p><a href="#">Important Link</a></p></div>';
 	    $home_page_check = get_page_by_title($home_page_title);
 	    $home_page = array(
 		    'post_type' => 'page',
