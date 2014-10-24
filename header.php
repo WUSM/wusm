@@ -70,7 +70,6 @@
 
     <?php wp_nav_menu( array(
         'theme_location' => 'header-menu',
-        'menu'           => 'header',
         'container'      => 'nav',
         'container_id'   => 'main-nav',
         'items_wrap'     => '<div class="wrapper"><ul>%3$s</ul></div>',

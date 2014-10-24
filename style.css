@@ -277,6 +277,10 @@ a {
     background-color: #fff;
 }
 
+#main-nav .sub-menu {
+    display: none;
+}
+
 #main-nav ul {
     list-style-type: none;
     margin-left: 10px;
@@ -1075,7 +1079,7 @@ article.search-results {
 }
 
 .admin-bar #jPanelMenu-menu {
-    top: 32px;
+    top: 137px;
 }
 
 #jPanelMenu-menu .current_page_item a {
@@ -1353,7 +1357,7 @@ article.search-results {
 
 @media screen and (max-width: 780px) {
     .admin-bar #jPanelMenu-menu {
-        top: 46px;
+        top: 151px;
     }
 }
 
