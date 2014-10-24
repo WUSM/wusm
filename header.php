@@ -62,7 +62,7 @@
 
     <div id="header-site-row" class="clearfix">
         <div class="wrapper clearfix">
-            <div id="mobile-menu-icon"><img src="<?php echo get_template_directory_uri(); ?>/_/img/mobile-menu-icon.png"></div>
+            <div id="mobile-menu-icon"><div class="dashicons dashicons-menu"></div></div>
             <?php get_search_form(); ?>
             <div id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
         </div>

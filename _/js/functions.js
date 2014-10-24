@@ -19,7 +19,7 @@ $(document).ready(function (){
         menu                : '#mobile-nav',
         trigger             : '#mobile-menu-icon',
         direction           : 'right',
-        excludedPanelContent: '#wpadminbar',
+        excludedPanelContent: '#wpadminbar, header',
         openPosition        : '75%'
     });
     jPM.on();
