@@ -41,11 +41,6 @@ $(document).ready(function (){
     // Remove inline style (hard-coded width)
     // Remove extra 10px of width from inline style
     //$(".wp-caption").removeAttr('style');
-
-    $(".jpm-expand").each(function(){
-        if($(this).parent().height() > 16)
-            $(this).css('padding-top', 2 + ( ($(this).parent().height() / 16) * 10) + 'px');
-    });
     
 });
 
