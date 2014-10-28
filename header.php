@@ -96,8 +96,8 @@
                 ) );
                 ?>
 
-                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://wustl.edu/']);" href="http://wustl.edu/">WUSTL</a></li>
-                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://medicine.wustl.edu/directory']);" href="http://medicine.wustl.edu/directory">Directories</a></li>
+                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://wustl.edu/']);" href="http://wustl.edu/"><img class="shield-icon" src="<?php echo get_template_directory_uri(); ?>/_/img/shield.png"> WUSTL</a></li>
+                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://medicine.wustl.edu/directory']);" href="http://medicine.wustl.edu/directory"><div class="dashicons dashicons-book-alt"></div> Directories</a></li>
             </ul>
         </nav>
     </div>
