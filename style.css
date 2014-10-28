@@ -215,7 +215,8 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990000', endColorstr='#720000',GradientType=0 );
 }
 
-#mobile-menu-icon {
+#mobile-menu-icon,
+#mobile-search-icon {
     display: none;
 }
 
@@ -431,7 +432,8 @@ a {
     padding-bottom: 0;
 }
 
-#mobile-nav {
+#mobile-nav,
+#mobile-search-form {
     display: none;
 }
 
@@ -1033,25 +1035,31 @@ article.search-results {
 
 /* Mobile navigation
 -------------------------------------------------------------------------------*/
-#mobile-search-form {
+.mobile-container {
+    position: absolute;
+    z-index: 100;
     width: 100%;
-    height: 20px;
-    padding: 20px 18px;
-    margin: 0;
+}
+
+#mobile-search-form {
+    box-sizing      : border-box;
+    width           : 100%;
+    padding         : 20px 18px;
+    margin          : 0;
     background-color: #222;
-    white-space: nowrap;
-    border-bottom: 1px solid #454545;
-    box-shadow: 0 1px 0 0 #252525;
+    white-space     : nowrap;
+    border-bottom   : 1px solid #454545;
+    box-shadow      : 0 1px 0 0 #252525;
 }
 
 #mobile-search-box {
-    width: 80%;
-    font-family: Arial, sans-serif;
-    font-style: italic;
-    font-size: 14px;
-    border: 0;
-    padding: 0;
-    color: #fff;
+    width           : 100%;
+    font-family     : Arial, sans-serif;
+    font-style      : italic;
+    font-size       : 14px;
+    border          : 0;
+    padding         : 0;
+    color           : #fff;
     background-color: #222;
 }
 
@@ -1069,45 +1077,42 @@ article.search-results {
 }
 
 #mobile-search-btn {
-    width: 5%;
-    max-width: 13px;
-    border: 0;
+    border     : 0;
+    position   : absolute;
+    right      : 30px;
+    background : transparent;
+    color      : #fff;
 }
 
-#jPanelMenu-menu {
+#mobile-nav {
     background-color: #333;
+    width           : 100%;
 }
 
-.admin-bar #jPanelMenu-menu {
-    top: 137px;
-}
-
-#jPanelMenu-menu .current_page_item a {
+#mobile-nav .current_page_item a {
     color: #fff;
 }
 
-#jPanelMenu-menu a, #jPanelMenu-menu .current_page_item .children a {
+#mobile-nav a, #mobile-nav .current_page_item .children a {
     color: #ddd;
     padding-right: 44px;
     display: inline-block;
 }
 
-#jPanelMenu-menu .page_item {
-    text-transform: uppercase;
+#mobile-nav .page_item {
     padding       : 14px 0 14px 18px;
     border-bottom : 1px solid #454545;
-    box-shadow    : 0 1px 0 0 #252525;
     position      : relative;
 }
 
-#jPanelMenu-menu .page_item .children .page_item {
+#mobile-nav .page_item .children .page_item {
     text-transform: none;
-    padding: 14px 44px 0 14px;
-    border-bottom: none;
-    box-shadow: none;
+    padding       : 14px 44px 0 14px;
+    border-bottom : none;
+    box-shadow    : none;
 }
 
-#jPanelMenu-menu .page_item .children .page_item a {
+#mobile-nav .page_item .children .page_item a {
     font-weight: 400;
 }
 
@@ -1115,7 +1120,7 @@ article.search-results {
     box-shadow: 4px 0 10px 0 #252525;
 }
 
-#jPanelMenu-menu ul.children { 
+#mobile-nav ul.children { 
     display: none;
 }
 .jpm-expand {
@@ -1158,6 +1163,14 @@ article.search-results {
     }
 
     #header-logo {
+        width: 100%;
+    }
+
+    #header-logo img {
+        margin: 0 auto;
+    }
+
+/*    #header-logo {
         display: none;
     }
 
@@ -1166,7 +1179,7 @@ article.search-results {
         padding: 10px;
         width: 100%;
         text-align: center;
-    }
+    }*/
 
     #header-text a {
         color: #980006;
@@ -1183,19 +1196,43 @@ article.search-results {
     }
 
     #mobile-menu-icon {
-        display: block;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    #mobile-search-icon {
+        right: 65px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #mobile-menu-icon,
+    #mobile-search-icon {
+        display : block;
         position: absolute;
-        top: 50%;
-        right: 0;
-        cursor: pointer;
-        margin: -18px 22px 0 0;
+        top     : 0;
+        cursor  : pointer;
+        
+    }
+    
+    #mobile-menu-icon .dashicons,
+    #mobile-search-icon .dashicons {
+        
+        right   : 20px;
+        position: absolute;
     }
 
     #mobile-menu-icon .dashicons {
+        top     : 18px;
         font-size: 35px;
-        height: 35px;
-        width: 35px;
-        color: #fff;
+        color    : #fff;
+    }
+
+    #mobile-search-icon .dashicons {
+        top     : 20px;
+        font-size: 30px;
+        color    : #fff;
     }
 
     #search-form {
@@ -1203,7 +1240,7 @@ article.search-results {
     }
 
     #site-title {
-        padding: 22px 82px 22px 18px;
+        padding: 22px 105px 22px 18px;
     }
 
     #site-title a {
@@ -1356,9 +1393,6 @@ article.search-results {
 }
 
 @media screen and (max-width: 780px) {
-    .admin-bar #jPanelMenu-menu {
-        top: 151px;
-    }
 }
 
 @media screen and (max-width:518px) {
