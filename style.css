@@ -341,7 +341,9 @@ a {
 }
 #featured-image {
     text-align: center;
-    margin-bottom: -3px; /* I don't know why it adds 3px to the height of the featured image without this. */
+}
+#featured-image-home img, #featured-image img {
+    display: block;
 }
 
 
@@ -1265,14 +1267,8 @@ article.search-results {
         display: none;
     }
 
-    #featured-image {
-        margin-bottom: -2px;
-    }
-
     #main {
         background-color: #f4f4f4;
-        top: -2px;
-        margin-bottom: -2px;
     }
 
     #page-background {
