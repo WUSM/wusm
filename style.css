@@ -1098,9 +1098,11 @@ article.search-results {
 }
 
 #mobile-nav li a {
-    display: inline-block;
-    padding: 14px 44px 14px 0;
-    color  : #ddd;
+    display   : inline-block;
+    padding   : 14px 44px 14px 0;
+    color     : #ddd;
+    width     : 100%;
+    box-sizing: border-box;
 }
 
 #mobile-nav .page_item {
