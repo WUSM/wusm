@@ -55,48 +55,4 @@
 
     <?php endif; ?>
 
-
-
-    <ul id="mobile-nav">
-        <li>
-            <form method="get" id="mobile-search-form" autocapitalize="none" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <input type="text" name="s" id="mobile-search-box" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
-                <input type="image" class="submit" name="submit" id="mobile-search-btn" src="<?php echo get_template_directory_uri(); ?>/_/img/search.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/search.png';this.onerror=null;">
-            </form>
-        </li>
-        <li class="page_item<?php echo is_front_page() ? ' current_page_item' : '' ?>"><a href="<?php echo home_url(); ?>">Home</a></li>
-
-        <?php
-        $frontpage_id = get_option('page_on_front');
-        wp_list_pages( array(
-            'sort_column'  => 'menu_order',
-            'title_li' => '',
-            'exclude'      => $frontpage_id
-        ) );
-        ?>
-
-        <?php
-        /*
-        // This is a start to improve the mobile nav
-        if ((in_menu($id) || (sizeof($post->ancestors) > 0)) && !(is_search()) && isset($top_level_page)) {
-            // This part needs some work. The whole things should probably be reorganized.
-            echo $top_level_page;
-            echo $children;
-        } else {
-            // I think this part is working.
-            $header_menu_items = wp_get_nav_menu_items('header');
-            foreach ($header_menu_items as $menu_item) {
-                echo '<li class="page_item';
-                echo (is_front_page() && $menu_item->title == 'Home') || is_page($menu_item->object_id) ? ' current_page_item' : '';
-                echo '"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a> ';
-                echo $menu_item->post_name . '</li>';
-            }
-        }
-        */
-        ?>
-
-        <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://wustl.edu/']);" href="http://wustl.edu/">WUSTL</a></li>
-        <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://medicine.wustl.edu/directory']);" href="http://medicine.wustl.edu/directory">Directories</a></li>
-    </ul>
-
 </nav>

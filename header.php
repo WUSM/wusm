@@ -62,11 +62,13 @@
 
     <div id="header-site-row" class="clearfix">
         <div class="wrapper clearfix">
+            <div id="mobile-search-icon"><div class="dashicons dashicons-search"></div></div>
             <div id="mobile-menu-icon"><div class="dashicons dashicons-menu"></div></div>
             <?php get_search_form(); ?>
             <div id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
         </div>
     </div>
+
 
     <?php wp_nav_menu( array(
         'theme_location' => 'header-menu',
@@ -74,6 +76,31 @@
         'container_id'   => 'main-nav',
         'items_wrap'     => '<div class="wrapper"><ul>%3$s</ul></div>',
     ) ); ?>
+
+    <div class="mobile-container">
+        <form method="get" id="mobile-search-form" autocapitalize="none" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <input type="text" name="s" id="mobile-search-box" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
+            <!-- <input type="submit" class="submit" name="submit" value="GO" id="mobile-search-btn"> -->
+        </form>
+
+        <nav id="mobile-nav">
+            <ul>
+                <li class="page_item<?php echo is_front_page() ? ' current_page_item' : '' ?>"><a href="<?php echo home_url(); ?>">Home</a></li>
+
+                <?php
+                $frontpage_id = get_option('page_on_front');
+                wp_list_pages( array(
+                    'sort_column' => 'menu_order',
+                    'title_li'    => '',
+                    'exclude'     => $frontpage_id
+                ) );
+                ?>
+
+                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://wustl.edu/']);" href="http://wustl.edu/"><img class="shield-icon" src="<?php echo get_template_directory_uri(); ?>/_/img/shield.png"> WUSTL</a></li>
+                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://medicine.wustl.edu/directory']);" href="http://medicine.wustl.edu/directory"><div class="dashicons dashicons-book-alt"></div> Directories</a></li>
+            </ul>
+        </nav>
+    </div>
 
 </header>
 
