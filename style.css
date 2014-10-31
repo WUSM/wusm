@@ -338,13 +338,13 @@ a {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
 }
 #featured-image {
     text-align: center;
 }
 #featured-image-home img, #featured-image img {
     display: block;
+    margin: 0 auto;
 }
 
 
