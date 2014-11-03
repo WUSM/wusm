@@ -16,6 +16,10 @@
 $(document).ready(function (){
     $('#mobile-menu-icon').click(function() {
         $('#mobile-nav').slideToggle();
+        $(".jpm-expand").each(function() {
+            if($(this).parent().height() != 0)
+                $(this).height($(this).parent().height() - 26);
+        });
     });
     
     $('#mobile-search-icon').click(function() {
@@ -36,6 +40,9 @@ $(document).ready(function (){
     });
 
     $("#mobile-nav .current_page_ancestor > .children").addClass("jpm-expanded").slideToggle();
+    $("#mobile-nav .current_page_ancestor > .dashicons-arrow-down-alt2").toggleClass("dashicons-arrow-up-alt2 dashicons-arrow-down-alt2");
+
+
 });
 
 
