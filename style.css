@@ -919,6 +919,9 @@ a#site-rss:hover {
 #copyright {
     font-size: 12px;
     margin-top: 10px;
+}
+
+#copyright a {
     color: #767676;
 }
 
