@@ -4,11 +4,15 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     14.11.3.0
+Version:     14.11.04.1
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+
+/* Reset
+-------------------------------------------------------------------------------*/
 
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
     margin: 0;
@@ -71,7 +75,7 @@ input[type="checkbox"] {vertical-align: bottom;}
 .ie7 input[type="checkbox"] {vertical-align: baseline;}
 .ie6 input {vertical-align: text-bottom;}
 
-select, input, textarea {font: 99% sans-serif;}
+select, input, textarea {font: 99% 'Open Sans',sans-serif;}
 
 table {font-size: inherit; font: 100%;}
 
@@ -127,7 +131,7 @@ button {width: auto; overflow: visible;}
 -------------------------------------------------------------------------------*/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #333;
 }
@@ -314,7 +318,6 @@ a {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 35px;
-    font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 .homepage-content h1 {
@@ -531,7 +534,6 @@ article blockquote {
     margin: 30px 0 45px 95px;
     padding-left: 20px;
     border-left: 3px solid #900;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 32px;
@@ -1068,7 +1070,6 @@ article.search-results {
 
 #mobile-search-box {
     width           : 100%;
-    font-family     : Arial, sans-serif;
     font-style      : italic;
     font-size       : 16px;
     border          : 0;
