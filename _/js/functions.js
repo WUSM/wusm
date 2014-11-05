@@ -16,7 +16,7 @@
 $(document).ready(function (){
     $('#mobile-menu-icon').click(function() {
         $('#mobile-nav').slideToggle();
-        $(".jpm-expand").each(function() {
+        $(".dashicons-arrow-down-alt2").each(function() {
             if($(this).parent().height() != 0)
                 $(this).height($(this).parent().height() - 26);
         });
