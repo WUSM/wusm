@@ -1098,7 +1098,7 @@ article.search-results {
     width           : 100%;
 }
 
-#mobile-nav .current_page_item a {
+#mobile-nav .current_page_item > a {
     color: #fff;
     background-color: #4c4c4c;
 }
