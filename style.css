@@ -331,6 +331,12 @@ a {
     padding-bottom: 35px;
     line-height: 34px;
 }
+.homepage-content a {
+    color: #930000;
+}
+.homepage-content a:hover {
+    color: #717171;
+}
 
 
 
@@ -618,6 +624,7 @@ article .disclaimer p {
 
 .call-to-action a:hover {
     background: #c40000;
+    color: #fff;
 }
 
 article tr:nth-child(odd) {
