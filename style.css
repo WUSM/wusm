@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     14.11.04.1
+Version:     14.11.13.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -182,7 +182,7 @@ a {
 
 #utility-nav {
     list-style-type: none;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 #utility-nav li {
@@ -231,20 +231,17 @@ a {
     width: 240px;
     margin-right: 10px;
     top: 50%;
-    margin-top: -12px;
+    margin-top: -19px;
     right: 0;
 }
 
 #search-box {
     margin: 0;
     width: 200px;
-    padding: 6px 30px 6px 10px;
+    padding: 10px 30px 11px 10px;
     border: none;
     border-radius: 5px;
-    background: #680101;
-    -webkit-box-shadow: inset 1px 1px 1px #000000;
-    -moz-box-shadow: inset 1px 1px 1px #000000;
-    box-shadow: inset 1px 1px 1px #000000;
+    background: #a70000;
     color: #fff;
     letter-spacing: 1px;
     font-style: italic;
@@ -294,12 +291,12 @@ a {
 
 #main-nav li {
     float: left;
-    padding: 13px 30px 0 0;
+    padding: 11px 30px 0 0;
 }
 
 #main-nav li a {
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
     color: #900;
     text-transform: uppercase;
 }
@@ -333,6 +330,12 @@ a {
     color: #838383;
     padding-bottom: 35px;
     line-height: 34px;
+}
+.homepage-content a {
+    color: #930000;
+}
+.homepage-content a:hover {
+    color: #717171;
 }
 
 
@@ -404,8 +407,8 @@ a {
 
 #left-nav li a {
     color: #980006;
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: 700;
+    font-size: 14px;
     line-height: 17px;
     margin-left: 10px;
     display: block;
@@ -478,7 +481,7 @@ article h1 {
 
 article h2 {
     font-size: 21px;
-    margin-top: 45px;
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 
@@ -611,7 +614,7 @@ article .disclaimer p {
 .call-to-action a {
     color: #fff;
     background: #990000;
-    padding: 15px 50px 17px;
+    padding: 15px 50px;
     display: inline-block;
     border-radius: 3px;
     letter-spacing: 1px;
@@ -621,6 +624,7 @@ article .disclaimer p {
 
 .call-to-action a:hover {
     background: #c40000;
+    color: #fff;
 }
 
 article tr:nth-child(odd) {
@@ -1231,13 +1235,13 @@ article.search-results {
     }
 
     #mobile-menu-icon .dashicons {
-        top     : 9px;
+        top     : 8px;
         font-size: 35px;
         color    : #fff;
     }
 
     #mobile-search-icon .dashicons {
-        top     : 10px;
+        top     : 11px;
         font-size: 30px;
         color    : #fff;
     }

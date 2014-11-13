@@ -24,7 +24,7 @@ body#tinymce.wp-editor h1 {
 
 body#tinymce.wp-editor h2 {
 	font-size: 21px;
-	margin-top: 45px;
+	margin-top: 30px;
 	margin-bottom: 15px;
 }
 
@@ -144,20 +144,26 @@ body#tinymce.wp-editor .call-to-action {
 
 body#tinymce.wp-editor .call-to-action p {
 	margin: 0;
-	line-height: 17px;
+	line-height: 14px;
+	font-size: 14px;
+	text-transform: uppercase;
 }
 
 body#tinymce.wp-editor .call-to-action a {
 	color: #fff;
     background: #990000;
-    padding: 15px 20px;
+    padding: 15px 50px;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    font-weight: 600;
     transition: background 0.1s ease;
+    margin-bottom: 15px;
 }
 
 body#tinymce.wp-editor .call-to-action a:hover {
 	background: #720000;
+	color: #fff;
 }
 
 .mceItemTable {
