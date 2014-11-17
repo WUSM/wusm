@@ -2,14 +2,13 @@
 
     <?php if (isset($post->ID)) : $id = $post->ID; ?>
 
-        <ul id="left-nav">
+        <?php if ((in_menu($id) || is_page() || (sizeof($post->ancestors) > 0)) && !(is_search())) {
 
-            <?php
-            if ((in_menu($id) || is_page() || (sizeof($post->ancestors) > 0)) && !(is_search())) {
+                $walker = new Razorback_Walker_Page_Selective_Children(); ?>
 
-                $walker = new Razorback_Walker_Page_Selective_Children();
+                <ul id="left-nav">
 
-                if ( is_page() || $force_menu) {
+                <?php if ( is_page() || $force_menu) {
                     if ( is_page() && $post->post_parent ) {
                         // This is a subpage
                         $get_children_of = ( isset( $post->ID ) ) ? (int) $post->ancestors[count($post->ancestors)-1] : 0;
@@ -25,7 +24,9 @@
                         'title_li'     => '',
                         'child_of'     => $get_children_of,
                         'walker'       => $walker,
-                        'echo'         => 0
+                        'echo'         => 0,
+                        'meta_key'     => 'hide_in_left_nav',
+                        'meta_value'   => '0'
                     ));
 
 
@@ -39,19 +40,20 @@
                         if ( sizeof($post->ancestors) == 0 && $children ) {
                             // Top-level page with children
                             $top_level_page = '<li class="current_page_item top_level_page"><a href="/' . get_post($ptg)->post_name . '">' . $page_title . '</a></li>';
-                        } elseif ( sizeof($post->ancestors) > 0 ) {
+                        } elseif ( sizeof($post->ancestors) > 0 && $children ) {
                             // Sub-page
                             $top_level_page = '<li class="top_level_page"><a href="/' . get_post($ptg)->post_name . '">' . $page_title . '</a></li>';
                         }
 
-                        echo isset($top_level_page) ? $top_level_page : '';
+                        if ( isset($children)) {
+                            echo isset($top_level_page) ? $top_level_page : '';
+                        }
                         echo $children;
 
                     }
-                }
-            }
-            ?>
-        </ul>
+                } ?>
+                </ul>
+            <?php } ?>
 
     <?php endif; ?>
 

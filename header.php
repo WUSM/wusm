@@ -92,7 +92,9 @@
                 wp_list_pages( array(
                     'sort_column' => 'menu_order',
                     'title_li'    => '',
-                    'exclude'     => $frontpage_id
+                    'exclude'     => $frontpage_id,
+                    'meta_key'    => 'hide_in_left_nav',
+                    'meta_value'  => '0'
                 ) );
                 ?>
 
