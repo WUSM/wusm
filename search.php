@@ -12,9 +12,7 @@
 
         <div id="page-background-inner"></div>
 
-        <nav id="left-col">
-            <?php get_sidebar( 'left' ); ?>
-        </nav>
+        <?php get_sidebar( 'left' ); ?>
 
         <div id="search-results-wrapper">
 
