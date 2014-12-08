@@ -12,8 +12,6 @@
 
 		<div class="wrapper">
 
-        	<?php get_sidebar( 'left' ); ?>
-
 			<div class="homepage-content">
 
 				<?php the_title('<h1>', '</h1>'); ?>
