@@ -609,16 +609,10 @@ article .disclaimer p {
     font-size: 12px;
     display: inline-block;
     margin-bottom: 20px;
-}
-
-.call-to-action p {
     line-height: 14px;
     margin: 0;
     font-size: 14px;
     text-transform: uppercase;
-}
-
-.call-to-action a {
     color: #fff;
     background: #990000;
     padding: 15px 50px;
@@ -629,7 +623,7 @@ article .disclaimer p {
     transition: background 0.1s ease;
 }
 
-.call-to-action a:hover {
+.call-to-action:hover {
     background: #c40000;
     color: #fff;
 }

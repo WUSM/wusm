@@ -287,12 +287,6 @@ function customize_mce( $settings ) {
 					'block'		=> 'div',
 					'classes'	=> 'disclaimer',
 					'wrapper'	=> 'true'
-				),
-				array(
-					'title'		=> 'Call to Action',
-					'block'		=> 'div',
-					'classes'	=> 'call-to-action',
-					'wrapper'	=> 'true'
 				)
 			)
 		)
@@ -333,3 +327,63 @@ function attachment_display_settings() {
 	update_option('image_default_size', 'large' );
 }
 add_action('after_setup_theme', 'attachment_display_settings');
+
+add_action( 'init', function() {
+	add_shortcode( 'wusmbutton', function( $attr, $content = '' ) {
+		$attr = wp_parse_args( $attr, array(
+			'url' => '',
+			'window' => ''
+		) );
+		ob_start(); ?><a class="call-to-action" href="<?php echo esc_html( $attr['url'] ); ?>" <?php if(esc_html( $attr['window'] ) == 'true' ) : echo "target=\"_blank\""; endif; ?> <?php echo esc_html( $attr['window'] ); ?>><?php echo esc_html( $content ); ?></a><?php return ob_get_clean();
+	});
+});
+
+function register_shortcake_ui () {
+	if ( is_plugin_active( 'shortcake/shortcode-ui.php' ) ) {
+		shortcode_ui_register_for_shortcode(
+			'wusmbutton',
+			array(
+				'label' => 'Button',
+				'listItemImage' => 'dashicons-migrate',
+				'attrs' => array(
+					array(
+						'label' => 'Button Text',
+						'attr'  => 'content',
+						'type'  => 'text',
+					),
+					array(
+						'label' => 'URL',
+						'attr' => 'url',
+						'type' => 'url',
+						'placeholder' => 'http://',
+					),
+					array(
+						'label' => 'Open in new window?',
+						'attr' => 'window',
+						'type' => 'checkbox',
+					),
+				),
+			)
+		);
+	}
+}
+add_action( 'admin_init', 'register_shortcake_ui' );
+
+function wusm_button() {
+	if ( !current_user_can( 'edit_posts' ) && !current_user_can( 'edit_pages' ) ) {
+		return;
+	}
+	if ( 'true' == get_user_option( 'rich_editing' ) ) {
+		add_filter( "mce_external_plugins", "wusm_add_button" );
+		add_filter( 'mce_buttons', 'wusm_register_button' );
+	}
+}
+function wusm_add_button( $plugin_array ) {
+    $plugin_array['wusmbutton'] = get_template_directory_uri() . '/_/js/wusmbutton.js';
+    return $plugin_array;
+}
+function wusm_register_button( $button ) {
+    array_push( $button, 'wusmbutton' );
+    return $button;
+}
+add_action( 'admin_head', 'wusm_button' );
