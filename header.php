@@ -43,18 +43,14 @@
 
         <div class="wrapper clearfix">
 
-            <div id="header-logo"><a onclick="javascript:_gaq.push(['_trackEvent','header-logo','http://medicine.wustl.edu/']);" href="http://medicine.wustl.edu/"><img width="435" height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.png';this.onerror=null;" alt="Washington University School of Medicine in St. Louis"></a></div>
+            <div id="header-logo"><a onclick="__gaTracker('send', 'event', 'header-logo', 'http://medicine.wustl.edu', 'School of Medicine');" href="http://medicine.wustl.edu/"><img width="435" height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.png';this.onerror=null;" alt="Washington University School of Medicine in St. Louis"></a></div>
 
             <nav id="utility-bar">
                 <ul id="utility-nav">
-                    <li><a onclick="javascript:_gaq.push(['_trackEvent','utility-nav','http://wustl.edu/']);" href="http://wustl.edu/">WUSTL</a></li>
-                    <li class="last-child"><a onclick="javascript:_gaq.push(['_trackEvent','utility-nav','http://medicine.wustl.edu/directory']);" href="http://medicine.wustl.edu/directory">Directories</a></li>
+                    <li><a onclick="__gaTracker('send', 'event', 'utility-nav', 'http://wustl.edu', 'WUSTL');" href="http://wustl.edu/">WUSTL</a></li>
+                    <li class="last-child"><a onclick="__gaTracker('send', 'event', 'utility-nav', 'http://medicine.wustl.edu/directory', 'Directory');" href="http://medicine.wustl.edu/directory">Directories</a></li>
                 </ul>
             </nav>
-
-            <div id="header-text">
-                <a onclick="javascript:_gaq.push(['_trackEvent','header-text','http://medicine.wustl.edu/']);" href="http://medicine.wustl.edu/">Washington University School of Medicine</a>
-            </div>
 
         </div>
 
@@ -98,8 +94,8 @@
                 ) );
                 ?>
 
-                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://wustl.edu/']);" href="http://wustl.edu/">WUSTL</a></li>
-                <li class="page_item"><a onclick="javascript:_gaq.push(['_trackEvent','mobile-utility-nav','http://medicine.wustl.edu/directory']);" href="http://medicine.wustl.edu/directory">Directories</a></li>
+                <li class="page_item"><a onclick="__gaTracker('send', 'event', 'mobile-utility-nav', 'http://wustl.edu', 'WUSTL');" href="http://wustl.edu/">WUSTL</a></li>
+                <li class="page_item"><a onclick="__gaTracker('send', 'event', 'mobile-utility-nav', 'http://medicine.wustl.edu/directory', 'Directories');" href="http://medicine.wustl.edu/directory">Directories</a></li>
             </ul>
         </nav>
     </div>
