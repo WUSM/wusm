@@ -280,6 +280,23 @@ function customize_mce( $settings ) {
 
 	$new_styles = array(
 		array(
+			'title' => 'Signature',
+			'items' => array(
+				array(
+					'title'		=> 'Name',
+					'block'		=> 'p',
+					'classes'	=> 'signature-name',
+					'wrapper'	=> false
+				),
+				array(
+					'title'		=> 'Title(s)',
+					'block'		=> 'p',
+					'classes'	=> 'signature-title',
+					'wrapper'	=> false
+				)
+			)
+		),
+		array(
 			'title' => 'Custom Styles',
 			'items' => array(
 				array(
