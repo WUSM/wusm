@@ -137,25 +137,23 @@ body#tinymce.wp-editor .disclaimer p {
     line-height: 17px;
 }
 
-body#tinymce.wp-editor .call-to-action {
-	font-size: 16px;
+body#tinymce.wp-editor a.call-to-action {
     display: inline-block;
-	margin: 0;
 	line-height: 14px;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
     background: #990000;
     padding: 15px 50px;
-    display: inline-block;
     border-radius: 3px;
     letter-spacing: 1px;
-    font-weight: 600;
     transition: background 0.1s ease;
+    margin: 0 20px 0 0;
     cursor: pointer;
+    font-weight: bold;
 }
 
-body#tinymce.wp-editor .call-to-action:hover {
+body#tinymce.wp-editor a.call-to-action:hover {
 	background: #720000;
 	color: #fff;
 }
