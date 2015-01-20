@@ -29,7 +29,10 @@
     ?>
 </head>
 
-<body <?php body_class(); ?>>
+<!--[if IE 7 ]>  <body <?php body_class('ie ie7 ie-lt10 ie-lt9 ie-lt8'); ?>> <![endif]-->
+<!--[if IE 8 ]>  <body <?php body_class('ie ie8 ie-lt10 ie-lt9'); ?>> <![endif]-->
+<!--[if IE 9 ]>  <body <?php body_class('ie ie9 ie-lt10'); ?>> <![endif]-->
+<!--[if gt IE 9]><!--><body <?php body_class(); ?>><!--<![endif]-->
 
 <header>
 
