@@ -200,6 +200,30 @@ function head_cleanup() {
 add_action('init', 'head_cleanup');
 
 
+// Add IE classes to the body
+function ie_body_class($classes) {
+    global $is_IE;
+    if($is_IE) {
+        $browser = $_SERVER['HTTP_USER_AGENT'];
+        $browser = substr("$browser", 25, 8);
+        if($browser == "MSIE 7.0") {
+            $classes[] = 'ie';
+            $classes[] = 'ie7 ie-lt10 ie-lt9 ie-lt8';
+        } elseif ($browser == "MSIE 8.0") {
+            $classes[] = 'ie';
+            $classes[] = 'ie8 ie-lt10 ie-lt9';
+        } elseif ($browser == "MSIE 9.0") {
+            $classes[] = 'ie';
+            $classes[] = 'ie9 ie-lt10';
+        } else {
+            $classes[] = 'ie';
+        }
+    }
+    return $classes;
+}
+add_filter('body_class', 'ie_body_class');
+
+
 // Remove WP version from scripts
 function remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
