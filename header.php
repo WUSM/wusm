@@ -98,16 +98,3 @@
     </div>
 
 </header>
-
-<?php
-// Required for mobile nav on Event Organiser search results page.
-// I'd prefer to have this in the WUSM Event Organiser Skin plugin.
-if (isset($_GET['post_type']) && $_GET['post_type'] == 'event' && is_search()) {
-?>
-<div id="main" class="clearfix">
-    <div id="page-background"></div>
-    <div class="wrapper">
-        <?php get_sidebar( 'left' ); ?>
-<?php
-}
-?>
