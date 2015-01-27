@@ -278,6 +278,7 @@ a {
     border-bottom: 1px solid #ccc;
     white-space: nowrap;
     background-color: #fff;
+    overflow: hidden;
 }
 
 #main-nav .sub-menu {
