@@ -300,6 +300,12 @@ function customize_mce( $settings ) {
 			'title' => 'Custom Styles',
 			'items' => array(
 				array(
+					'title'		=> 'Intro Text',
+					'block'		=> 'p',
+					'classes'	=> 'intro-text',
+					'wrapper'	=> false
+				),
+				array(
 					'title'		=> 'Disclaimer',
 					'block'		=> 'div',
 					'classes'	=> 'disclaimer',

@@ -54,6 +54,13 @@ body#tinymce.wp-editor h1 + .accordion-header {
     margin-top: 45px;
 }
 
+body#tinymce.wp-editor .intro-text {
+    color: #787878;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
 body#tinymce.wp-editor ul {
 	list-style-type: disc;
 	margin-left: 40px;

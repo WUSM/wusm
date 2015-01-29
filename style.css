@@ -512,6 +512,13 @@ article h1 + .accordion-header {
     margin-top: 45px;
 }
 
+article .intro-text {
+    color: #787878;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
 article a {
     color: #980006;
 }
