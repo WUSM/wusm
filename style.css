@@ -311,6 +311,12 @@ a {
 .homepage {
     background: #f4f4f4;
 }
+.homepage a {
+    color: #930000;
+}
+.homepage a:hover {
+    color: #717171;
+}
 .homepage-content {
     max-width: 650px;
     width: 90%;
@@ -331,12 +337,6 @@ a {
     color: #838383;
     padding-bottom: 35px;
     line-height: 34px;
-}
-.homepage-content a {
-    color: #930000;
-}
-.homepage-content a:hover {
-    color: #717171;
 }
 
 
