@@ -1,0 +1,103 @@
+(function(e) {
+    e(function() {
+    tinymce.create('tinymce.plugins.wusmbutton', {
+        init : function(editor, url) {
+            url = url.substring(0, url.length - 2);
+            editor.addButton('wusmbutton', {
+                title: 'Insert',
+                image: url + '/img/add.svg',
+                type: 'menubutton',
+                menu: [ 
+                    {
+                        text: 'Button',
+                        icon: false,
+                        onclick: function() {
+                            var text_selection = tinymce.activeEditor.selection.getContent({format: 'text'});
+                            editor.windowManager.open({
+                            title: 'Insert Button',
+                            body: [{
+                                type: 'textbox',
+                                name: 'text',
+                                label: 'Text',
+                                size: 30,
+                                value: text_selection
+                            }, {
+                                type: 'textbox',
+                                name: 'link',
+                                label: 'URL',
+                                value: ''
+                            }, {
+                                type: 'checkbox',
+                                name: 'newwindow',
+                                label: 'Open in a new window?'
+                            }, ],
+                            onsubmit: function(e) {
+                                if(e.data.newwindow == true) {
+                                    var openin = 'target="_blank"';
+                                }
+                                editor.insertContent(
+                                    '<a id="call-to-action" class="call-to-action"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
+                                );
+                            }
+                            });
+                        }
+                    }
+                    ]
+            });
+            editor.on('click',function(e) {
+                if (jQuery(e.target).hasClass('call-to-action')) {
+                    var link = jQuery(e.target).attr('href');
+                    var text = e.target.text;
+                    var newwindow = e.target.target;
+                    if(newwindow == '_blank') {
+                        var target = true;
+                    }
+                    editor.selection.select(e.toElement);
+                    editor.windowManager.open({
+                        title: 'Edit Button',
+                        body: [{
+                            type: 'textbox',
+                            name: 'text',
+                            label: 'Text',
+                            size: 30,
+                            value: text
+                        }, {
+                            type: 'textbox',
+                            name: 'link',
+                            label: 'URL',
+                            value: link
+                        }, {
+                            type: 'checkbox',
+                            name: 'newwindow',
+                            label: 'Open in a new window?',
+                            checked: target
+                        }],
+                        onsubmit: function(e) {
+                            if(e.data.newwindow == true) {
+                                var openin = 'target="_blank"';
+                            }
+                            editor.insertContent(
+                                '<a class="call-to-action"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
+                            );
+                        }
+                    })
+                }
+            });
+        },
+ 
+        createControl : function(n, cm) {
+            return null;
+        },
+ 
+        getInfo : function() {
+            return {
+                longname : 'WUSM Button',
+                author : 'Medical Public Affairs',
+                authorurl : 'http://medicine.wustl.edu',
+                version : "1.0"
+            };
+        }
+    });
+    tinymce.PluginManager.add( 'wusmbutton', tinymce.plugins.wusmbutton );
+    })
+})(jQuery);

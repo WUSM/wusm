@@ -61,7 +61,7 @@ function create_default_wusm_settings() {
 	    if(!the_slug_exists('home') && !(get_option('show_on_front') === 'page')) {
 
 	    	$home_page_title = 'Headline capturing the value or service your group provides';
-		    $home_page_content = 'Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max) <div class="call-to-action"><p><a href="#">Important Link</a></p></div>';
+		    $home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="call-to-action">Important Link</a></p>';
 		    $home_page = array(
 			    'post_type' => 'page',
 			    'post_title' => $home_page_title,
@@ -310,12 +310,6 @@ function customize_mce( $settings ) {
 					'block'		=> 'div',
 					'classes'	=> 'disclaimer',
 					'wrapper'	=> 'true'
-				),
-				array(
-					'title'		=> 'Call to Action',
-					'block'		=> 'div',
-					'classes'	=> 'call-to-action',
-					'wrapper'	=> 'true'
 				)
 			)
 		)
@@ -356,3 +350,19 @@ function attachment_display_settings() {
 	update_option('image_default_size', 'large' );
 }
 add_action('after_setup_theme', 'attachment_display_settings');
+
+
+
+function wusm_button() {
+    add_filter( "mce_external_plugins", "wusm_add_button" );
+    add_filter( 'mce_buttons', 'wusm_register_button' );
+}
+function wusm_add_button( $plugin_array ) {
+    $plugin_array['wusmbutton'] = get_template_directory_uri() . '/_/js/wusmbutton.js';
+    return $plugin_array;
+}
+function wusm_register_button( $button ) {
+    array_push( $button, 'wusmbutton' );
+    return $button;
+}
+add_action( 'admin_head', 'wusm_button' );
