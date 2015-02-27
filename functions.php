@@ -306,10 +306,16 @@ function customize_mce( $settings ) {
 					'wrapper'	=> false
 				),
 				array(
+					'title'	   => 'Callout',
+					'block'	   => 'div',
+					'classes'  => 'callout',
+					'wrapper'  => true
+				),
+				array(
 					'title'		=> 'Disclaimer',
 					'block'		=> 'div',
 					'classes'	=> 'disclaimer',
-					'wrapper'	=> 'true'
+					'wrapper'	=> true
 				)
 			)
 		)

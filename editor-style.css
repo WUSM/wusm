@@ -147,6 +147,28 @@ body#tinymce.wp-editor .signature-title {
     margin: 0;
 }
 
+body#tinymce.wp-editor .callout {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+body#tinymce.wp-editor .callout h2,
+body#tinymce.wp-editor .callout h3,
+body#tinymce.wp-editor .callout h4 {
+	margin-top: 0;
+}
+
+body#tinymce.wp-editor .callout p {
+	margin-bottom: 10px;
+}
+
+body#tinymce.wp-editor .callout p:last-child {
+	margin: 0;
+}
+
 body#tinymce.wp-editor .disclaimer {
     font-size: 12px;
     color: #a0a0a0;
