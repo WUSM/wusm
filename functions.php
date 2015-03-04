@@ -38,9 +38,9 @@ add_action( 'init', 'theme_init' );
  * Enqueue scripts and styles.
  */
 function wusm_scripts() {
-    wp_deregister_style( 'open-sans' ); // De-register open-sans so we can add the 700 (bold) weight
-    wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C300%2C400%2C600%2C700&subset=latin%2Clatin-ext' );
-    wp_enqueue_style( 'dashicons' );
+	wp_deregister_style( 'open-sans' ); // De-register open-sans so we can add the 700 (bold) weight
+	wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C300%2C400%2C600%2C700&subset=latin%2Clatin-ext' );
+	wp_enqueue_style( 'dashicons' );
 }
 add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
 
@@ -58,20 +58,20 @@ function create_default_wusm_settings() {
 
 	if (isset($_GET['activated']) && is_admin()) {
 
-	    if(!the_slug_exists('home') && !(get_option('show_on_front') === 'page')) {
+		if(!the_slug_exists('home') && !(get_option('show_on_front') === 'page')) {
 
-	    	$home_page_title = 'Headline capturing the value or service your group provides';
-		    $home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="call-to-action">Important Link</a></p>';
-		    $home_page = array(
-			    'post_type' => 'page',
-			    'post_title' => $home_page_title,
-			    'post_content' => $home_page_content,
-			    'post_status' => 'publish',
-			    'post_name' => 'home'
-		    );
-	        $home_page_id = wp_insert_post($home_page);
+			$home_page_title = 'Headline capturing the value or service your group provides';
+			$home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="call-to-action">Important Link</a></p>';
+			$home_page = array(
+				'post_type' => 'page',
+				'post_title' => $home_page_title,
+				'post_content' => $home_page_content,
+				'post_status' => 'publish',
+				'post_name' => 'home'
+			);
+			$home_page_id = wp_insert_post($home_page);
 
-	        // Add Featured Image to Post
+			// Add Featured Image to Post
 			$image_url  = 'http://mpaweb1.wustl.edu/~medschool/tierone-default.jpg';
 			$upload_dir = wp_upload_dir();
 			$image_data = file_get_contents($image_url);
@@ -79,9 +79,9 @@ function create_default_wusm_settings() {
 
 			// Check folder permission and define file location
 			if( wp_mkdir_p( $upload_dir['path'] ) ) {
-			    $file = $upload_dir['path'] . '/' . $filename;
+				$file = $upload_dir['path'] . '/' . $filename;
 			} else {
-			    $file = $upload_dir['basedir'] . '/' . $filename;
+				$file = $upload_dir['basedir'] . '/' . $filename;
 			}
 
 			// Create the image file on the server
@@ -92,10 +92,10 @@ function create_default_wusm_settings() {
 
 			// Set attachment data
 			$attachment = array(
-			    'post_mime_type' => $wp_filetype['type'],
-			    'post_title'     => sanitize_file_name( $filename ),
-			    'post_content'   => '',
-			    'post_status'    => 'inherit'
+				'post_mime_type' => $wp_filetype['type'],
+				'post_title'     => sanitize_file_name( $filename ),
+				'post_content'   => '',
+				'post_status'    => 'inherit'
 			);
 
 			$post_id = get_page_by_title($home_page_title);
@@ -114,8 +114,8 @@ function create_default_wusm_settings() {
 			// Assign featured image to post
 			set_post_thumbnail( $post_id, $attach_id );
 			
-		    update_option( 'page_on_front', $home_page_id );
-		    update_option( 'show_on_front', 'page' );
+			update_option( 'page_on_front', $home_page_id );
+			update_option( 'show_on_front', 'page' );
 		}
 	}
 
@@ -360,15 +360,18 @@ add_action('after_setup_theme', 'attachment_display_settings');
 
 
 function wusm_button() {
-    add_filter( "mce_external_plugins", "wusm_add_button" );
-    add_filter( 'mce_buttons', 'wusm_register_button' );
+	add_filter( "mce_external_plugins", "wusm_add_button" );
+	add_filter( 'mce_buttons', 'wusm_register_button' );
 }
 function wusm_add_button( $plugin_array ) {
-    $plugin_array['wusmbutton'] = get_template_directory_uri() . '/_/js/wusmbutton.js';
-    return $plugin_array;
+	$plugin_array['wusmbutton'] = get_template_directory_uri() . '/_/js/wusmbutton.js';
+	return $plugin_array;
 }
-function wusm_register_button( $button ) {
-    array_push( $button, 'wusmbutton' );
-    return $button;
+function wusm_register_button( $buttons ) {
+	if( ! in_array( 'wusmbutton', $buttons) ) {
+		array_push( $buttons, 'wusmbutton' );
+	}
+	
+	return $buttons;
 }
 add_action( 'admin_head', 'wusm_button' );

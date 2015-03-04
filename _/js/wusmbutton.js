@@ -43,8 +43,7 @@
                     title: 'Insert',
                     image: url + '/img/add.svg',
                     type: 'menubutton',
-                    menu: [ 
-                        {
+                    menu: [ {
                             text: 'Button',
                             icon: false,
                             onclick: function( ) {
@@ -77,8 +76,7 @@
                                 }
                                 } );
                             }
-                        }
-                        ]
+                        } ]
                 } );
             }
             editor.on('click',function(e) {
