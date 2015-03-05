@@ -631,7 +631,8 @@ article .disclaimer p {
     line-height: 17px;
 }
 
-a.call-to-action {
+a.call-to-action,
+a.wusm-button {
     display: inline-block;
     line-height: 14px;
     margin: 0;
@@ -646,12 +647,14 @@ a.call-to-action {
     transition: background 0.1s ease;
 }
 
-a.call-to-action:hover {
+a.call-to-action:hover,
+a.wusm-button:hover {
     background: #c40000;
     color: #fff;
 }
 
-article a.call-to-action {
+article a.call-to-action,
+article a.wusm-button {
     margin: 0 20px 0 0;
 }
 

@@ -178,7 +178,8 @@ body#tinymce.wp-editor .disclaimer p {
     line-height: 17px;
 }
 
-body#tinymce.wp-editor a.call-to-action {
+body#tinymce.wp-editor a.call-to-action,
+body#tinymce.wp-editor a.wusm-button {
     display: inline-block;
 	line-height: 14px;
 	font-size: 14px;
@@ -194,7 +195,8 @@ body#tinymce.wp-editor a.call-to-action {
     font-weight: bold;
 }
 
-body#tinymce.wp-editor a.call-to-action:hover {
+body#tinymce.wp-editor a.call-to-action:hover,
+body#tinymce.wp-editor a.wusm-button:hover {
 	background: #720000;
 	color: #fff;
 }
