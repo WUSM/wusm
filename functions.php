@@ -38,7 +38,7 @@ add_action( 'init', 'theme_init' );
  * Enqueue scripts and styles.
  */
 function wusm_scripts() {
-	wp_enqueue_style( 'wusm-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wusm', get_stylesheet_uri() );
 	wp_deregister_style( 'open-sans' ); // De-register open-sans so we can add the 700 (bold) weight
 	wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C300%2C400%2C600%2C700&subset=latin%2Clatin-ext' );
 	wp_enqueue_style( 'dashicons' );
