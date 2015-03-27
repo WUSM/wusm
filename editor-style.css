@@ -4,7 +4,6 @@ body#tinymce.wp-editor {
 	color: #333;
 	background-color: #f4f4f4;
 	max-width: 450px;
-	padding: 45px 35px 70px 35px;
 }
 
 body#tinymce.wp-editor a {
