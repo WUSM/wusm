@@ -32,6 +32,10 @@ $(document).ready(function (){
     $("#mobile-nav .current_page_ancestor > .children").addClass("jpm-expanded").slideToggle();
     $("#mobile-nav .current_page_ancestor > .dashicons-arrow-down-alt2").toggleClass("dashicons-arrow-up-alt2 dashicons-arrow-down-alt2");
 
+    if($('#lists > div').length == 1) {
+        $('#col1').css('width', 'auto');
+    }
+
 
 });
 

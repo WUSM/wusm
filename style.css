@@ -840,18 +840,18 @@ footer {
 
 #site-footer {
     background-color: #dedede;
-    padding: 13px 0 30px 0;
+    overflow: auto;
 }
 
 #site-footer-top {
     margin: 0 10px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #bcbcbc;
 }
 
 #site-footer-top nav {
     float: left;
-    padding: 6px 0 2px;
+    padding: 17px 0 2px;
 }
 
 #site-footer a {
@@ -866,8 +866,14 @@ footer {
     margin-right: 40px;
 }
 
+#site-footer-top nav li {
+    float: left;
+}
+
 #site-social {
     float: right;
+    font-size: 0;
+    padding-top: 14px;
 }
 
 #site-social img {
@@ -922,7 +928,8 @@ a#site-rss:hover {
 }
 
 #site-footer-bottom {
-    margin: 30px 50px 0 50px;
+    margin: 0 50px;
+    padding: 30px 0;
 }
 
 #site-footer-bottom #col1 {
@@ -931,16 +938,25 @@ a#site-rss:hover {
     line-height: 24px;
 }
 
+#site-footer #site-footer-bottom > div:only-child {
+    width: auto;
+}
+
+#site-footer-bottom #lists {
+    float: right;
+}
+
 #site-footer-bottom #col2 {
     float: left;
     width: 154px;
-    height: 210px;
+    min-height: 192px;
     border-left: 1px solid #bcbcbc;
     padding: 0 10px 0 15px;
 }
 
-#site-footer-bottom #col2 ul {
-    margin-top: 10px;
+#site-footer-bottom #col2 strong {
+    margin-bottom: 10px;
+    display: block;
 }
 
 #site-footer-bottom #col2 li {
@@ -950,13 +966,14 @@ a#site-rss:hover {
 #site-footer-bottom #col3 {
     float: left;
     width: 154px;
-    height: 210px;
+    min-height: 192px;
     border-left: 1px solid #bcbcbc;
     padding: 0 10px 0 15px;
 }
 
-#site-footer-bottom #col3 ul {
-    margin-top: 10px;
+#site-footer-bottom #col3 strong {
+    margin-bottom: 10px;
+    display: block;
 }
 
 #site-footer-bottom #col3 li {
@@ -1385,9 +1402,14 @@ article.search-results {
         line-height: 24px;
     }
 
+    #site-footer-top nav li {
+        float: none;
+    }
+
     #site-social {
         float: none;
         margin-top: 20px;
+        padding: 0;
     }
 
     a#site-facebook {
@@ -1396,6 +1418,7 @@ article.search-results {
 
     #site-footer-bottom {
         margin: 20px 10px 0 10px;
+        padding: 0;
     }
 
     #site-footer-bottom #col1 {
@@ -1406,11 +1429,26 @@ article.search-results {
         border-bottom: 1px solid #bcbcbc;
     }
 
+    #site-footer #site-footer-bottom > div:only-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    #site-footer-bottom #lists {
+        float: none;
+    }
+
+    #site-footer-bottom #lists > div:only-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
     #site-footer-bottom #col2 {
         float: none;
         width: auto;
         height: auto;
         border-left: none;
+        min-height: 0;
         padding: 0 0 10px 0;
         margin-bottom: 20px;
         border-bottom: 1px solid #bcbcbc;
@@ -1420,8 +1458,10 @@ article.search-results {
         float: none;
         width: auto;
         height: auto;
+        min-height: 0;
         border-left: none;
         padding: 0;
+        margin-bottom: 20px;
     }
 
     #wusm-footer-left {

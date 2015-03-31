@@ -2,6 +2,7 @@
 
 if(!defined('WP_LOCAL_INSTALL')) {
 	require_once( get_template_directory() . '/_/php/acf_fields.php' );
+	add_filter('acf/settings/show_admin', '__return_false');
 }
 
 require_once( get_template_directory() . '/_/php/custom_post_types.php' );
@@ -18,9 +19,9 @@ add_filter('admin_footer_text', 'wpfme_footer_admin');
 
 // Intialize all the theme options
 function theme_init() {
-	// Create Header Menu theme location
+	// Create Header and Footer Menu theme locations
 	register_nav_menus(
-		array( 'header-menu' => 'Header Menu' )
+		array( 'header-menu' => 'Header Menu', 'footer-menu' => 'Footer Menu', )
 	);
 
 	register_sidebar();
@@ -147,10 +148,17 @@ function create_default_wusm_settings() {
 		}
 	}
 
-	// Assign Header menu to the Header Menu theme location
+	if ( !is_nav_menu( 'Footer' )) {
+		// Create Footer menu, if it doesn't already exist
+		wp_create_nav_menu( 'Footer', array( 'slug' => 'footer' ) );
+	}
+
+	// Assign Header and Footer menus to their appropriate theme locations
 	$menu_id = wp_get_nav_menu_object( 'Header' );
 	$header_id = $menu_id->term_id;
-	set_theme_mod('nav_menu_locations', array( 'header-menu' => $header_id ));
+	$footer_menu_id = wp_get_nav_menu_object( 'Footer' );
+	$footer_id = $footer_menu_id->term_id;
+	set_theme_mod('nav_menu_locations', array( 'header-menu' => $header_id, 'footer-menu' => $footer_id ));
 
 }
 add_action( 'after_switch_theme', 'create_default_wusm_settings');

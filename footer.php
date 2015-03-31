@@ -1,6 +1,11 @@
 <footer>
 
-    <?php include_once(get_stylesheet_directory() . '/site-footer.php') ?>
+    
+    <?php if ( file_exists( trailingslashit( get_stylesheet_directory() ) . 'site-footer.php' ) ) {
+        include_once( trailingslashit( get_stylesheet_directory() ) . '/site-footer.php');
+    } else {
+        include_once( trailingslashit( get_template_directory() ) . '/site-footer.php');
+    } ?>
 
     <div id="wusm-footer">
 
