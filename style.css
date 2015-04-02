@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.04.01.0
+Version:     2015.04.02.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -474,6 +474,7 @@ article h1 {
     font-family: Georgia, serif;
     font-weight: normal;
     font-size: 30px;
+    margin-bottom: 30px;
 }
 
 article h2 {
@@ -498,10 +499,6 @@ article h4 {
 article p {
     line-height: 25px;
     margin-bottom: 20px;
-}
-
-article h1 + p, article h1 + table, article h1 + .wp-caption, article h1 + .wp-caption.alignleft + p, article h1 + .wp-caption.alignright + p {
-    margin-top: 50px;
 }
 
 article h1 + .accordion-header {
@@ -565,6 +562,7 @@ article .wp-caption {
 
 article .alignleft {
     float: left;
+    margin-top: 5px;
 }
 
 article .aligncenter {
@@ -574,6 +572,7 @@ article .aligncenter {
 
 article .alignright {
     float: right;
+    margin-top: 5px;
 }
 
 article .wp-caption.alignright, article img.alignright {
