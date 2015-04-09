@@ -32,7 +32,7 @@ if( function_exists('acf_add_options_page') ) {
                 'default_value' => '<strong>Office of Lorem Ipsum</strong>
     Washington University School of Medicine
     <strong>Mailing Address:</strong> Street Address, CB ### | St. Louis, MO ZIP
-    <strong>Office Location:</strong> <a href="">Street Address, Suite ### | St. Louis, MO ZIP</a>
+    <strong>Office Location:</strong> Street Address, Suite ### | St. Louis, MO ZIP
     <strong>Phone:</strong> 314-555-5555
     <strong>Fax:</strong> 314-555-5555
     <strong>Email:</strong> <a href="mailto:office@wustl.edu">office@wustl.edu</a>',
