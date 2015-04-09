@@ -24,8 +24,6 @@ function theme_init() {
 		array( 'header-menu' => 'Header Menu', 'footer-menu' => 'Footer Menu', )
 	);
 
-	register_sidebar();
-
 	// Thumbnails
 	add_theme_support( 'post-thumbnails' );
 
