@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.04.10.0
+Version:     2015.04.24.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,7 +30,8 @@ article, aside, figure, footer, header, nav, section, details, summary {display:
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
 img,
 object,
-embed {max-width: 100%;}
+embed,
+iframe {max-width: 100%;}
 
 /* force a vertical scrollbar to prevent a jumpy page */
 html {overflow-y: scroll;}
@@ -730,6 +731,10 @@ article td p:last-child {
     height: 100%;
 }
 
+article iframe {
+    width: 450px;
+    height: 300px;
+}
 
 
 /* Right column
