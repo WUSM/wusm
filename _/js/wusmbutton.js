@@ -80,7 +80,7 @@
                 } );
             }
             editor.on('click',function(e) {
-                if (jQuery(e.target).hasClass('call-to-action')) {
+                if (jQuery(e.target).hasClass('wusm-button')) {
                     var link = jQuery(e.target).attr('href');
                     var text = e.target.text;
                     var newwindow = e.target.target;
@@ -112,7 +112,7 @@
                                 var openin = 'target="_blank"';
                             }
                             editor.insertContent(
-                                '<a class="call-to-action"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
+                                '<a class="wusm-button"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
                             );
                         }
                     })
