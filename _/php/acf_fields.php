@@ -146,7 +146,7 @@ if( function_exists('acf_add_options_page') ) {
                         'label' => 'URL',
                         'name' => 'url',
                         'prefix' => '',
-                        'type' => 'url',
+                        'type' => 'text',
                         'instructions' => '',
                         'required' => 0,
                         'conditional_logic' => 0,
