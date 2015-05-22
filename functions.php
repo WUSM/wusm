@@ -46,19 +46,10 @@ add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
 
 
 function create_default_wusm_settings() {
-	
-	function the_slug_exists($post_name) {
-		global $wpdb;
-		if($wpdb->get_row("SELECT post_name FROM wp_posts WHERE post_name = '" . $post_name . "'", 'ARRAY_A')) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 
 	if (isset($_GET['activated']) && is_admin()) {
 
-		if(!the_slug_exists('home') && !(get_option('show_on_front') === 'page')) {
+		if(!(get_option('show_on_front') === 'page')) {
 
 			$home_page_title = 'Headline capturing the value or service your group provides';
 			$home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="call-to-action">Important Link</a></p>';
