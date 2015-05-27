@@ -41,7 +41,7 @@
             } else {
                 editor.addButton( 'wusmbutton', {
                     title: 'Insert',
-                    image: url + '/img/add.svg',
+                    image: url + 'img/add.svg',
                     type: 'menubutton',
                     menu: [ {
                             text: 'Button',
