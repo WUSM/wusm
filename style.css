@@ -889,7 +889,12 @@ footer {
     display: block;
 }
 
-a#site-facebook, a#site-twitter, a#site-linkedin, a#site-youtube, a#site-rss {
+a#site-facebook,
+a#site-twitter,
+a#site-instagram,
+a#site-linkedin,
+a#site-youtube,
+a#site-rss {
     display: inline-block;
     width: 23px;
     height: 23px;
@@ -910,6 +915,14 @@ a#site-twitter {
 
 a#site-twitter:hover {
     background-color: #61bef7;
+}
+
+a#site-instagram {
+    background: #316699;
+}
+
+a#site-instagram:hover {
+    background: #4080b1;
 }
 
 a#site-linkedin {

@@ -315,6 +315,23 @@ if( function_exists('acf_add_options_page') ) {
                 'placeholder' => '',
             ),
             array (
+                'key' => 'field_557736f387c3f',
+                'label' => 'Instagram',
+                'name' => 'instagram',
+                'prefix' => '',
+                'type' => 'url',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
+            array (
                 'key' => 'field_5515af7a74b0f',
                 'label' => 'LinkedIn',
                 'name' => 'linkedin',
