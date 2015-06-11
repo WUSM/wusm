@@ -2,8 +2,12 @@
 
 if(!defined('WP_LOCAL_INSTALL')) {
 	require_once( get_template_directory() . '/_/php/acf_fields.php' );
-	add_filter('acf/settings/show_admin', '__return_false');
 }
+
+function acf_remove_menu_page() {
+	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
+}
+add_action( 'admin_menu', 'acf_remove_menu_page' );
 
 require_once( get_template_directory() . '/_/php/custom_post_types.php' );
 require_once( get_template_directory() . '/_/php/load_js.php' );
