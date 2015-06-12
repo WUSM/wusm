@@ -1,7 +1,6 @@
 <div class="mobile-container">
     <form method="get" id="mobile-search-form" autocapitalize="none" action="<?php echo esc_url( home_url( '/' ) ); ?>">
         <input type="text" name="s" id="mobile-search-box" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
-        <!-- <input type="submit" class="submit" name="submit" value="GO" id="mobile-search-btn"> -->
     </form>
 
     <nav id="mobile-nav">
