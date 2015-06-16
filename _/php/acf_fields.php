@@ -1,7 +1,61 @@
 <?php
 
 if( function_exists('acf_add_options_page') ) {
-    
+
+    acf_add_options_page(array(
+        'page_title'    => 'Header',
+        'menu_title'    => 'Header',
+        'menu_slug'     => 'header',
+        'capability'    => 'edit_posts',
+        'redirect'      => false,
+        'parent' => 'themes.php',
+    ));
+
+    register_field_group(array (
+        'key' => 'group_557b2407ebbbd',
+        'title' => 'Branding',
+        'fields' => array (
+            array (
+                'key' => 'field_557b2429bbe0e',
+                'label' => 'Logo',
+                'name' => 'logo',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array (
+                    'WUSM' => 'School of Medicine',
+                    'WUPhysicians' => 'Washington University Physicians',
+                    'WUSTL' => 'Washington University',
+                ),
+                'other_choice' => 0,
+                'save_other_choice' => 0,
+                'default_value' => 'WUSM',
+                'layout' => 'vertical',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'header',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+    ));
+
     acf_add_options_page(array(
         'page_title'    => 'Footer',
         'menu_title'    => 'Footer',
