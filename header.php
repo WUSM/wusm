@@ -1,3 +1,31 @@
+<?php
+    switch (get_field('logo', 'option')) {
+        case 'WUPhysicians':
+            $brand = array(
+                'text'        => 'Washington University Physicians',
+                'url'         => 'http://wuphysicians.wustl.edu/',
+                'event_label' => 'Washington University Physicians',
+                'logo'        => 'wuphysicians-logo'
+            );
+            break;
+        case 'WUSTL':
+            $brand = array(
+                'text'        => 'Washington University in St. Louis',
+                'url'         => 'http://wustl.edu/',
+                'event_label' => 'WUSTL',
+                'logo'        => 'wustl-logo'
+            );
+            break;
+        default:
+            $brand = array(
+                'text'        => 'Washington University School of Medicine in St. Louis',
+                'url'         => 'http://medicine.wustl.edu/',
+                'event_label' => 'School of Medicine',
+                'logo'        => 'wusm-logo'
+            );
+    }
+?>
+
 <!doctype html>
 
 <html class="no-js" lang="en">
@@ -7,9 +35,9 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title><?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? 'Washington University School of Medicine in St. Louis' : bloginfo('name'); ?></title>
+    <title><?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? $brand['text'] : bloginfo('name'); ?></title>
 
-    <meta name="title" content="<?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php is_front_page() ? 'Washington University School of Medicine in St. Louis' : bloginfo('name'); ?>">
+    <meta name="title" content="<?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? $brand['text'] : bloginfo('name'); ?>">
     <meta name="author" content="Washington University School of Medicine in St. Louis">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,14 +66,16 @@
 
         <div class="wrapper clearfix">
 
-            <div id="header-logo"><a onclick="__gaTracker('send', 'event', 'header-logo', 'http://medicine.wustl.edu', 'School of Medicine');" href="http://medicine.wustl.edu/"><img width="435" height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/wusm-logo.png';this.onerror=null;" alt="Washington University School of Medicine in St. Louis"></a></div>
+            <div id="header-logo"><a onclick="__gaTracker('send', 'event', 'header-logo', '<?php echo $brand['url']; ?>', '<?php echo $brand['event_label']; ?>');" href="<?php echo $brand['url']; ?>"><img height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.png';this.onerror=null;" alt="<?php echo $brand['text']; ?>"></a></div>
 
+            <?php if (get_field('logo', 'option') != 'WUSTL') : ?>
             <nav id="utility-bar">
                 <ul id="utility-nav">
                     <li><a onclick="__gaTracker('send', 'event', 'utility-nav', 'http://wustl.edu', 'WUSTL');" href="http://wustl.edu/">WUSTL</a></li>
                     <li class="last-child"><a onclick="__gaTracker('send', 'event', 'utility-nav', 'http://medicine.wustl.edu/directory', 'Directory');" href="http://medicine.wustl.edu/directory">Directories</a></li>
                 </ul>
             </nav>
+            <?php endif; ?>
 
         </div>
 
@@ -60,39 +90,15 @@
         </div>
     </div>
 
+    <?php
+        wp_nav_menu( array(
+            'theme_location' => 'header-menu',
+            'container'      => 'nav',
+            'container_id'   => 'main-nav',
+            'items_wrap'     => '<div class="wrapper"><ul>%3$s</ul></div>',
+        ) );
 
-    <?php wp_nav_menu( array(
-        'theme_location' => 'header-menu',
-        'container'      => 'nav',
-        'container_id'   => 'main-nav',
-        'items_wrap'     => '<div class="wrapper"><ul>%3$s</ul></div>',
-    ) ); ?>
-
-    <div class="mobile-container">
-        <form method="get" id="mobile-search-form" autocapitalize="none" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <input type="text" name="s" id="mobile-search-box" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" placeholder="<?php esc_attr_e( 'Search' ); ?>">
-            <!-- <input type="submit" class="submit" name="submit" value="GO" id="mobile-search-btn"> -->
-        </form>
-
-        <nav id="mobile-nav">
-            <ul>
-                <li class="page_item<?php echo is_front_page() ? ' current_page_item' : '' ?>"><a href="<?php echo home_url(); ?>">Home</a></li>
-
-                <?php
-                $frontpage_id = get_option('page_on_front');
-                wp_list_pages( array(
-                    'sort_column' => 'menu_order',
-                    'title_li'    => '',
-                    'exclude'     => $frontpage_id,
-                    'meta_key'    => 'hide_in_left_nav',
-                    'meta_value'  => '0'
-                ) );
-                ?>
-
-                <li class="page_item"><a onclick="__gaTracker('send', 'event', 'mobile-utility-nav', 'http://wustl.edu', 'WUSTL');" href="http://wustl.edu/">WUSTL</a></li>
-                <li class="page_item"><a onclick="__gaTracker('send', 'event', 'mobile-utility-nav', 'http://medicine.wustl.edu/directory', 'Directories');" href="http://medicine.wustl.edu/directory">Directories</a></li>
-            </ul>
-        </nav>
-    </div>
+        include 'mobile-nav.php'
+    ?>
 
 </header>
