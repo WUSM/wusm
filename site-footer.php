@@ -42,7 +42,7 @@
             <div id="lists">
                 <?php if( have_rows('list1_links', 'option') ): ?>
                 <div id="col2">
-                    <strong><?php the_field('list1_title', 'option'); ?></strong>
+                    <?php if(get_field('list1_title', 'option')): ?><strong><?php the_field('list1_title', 'option'); ?></strong><?php endif; ?>
                     <ul>
                         <?php while ( have_rows('list1_links', 'option') ) : the_row(); ?>
                         <li><a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('link_text'); ?></a></li>
