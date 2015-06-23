@@ -7,7 +7,7 @@ if ( function_exists( 'get_field' ) && get_field( 'sidebars' ) ): ?>
 	<?php while ( has_sub_field( 'sidebars' ) ):
 		if ( get_row_layout() == 'links' ): // Related Links ?>
 			<aside class="links">
-				<h2><?php the_sub_field( 'title' ); ?></h2>
+				<?php if ( get_sub_field( 'title' ) ): ?><h2><?php the_sub_field( 'title' ); ?></h2><?php endif; ?>
 				<?php echo get_sub_field( 'text' ) ? '<p class="secondary">' . get_sub_field( 'text' ) . '</p>' : ''; ?>
 				<?php if ( get_sub_field( 'links' ) ): ?>
 					<ul>
@@ -28,7 +28,7 @@ if ( function_exists( 'get_field' ) && get_field( 'sidebars' ) ): ?>
 					echo $attachment_id ? wp_get_attachment_image( $attachment_id, 'right-sidebar' ) : '';
 				?>
 				<div class="sidebar-body">
-					<h2><?php the_sub_field( 'title' ); ?></h2>
+					<?php if ( get_sub_field( 'title' ) ): ?><h2><?php the_sub_field( 'title' ); ?></h2><?php endif; ?>
 					<?php echo get_sub_field( 'text' ) ? get_sub_field( 'text' ) : ''; ?>
 				</div>
 				<?php
