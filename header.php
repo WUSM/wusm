@@ -5,7 +5,8 @@
                 'text'        => 'Washington University Physicians',
                 'url'         => 'http://wuphysicians.wustl.edu/',
                 'event_label' => 'Washington University Physicians',
-                'logo'        => 'wuphysicians-logo'
+                'logo'        => 'wuphysicians-logo',
+                'logo-width'  => 294
             );
             break;
         case 'WUSTL':
@@ -13,7 +14,8 @@
                 'text'        => 'Washington University in St. Louis',
                 'url'         => 'http://wustl.edu/',
                 'event_label' => 'WUSTL',
-                'logo'        => 'wustl-logo'
+                'logo'        => 'wustl-logo',
+                'logo-width'  => 279
             );
             break;
         default:
@@ -21,7 +23,8 @@
                 'text'        => 'Washington University School of Medicine in St. Louis',
                 'url'         => 'http://medicine.wustl.edu/',
                 'event_label' => 'School of Medicine',
-                'logo'        => 'wusm-logo'
+                'logo'        => 'wusm-logo',
+                'logo-width'  => 435
             );
     }
 ?>
@@ -66,7 +69,7 @@
 
         <div class="wrapper clearfix">
 
-            <div id="header-logo"><a onclick="__gaTracker('send', 'event', 'header-logo', '<?php echo $brand['url']; ?>', '<?php echo $brand['event_label']; ?>');" href="<?php echo $brand['url']; ?>"><img height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.png';this.onerror=null;" alt="<?php echo $brand['text']; ?>"></a></div>
+            <div id="header-logo"><a onclick="__gaTracker('send', 'event', 'header-logo', '<?php echo $brand['url']; ?>', '<?php echo $brand['event_label']; ?>');" href="<?php echo $brand['url']; ?>"><img width="<?php echo $brand['logo-width'] ?>" height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.png';this.onerror=null;" alt="<?php echo $brand['text']; ?>"></a></div>
 
             <?php if (get_field('logo', 'option') != 'WUSTL') : ?>
             <nav id="utility-bar">
