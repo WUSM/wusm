@@ -9,7 +9,6 @@ function acf_remove_menu_page() {
 }
 add_action( 'admin_menu', 'acf_remove_menu_page' );
 
-require_once( get_template_directory() . '/_/php/custom_post_types.php' );
 require_once( get_template_directory() . '/_/php/load_js.php' );
 require_once( get_template_directory() . '/_/php/left-nav.php' );
 
