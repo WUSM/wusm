@@ -1,13 +1,13 @@
 <?php
 
-if(!defined('WP_LOCAL_INSTALL')) {
+if( !WP_DEBUG ) {
 	require_once( get_template_directory() . '/_/php/acf_fields.php' );
+	add_action( 'admin_menu', 'acf_remove_menu_page' );
 }
 
 function acf_remove_menu_page() {
 	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
 }
-add_action( 'admin_menu', 'acf_remove_menu_page' );
 
 require_once( get_template_directory() . '/_/php/load_js.php' );
 require_once( get_template_directory() . '/_/php/left-nav.php' );
