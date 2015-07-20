@@ -55,7 +55,7 @@ function create_default_wusm_settings() {
 		if(!(get_option('show_on_front') === 'page')) {
 
 			$home_page_title = 'Headline capturing the value or service your group provides';
-			$home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="call-to-action">Important Link</a></p>';
+			$home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="wusm-button">Important Link</a></p>';
 			$home_page = array(
 				'post_type' => 'page',
 				'post_title' => $home_page_title,
