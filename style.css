@@ -1143,6 +1143,7 @@ article.search-results {
     position: absolute;
     z-index: 100;
     width: 100%;
+    display: none;
 }
 
 #mobile-search-form {
@@ -1309,6 +1310,10 @@ article.search-results {
 
     #utility-nav {
         margin-top: 10px;
+    }
+
+    .mobile-container {
+        display: block;
     }
 
     #mobile-menu-icon,
