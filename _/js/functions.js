@@ -5,12 +5,21 @@
 /* trigger when page is ready */
 $(document).ready(function (){
     $('#mobile-menu-icon').click(function() {
-        $('#mobile-nav').slideToggle('fast');
+        $(this).toggleClass('active');
+        $('#mobile-nav').slideToggle('fast').toggleClass('active');
+        if($('#mobile-search-form').hasClass('active')) {
+            $('#mobile-search-form').hide().toggleClass('active');
+            $('#mobile-search-icon').removeClass('active');
+        }
     });
     
     $('#mobile-search-icon').click(function() {
-        $('#mobile-search-form').slideToggle('fast');
-        $('#mobile-search-form').toggleClass('active');
+        $(this).toggleClass('active');
+        $('#mobile-search-form').slideToggle('fast').toggleClass('active');
+        if($('#mobile-nav').hasClass('active')) {
+            $('#mobile-nav').hide().toggleClass('active');
+            $('#mobile-menu-icon').removeClass('active');
+        }
     });
 
     $('#mobile-nav').find('.page_item_has_children > a').each(function() {
@@ -36,10 +45,6 @@ $(document).ready(function (){
     if($('#lists > div').length == 1) {
         $('#col1').css('width', 'auto');
     }
-
-
 });
-
-
 
 })(window.jQuery);

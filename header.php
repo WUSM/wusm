@@ -86,8 +86,14 @@
 
     <div id="header-site-row" class="clearfix">
         <div class="wrapper clearfix">
-            <div id="mobile-search-icon"><div class="dashicons dashicons-search"></div></div>
-            <div id="mobile-menu-icon"><div class="dashicons dashicons-menu"></div></div>
+            <div id="mobile-search-icon">
+                <img class="search-open" src="<?php echo get_template_directory_uri(); ?>/_/img/search-mobile.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/search-mobile.png';this.onerror=null;">
+                <img class="search-close" src="<?php echo get_template_directory_uri(); ?>/_/img/close.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/close.png';this.onerror=null;">
+            </div>
+            <div id="mobile-menu-icon">
+                <img class="mobile-open" src="<?php echo get_template_directory_uri(); ?>/_/img/menu.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/menu.png';this.onerror=null;">
+                <img class="mobile-close" src="<?php echo get_template_directory_uri(); ?>/_/img/close.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/close.png';this.onerror=null;">
+            </div>
             <?php get_search_form(); ?>
             <div id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
         </div>

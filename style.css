@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.07.10.0
+Version:     2015.07.20.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1179,17 +1179,14 @@ article.search-results {
     color: #fff;
 }
 
-#mobile-search-btn {
-    border: 0;
-    position: absolute;
-    right: 30px;
-    background: transparent;
-    color: #fff;
-}
-
 #mobile-nav {
     background-color: #fff;
     width: 100%;
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+#mobile-nav.active {
     -webkit-box-shadow: 2px -30px 37px 21px rgba(0,0,0,0.3);
     -moz-box-shadow: 2px -30px 37px 21px rgba(0,0,0,0.3);
     box-shadow: 2px -30px 37px 21px rgba(0,0,0,0.3);
@@ -1314,18 +1311,6 @@ article.search-results {
         margin-top: 10px;
     }
 
-    #mobile-menu-icon {
-        right: 15px;
-        width: 50px;
-        height: 50px;
-    }
-    
-    #mobile-search-icon {
-        right: 65px;
-        width: 50px;
-        height: 50px;
-    }
-
     #mobile-menu-icon,
     #mobile-search-icon {
         display: block;
@@ -1333,24 +1318,54 @@ article.search-results {
         top: 50%;
         cursor: pointer;
         margin-top: -25px;
-    }
-    
-    #mobile-menu-icon .dashicons,
-    #mobile-search-icon .dashicons {
-        right: 20px;
-        position: absolute;
+        width: 50px;
+        height: 50px;
     }
 
-    #mobile-menu-icon .dashicons {
-        top: 8px;
-        font-size: 35px;
-        color: #fff;
+    #mobile-menu-icon {
+        right: 15px;
     }
 
-    #mobile-search-icon .dashicons {
-        top: 11px;
-        font-size: 30px;
-        color: #fff;
+    #mobile-menu-icon img {
+        top: 13px;
+        left: 12px;
+        position: relative;
+    }
+
+    #mobile-search-icon {
+        right: 65px;
+    }
+
+    #mobile-search-icon img {
+        top: 15px;
+        left: 15px;
+        position: relative;
+    }
+
+    #mobile-menu-icon .mobile-close {
+        display: none;
+        padding: 3px 0 0 5px;
+    }
+
+    #mobile-search-icon .search-close {
+        display: none;
+        padding: 1px 0 0 2px;
+    }
+
+    #mobile-search-icon.active .search-close {
+        display: block;
+    }
+
+    #mobile-search-icon.active .search-open {
+        display: none;
+    }
+
+    #mobile-menu-icon.active .mobile-close {
+        display: block;
+    }
+
+    #mobile-menu-icon.active .mobile-open {
+        display: none;
     }
 
     #search-form {
