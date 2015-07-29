@@ -5,40 +5,46 @@
 /* trigger when page is ready */
 $(document).ready(function (){
     $('#mobile-menu-icon').click(function() {
-        $('#mobile-nav').slideToggle();
-        $(".dashicons-arrow-down-alt2").each(function() {
-            if($(this).parent().height() != 0)
-                $(this).height($(this).parent().height() - 26);
-        });
+        $(this).toggleClass('active');
+        $('#mobile-nav').slideToggle('fast').toggleClass('active');
+        if($('#mobile-search-form').hasClass('active')) {
+            $('#mobile-search-form').hide().toggleClass('active');
+            $('#mobile-search-icon').removeClass('active');
+        }
     });
     
     $('#mobile-search-icon').click(function() {
-        $('#mobile-search-form').slideToggle();
-    });
-
-    $("#mobile-nav .page_item_has_children > a").each(function() {
-        $(this).after( "<div class='dashicons dashicons-arrow-down-alt2 jpm-expand'></div>" );
-    });
-
-    $(".jpm-expand").click( function() {
-        if( $(this).parent().parent().parent().attr('id') == 'mobile-nav' ){
-            $(".jpm-expanded").not($(this).next()).removeClass("jpm-expanded").slideUp();
-            $(".jpm-expand").not($(this)).addClass("dashicons-arrow-down-alt2").removeClass("dashicons-arrow-up-alt2");
+        $(this).toggleClass('active');
+        $('#mobile-search-form').slideToggle('fast').toggleClass('active');
+        if($('#mobile-nav').hasClass('active')) {
+            $('#mobile-nav').hide().toggleClass('active');
+            $('#mobile-menu-icon').removeClass('active');
         }
-        $(this).next().toggleClass("jpm-expanded").slideToggle();
+    });
+
+    $('#mobile-nav').find('.page_item_has_children > a').each(function() {
+        $(this).wrap( '<div></div>' );
+    });
+
+    $("#mobile-nav .page_item_has_children > div > a").each(function() {
+        $(this).after( "<div class='dashicons dashicons-arrow-down-alt2 expand'></div>" );
+    });
+
+    $(".expand").click( function() {
+        if( $(this).parent().parent().parent().parent().attr('id') == 'mobile-nav' ){
+            $(".expanded").not($(this).parent().next()).removeClass("expanded").slideUp();
+            $(".expand").not($(this)).addClass("dashicons-arrow-down-alt2").removeClass("dashicons-arrow-up-alt2");
+        }
+        $(this).parent().next().toggleClass("expanded").slideToggle('fast');
         $(this).toggleClass("dashicons-arrow-up-alt2 dashicons-arrow-down-alt2");
     });
 
-    $("#mobile-nav .current_page_ancestor > .children").addClass("jpm-expanded").slideToggle();
-    $("#mobile-nav .current_page_ancestor > .dashicons-arrow-down-alt2").toggleClass("dashicons-arrow-up-alt2 dashicons-arrow-down-alt2");
+    $("#mobile-nav .current_page_ancestor > .children").addClass("expanded").slideToggle();
+    $("#mobile-nav .current_page_ancestor > div .dashicons-arrow-down-alt2").toggleClass("dashicons-arrow-up-alt2 dashicons-arrow-down-alt2");
 
     if($('#lists > div').length == 1) {
         $('#col1').css('width', 'auto');
     }
-
-
 });
-
-
 
 })(window.jQuery);
