@@ -864,6 +864,11 @@ footer {
     padding-top: 14px;
 }
 
+#site-social a {
+    width: 23px;
+    height: 23px;
+}
+
 #site-social img {
     display: block;
 }
@@ -875,8 +880,6 @@ a#site-linkedin,
 a#site-youtube,
 a#site-rss {
     display: inline-block;
-    width: 23px;
-    height: 23px;
     margin-left: 8px;
 }
 
@@ -952,7 +955,7 @@ a#site-rss:hover {
 #site-footer-bottom #col2 {
     float: left;
     width: 154px;
-    min-height: 192px;
+    min-height: 182px;
     border-left: 1px solid #bcbcbc;
     padding: 0 10px 0 15px;
 }
@@ -969,7 +972,7 @@ a#site-rss:hover {
 #site-footer-bottom #col3 {
     float: left;
     width: 154px;
-    min-height: 192px;
+    min-height: 182px;
     border-left: 1px solid #bcbcbc;
     padding: 0 10px 0 15px;
 }
@@ -1030,12 +1033,15 @@ a#site-rss:hover {
     float: right;
 }
 
+#wusm-social a {
+    width: 23px;
+    height: 23px;
+}
+
 a#wusm-facebook,
 a#wusm-twitter,
 a#wusm-google-plus {
     display: inline-block;
-    width: 23px;
-    height: 23px;
     margin-left: 8px;
 }
 
@@ -1447,22 +1453,32 @@ article.search-results {
 
     #site-footer-top nav a {
         margin-right: 0;
-        display: block;
         line-height: 24px;
     }
 
     #site-footer-top nav li {
         float: none;
+        margin-bottom: 5px;
     }
 
     #site-social {
         float: none;
-        margin-top: 20px;
+        margin-top: 15px;
         padding: 0;
+    }
+
+    #site-social a {
+        width: 30px;
+        height: 30px;
     }
 
     a#site-facebook {
         margin-left: 0;
+    }
+
+    #site-social img {
+        width: 30px;
+        height: 30px;
     }
 
     #site-footer-bottom {
@@ -1513,6 +1529,16 @@ article.search-results {
         margin-bottom: 20px;
     }
 
+    #site-footer-bottom #col2 li,
+    #site-footer-bottom #col3 li {
+        margin-bottom: 5px;
+    }
+
+    #site-footer-bottom #col2 a,
+    #site-footer-bottom #col3 a {
+        line-height: 24px;
+    }
+
     #wusm-footer-left {
         padding-top: 22px;
     }
@@ -1535,8 +1561,18 @@ article.search-results {
         float: none;
     }
 
+    #wusm-social a {
+        width: 30px;
+        height: 30px;
+    }
+
     a#wusm-facebook {
         margin-left: 0;
+    }
+
+    #wusm-social img {
+        width: 30px;
+        height: 30px;
     }
 
     #wusm-footer-right nav {
