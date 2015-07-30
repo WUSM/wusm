@@ -14,23 +14,20 @@
 
         <?php get_sidebar( 'left' ); ?>
 
-        <div id="search-results-wrapper">
+        <article class="search-results">
+            <h1>Search Results</h1>
 
-            <article class="search-results">
-                <h1>Search Results</h1>
-
-                <?php if ( have_posts() ) :
-                    while (have_posts()): the_post(); ?>
-                        <p>
-                            <a class="result-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
-                            <?php echo get_the_excerpt(); ?><br>
-                            <a class="result-url" href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a>
-                        </p>
-                    <?php endwhile;
-                else : ?>
-                    <h2>No Results Found</h2>
-                <?php endif; ?>
-            </article>
+            <?php if ( have_posts() ) :
+                while (have_posts()): the_post(); ?>
+                    <p>
+                        <a class="result-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
+                        <?php if(get_the_excerpt()) { echo get_the_excerpt(); ?><br><?php } ?>
+                        <a class="result-url" href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a>
+                    </p>
+                <?php endwhile;
+            else : ?>
+                <h2>No Results Found</h2>
+            <?php endif; ?>
 
             <nav id="paginate-results">
                 <?php
@@ -45,8 +42,7 @@
                     ) );
                 ?>
             </nav>
-
-        </div>
+        </article>
 
     </div>
 

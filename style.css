@@ -1117,15 +1117,6 @@ a#wusm-google-plus:hover img {
 /* Search results
 -------------------------------------------------------------------------------*/
 
-#search-results-wrapper {
-    float: left;
-    background-color: #f4f4f4;
-}
-
-article.search-results {
-    padding-bottom: 25px;
-}
-
 .result-title {
     font-size: 16px;
 }
@@ -1135,10 +1126,21 @@ article.search-results {
 }
 
 #paginate-results {
-    clear: left;
-    float: left;
     max-width: 450px;
-    padding: 0 35px 70px 35px;
+    padding: 25px 0 0;
+}
+
+#paginate-results span,
+#paginate-results a {
+    margin-right: 5px;
+}
+
+#paginate-results .next {
+    margin: 0 0 0 5px;
+}
+
+#paginate-results .prev {
+    margin-right: 10px;
 }
 
 
