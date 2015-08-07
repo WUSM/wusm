@@ -264,8 +264,11 @@ a:focus {
     position: absolute;
     top: 50%;
     margin-top: -7px;
+    padding: 0;
     right: 10px;
     cursor: pointer;
+    border: 0;
+    background: none;
 }
 
 .ie7 #search-btn {
