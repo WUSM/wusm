@@ -19,11 +19,9 @@
 
             <?php if ( have_posts() ) :
                 while (have_posts()): the_post(); ?>
-                    <p>
-                        <a class="result-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
-                        <?php if(get_the_excerpt()) { echo get_the_excerpt(); ?><br><?php } ?>
-                        <a class="result-url" href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a>
-                    </p>
+                    <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <?php if(get_the_excerpt()) { ?><p><?php echo get_the_excerpt(); ?></p><?php } ?>
+                    <p class="result-url"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></p>
                 <?php endwhile;
             else : ?>
                 <h2>No Results Found</h2>

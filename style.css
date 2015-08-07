@@ -1122,15 +1122,23 @@ a#wusm-google-plus:hover img {
 
 .result-title {
     font-size: 16px;
+    font-weight: normal;
+    margin: 30px 0 2px;
+    line-height: 1.6;
+}
+
+.search-results p {
+    margin-bottom: 5px;
 }
 
 .result-url {
     font-size: 11px;
+    line-height: 1.6;
 }
 
 #paginate-results {
     max-width: 450px;
-    padding: 25px 0 0;
+    padding: 35px 0 0;
 }
 
 #paginate-results span,
