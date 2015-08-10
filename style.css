@@ -941,8 +941,9 @@ a#site-rss:hover {
 
 #site-footer-bottom #col1 {
     float: left;
-    width: 500px;
-    max-width: 660px;
+    width: 475px;
+    max-width: 635px;
+    padding-right: 25px;
     line-height: 24px;
 }
 
