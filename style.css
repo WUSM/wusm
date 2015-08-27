@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.08.10.0
+Version:     2015.08.27.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -880,8 +880,7 @@ a#site-facebook,
 a#site-twitter,
 a#site-instagram,
 a#site-linkedin,
-a#site-youtube,
-a#site-rss {
+a#site-youtube {
     display: inline-block;
     margin-left: 8px;
 }
@@ -924,14 +923,6 @@ a#site-youtube {
 
 a#site-youtube:hover {
     background-color: #f4413d;
-}
-
-a#site-rss {
-    background: #f2861d;
-}
-
-a#site-rss:hover {
-    background-color: #f8a62a;
 }
 
 #site-footer-bottom {
@@ -1044,14 +1035,14 @@ a#site-rss:hover {
 
 a#wusm-facebook,
 a#wusm-twitter,
-a#wusm-google-plus {
+a#wusm-flickr {
     display: inline-block;
     margin-left: 8px;
 }
 
 a#wusm-facebook img,
 a#wusm-twitter img,
-a#wusm-google-plus img {
+a#wusm-flickr img {
     opacity: 0.8;
 }
 
@@ -1079,15 +1070,15 @@ a#wusm-twitter:hover img {
     opacity: 1;
 }
 
-a#wusm-google-plus {
+a#wusm-flickr {
     background: #5c5c5c;
 }
 
-a#wusm-google-plus:hover {
-    background: #dd4b39;
+a#wusm-flickr:hover {
+    background: #0063dc;
 }
 
-a#wusm-google-plus:hover img {
+a#wusm-flickr:hover img {
     opacity: 1;
 }
 
