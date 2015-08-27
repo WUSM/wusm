@@ -339,6 +339,14 @@ function customize_mce( $settings ) {
 add_filter('tiny_mce_before_init', 'customize_mce' );
 
 
+// Remove h1 option from dropdown in editor
+function wusm_remove_h1($arr){
+    $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4';
+    return $arr;
+  }
+add_filter('tiny_mce_before_init', 'wusm_remove_h1');
+
+
 // Image sizes (Settings / Media)
 update_option('medium_size_w', 225);
 update_option('medium_size_h', NULL);

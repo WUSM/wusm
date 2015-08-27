@@ -40,9 +40,6 @@
 
     <title><?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? $brand['text'] : bloginfo('name'); ?></title>
 
-    <meta name="title" content="<?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? $brand['text'] : bloginfo('name'); ?>">
-    <meta name="author" content="Washington University School of Medicine in St. Louis">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon.ico">
