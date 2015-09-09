@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.08.27.0
+Version:     2015.09.08.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -80,7 +80,7 @@ table {font-size: inherit; font: 100%;}
 
 small {font-size: 85%;}
 
-strong {font-weight: bold;}
+strong {font-weight: 600;}
 
 td, td img {vertical-align: top;} 
 
@@ -168,7 +168,7 @@ a:focus {
 
 #header-logo {
     float: left;
-    margin: 13px 10px 10px;
+    margin: 13px 0 10px;
 }
 
 #header-logo a {
@@ -201,6 +201,7 @@ a:focus {
 
 #utility-nav li.last-child {
     border: none;
+    padding-right: 0;
 }
 
 #utility-nav li a {
@@ -241,7 +242,6 @@ a:focus {
     float: right;
     position: absolute;
     width: 240px;
-    margin-right: 10px;
     top: 50%;
     margin-top: -19px;
     right: 0;
@@ -276,7 +276,7 @@ a:focus {
 }
 
 #site-title {
-    padding: 22px 0 22px 32px;
+    padding: 22px 0 22px 22px;
 }
 
 #site-title a {
@@ -302,7 +302,6 @@ a:focus {
 
 #main-nav ul {
     list-style-type: none;
-    margin-left: 10px;
 }
 
 #main-nav li {
@@ -407,8 +406,8 @@ a:focus {
 
 #left-col {
     float: left;
-    width: 180px;
-    padding: 45px 10px 45px 0;
+    width: 175px;
+    padding: 45px 15px 45px 0;
 }
 
 .home #left-col {
@@ -416,8 +415,7 @@ a:focus {
 }
 
 #left-nav li {
-    padding: 12px 0;
-    border-bottom: 1px solid #eae8e8;
+    padding: 10px 0;
 }
 
 #left-nav li:last-child {
@@ -425,10 +423,9 @@ a:focus {
 }
 
 #left-nav li a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    margin-left: 10px;
     display: block;
 }
 
@@ -465,46 +462,45 @@ a:focus {
 article {
     background-color: #f4f4f4;
     float: left;
-    max-width: 450px;
-    padding: 45px 35px 70px 35px;
+    max-width: 650px;
+    padding: 40px 60px 70px 60px;
     width: 100%;
-}
-
-article.notch {
-    margin-top: -58px;
-    border-top: 4px solid #006b7b;
-    padding-top: 24px;
 }
 
 article h1 {
     font-family: Georgia, serif;
     font-weight: normal;
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 35px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 article h2 {
     font-size: 21px;
+    font-weight: 600;
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
 article h3 {
     font-size: 17px;
+    font-weight: 600;
     margin-top: 36px;
     margin-bottom: 15px;
 }
 
 article h4 {
-    font-weight: bold;
     font-size: 14px;
+    font-weight: 600;
     margin-top: 50px;
     margin-bottom: 15px;
 }
 
 article p {
-    line-height: 25px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 30px;
 }
 
 article h1 + .accordion-header {
@@ -512,15 +508,15 @@ article h1 + .accordion-header {
 }
 
 article .intro-text {
-    color: #787878;
-    font-size: 18px;
-    line-height: 30px;
-    margin-top: 30px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 30px;
 }
 
 article ul {
     list-style-type: disc;
     margin-left: 40px;
+    font-size: 16px;
 }
 
 article > ul, article > ol {
@@ -533,6 +529,7 @@ article ul ul {
 
 article ol {
     margin-left: 40px;
+    font-size: 16px;
 }
 
 article ul li, article ol li {
@@ -741,7 +738,6 @@ article iframe {
 -------------------------------------------------------------------------------*/
 
 #right-col {
-    float: left;
     padding: 45px 0 0 0;
     background-color: #f4f4f4;
 }
@@ -758,6 +754,12 @@ article iframe {
     font-size: 17px;
     border-bottom: 1px solid #d5d2d2;
     padding-bottom: 12px;
+    margin: 0;
+}
+
+#right-col aside.links ul {
+    list-style: none;
+    margin: 0;
 }
 
 #right-col aside.links li {
@@ -1283,11 +1285,10 @@ a#wusm-flickr:hover img {
 /* Media queries
 -------------------------------------------------------------------------------*/
 
-@media screen and (max-width:960px) {
+@media screen and (max-width:990px) {
     .wrapper {
-        max-width: 640px;
+        max-width: 686px;
     }
-
     #page-background-inner {
         display: none;
     }
@@ -1404,6 +1405,10 @@ a#wusm-flickr:hover img {
         background-color: #f4f4f4;
     }
 
+    #main .wrapper {
+        max-width: 770px;
+    }
+
     #page-background {
         display: none;
     }
@@ -1414,21 +1419,7 @@ a#wusm-flickr:hover img {
 
     article {
         float: none;
-    }
-
-    article.notch {
-        margin-top: 0;
-        border-top: none;
-    }
-
-    #right-col {
-        padding: 0 35px 70px 35px;
-        width: 396px;
-    }
-
-    #right-col aside {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
 
     footer {
@@ -1445,6 +1436,8 @@ a#wusm-flickr:hover img {
     #site-footer {
         padding-top: 25px;
         padding-bottom: 25px;
+        max-width: 670px;
+        margin: 0 auto;
     }
 
     #site-footer-top {
@@ -1591,8 +1584,14 @@ a#wusm-flickr:hover img {
     }
 }
 
+@media screen and (max-width:770px) {
+    article {
+        width: 88%;
+        padding: 7% 6% 70px;
+    }
+}
+
 @media screen and (max-width:520px) {
-    article,
     #site-footer,
     #wusm-footer-left,
     #wusm-footer-right {
@@ -1601,18 +1600,16 @@ a#wusm-flickr:hover img {
         padding-right: 10%;
     }
 
+    article h1 {
+        font-size: 28px;
+    }
+
     article blockquote {
         margin-left: 30px;
     }
 
     article th, article td {
         padding: 5px;
-    }
-
-    #right-col {
-        width: 80%;
-        padding-left: 10%;
-        padding-right: 10%;
     }
 }
 
@@ -1624,11 +1621,6 @@ a#wusm-flickr:hover img {
 
     article, #site-footer {
         background-color: #fff;
-    }
-
-    article.notch {
-        margin-top: 0;
-        border-top: none;
     }
 
     #site-footer-bottom {
