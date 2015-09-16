@@ -508,8 +508,10 @@ article h1 + .accordion-header {
 }
 
 article .intro-text {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    font-weight: 100;
+    color: #787878;
+    line-height: 28px;
     margin-bottom: 30px;
 }
 
