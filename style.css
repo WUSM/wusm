@@ -622,6 +622,10 @@ article .callout p:last-child {
     margin-bottom: 0;
 }
 
+article .disclaimer {
+    margin-bottom: 25px;
+}
+
 article .disclaimer p {
     line-height: 22px;
     font-size: 14px;
