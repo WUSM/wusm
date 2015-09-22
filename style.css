@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.09.21.0
+Version:     2015.09.22.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -845,7 +845,6 @@ footer {
 }
 
 #site-footer-top {
-    margin: 0 10px;
     padding-bottom: 12px;
     border-bottom: 1px solid #bcbcbc;
 }
@@ -928,13 +927,13 @@ a#site-youtube:hover {
 }
 
 #site-footer-bottom {
-    margin: 0 50px;
+    margin: 0 40px;
     padding: 30px 0;
 }
 
 #site-footer-bottom #col1 {
     float: left;
-    width: 475px;
+    width: 485px;
     max-width: 635px;
     padding-right: 25px;
     line-height: 24px;
@@ -995,7 +994,6 @@ a#site-youtube:hover {
 
 #wusm-footer-left {
     float: left;
-    margin-left: 10px;
     padding-top: 20px;
 }
 
@@ -1021,7 +1019,6 @@ a#site-youtube:hover {
 }
 
 #wusm-footer-right {
-    margin-right: 10px;
     padding-top: 20px;
     float: right;
 }
@@ -1473,7 +1470,7 @@ a#wusm-flickr:hover img {
         height: 30px;
     }
 
-    a#site-facebook {
+    #site-social a:first-child {
         margin-left: 0;
     }
 
@@ -1483,14 +1480,14 @@ a#wusm-flickr:hover img {
     }
 
     #site-footer-bottom {
-        margin: 20px 10px 0 10px;
+        margin: 20px 0 0;
         padding: 0;
     }
 
     #site-footer-bottom #col1 {
         float: none;
         width: auto;
-        padding-bottom: 20px;
+        padding: 0 0 20px;
         margin-bottom: 20px;
         border-bottom: 1px solid #bcbcbc;
     }
