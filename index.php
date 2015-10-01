@@ -5,14 +5,17 @@
 	if (have_posts()) :
 		while (have_posts()) :
 			the_post();
-			if (get_the_post_thumbnail() != '') {
-				echo '<div id="featured-image">';
-				the_post_thumbnail();
-				echo '</div>';
-			}
 ?>
 
 <div id="main" class="clearfix">
+	
+	<?php
+		if (get_the_post_thumbnail() != '') {
+			echo '<div id="featured-image">';
+			the_post_thumbnail();
+			echo '</div>';
+		}
+	?>
 
 	<div id="page-background"></div>
 
