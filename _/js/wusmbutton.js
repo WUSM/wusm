@@ -44,80 +44,41 @@
                     image: url + 'img/add.svg',
                     type: 'menubutton',
                     menu: [ {
-                            text: 'Button',
-                            icon: false,
-                            onclick: function( ) {
-                                var text_selection = tinymce.activeEditor.selection.getContent( {format: 'text'} );
-                                editor.windowManager.open( {
-                                title: 'Insert Button',
-                                body: [{
-                                    type: 'textbox',
-                                    name: 'text',
-                                    label: 'Text',
-                                    size: 30,
-                                    value: text_selection
-                                }, {
-                                    type: 'textbox',
-                                    name: 'link',
-                                    label: 'URL',
-                                    value: ''
-                                }, {
-                                    type: 'checkbox',
-                                    name: 'newwindow',
-                                    label: 'Open in a new window?'
-                                }, ],
-                                onsubmit: function( e ) {
-                                    if( e.data.newwindow == true ) {
-                                        var openin = 'target="_blank"';
-                                    }
-                                    editor.insertContent( 
-                                        '<a class="wusm-button"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
-                                     );
+                        text: 'Button',
+                        icon: false,
+                        onclick: function( ) {
+                            var text_selection = tinymce.activeEditor.selection.getContent( {format: 'text'} );
+                            editor.windowManager.open( {
+                            title: 'Insert Button',
+                            body: [{
+                                type: 'textbox',
+                                name: 'text',
+                                label: 'Text',
+                                size: 30,
+                                value: text_selection
+                            }, {
+                                type: 'textbox',
+                                name: 'link',
+                                label: 'URL',
+                                value: ''
+                            }, {
+                                type: 'checkbox',
+                                name: 'newwindow',
+                                label: 'Open in a new window?'
+                            }, ],
+                            onsubmit: function( e ) {
+                                if( e.data.newwindow == true ) {
+                                    var openin = 'target="_blank"';
                                 }
-                                } );
+                                editor.insertContent( 
+                                    '<a class="wusm-button"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
+                                 );
                             }
-                        } ]
+                            } );
+                        }
+                    } ]
                 } );
             }
-            editor.on('click',function(e) {
-                if (jQuery(e.target).hasClass('wusm-button')) {
-                    var link = jQuery(e.target).attr('href');
-                    var text = e.target.text;
-                    var newwindow = e.target.target;
-                    if(newwindow == '_blank') {
-                        var target = true;
-                    }
-                    editor.selection.select(e.toElement);
-                    editor.windowManager.open({
-                        title: 'Edit Button',
-                        body: [{
-                            type: 'textbox',
-                            name: 'text',
-                            label: 'Text',
-                            size: 30,
-                            value: text
-                        }, {
-                            type: 'textbox',
-                            name: 'link',
-                            label: 'URL',
-                            value: link
-                        }, {
-                            type: 'checkbox',
-                            name: 'newwindow',
-                            label: 'Open in a new window?',
-                            checked: target
-                        }],
-                        onsubmit: function(e) {
-                            if(e.data.newwindow == true) {
-                                var openin = 'target="_blank"';
-                            }
-                            editor.insertContent(
-                                '<a class="wusm-button"' + openin + '" href="' + e.data.link + '">' + e.data.text + '</a>'
-                            );
-                        }
-                    })
-                }
-            });
         },
  
         createControl : function(n, cm) {
