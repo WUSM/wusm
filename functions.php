@@ -348,19 +348,16 @@ add_filter('tiny_mce_before_init', 'wusm_remove_h1');
 
 
 // Image sizes (Settings / Media)
-update_option('medium_size_w', 225);
+update_option('medium_size_w', 300);
 update_option('medium_size_h', NULL);
-update_option('large_size_w', 450);
+update_option('large_size_w', 645);
 update_option('large_size_h', NULL);
-update_option('embed_size_w', 450);
-
-add_image_size( 'right-sidebar', 238, NULL );
-
+update_option('embed_size_w', 645);
 
 
 // Set default values for Attachment Display Settings
 function attachment_display_settings() {
-	update_option('image_default_align', 'center' );
+	update_option('image_default_align', 'none' );
 	update_option('image_default_link_type', 'none' );
 	update_option('image_default_size', 'large' );
 }
