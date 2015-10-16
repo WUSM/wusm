@@ -1,5 +1,7 @@
 <?php
 
+if( WP_DEBUG ) { add_filter( 'http_request_host_is_external',  function() { return true; } ); }
+
 if( !WP_DEBUG ) {
 	add_action( 'admin_menu', 'acf_remove_menu_page' );
 }
