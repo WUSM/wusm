@@ -307,6 +307,19 @@ a:focus {
     padding-bottom: 22px;
 }
 
+#site-title .line-1 {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: -3px;
+}
+
+#site-title .line-2 {
+    line-height: 1;
+    margin-bottom: -2px;
+}
+
 #main-nav {
     height: 40px;
     border-bottom: 1px solid #ccc;

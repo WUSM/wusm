@@ -38,7 +38,13 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title><?php is_front_page() ? bloginfo('name') : wp_title(''); ?> | <?php echo is_front_page() ? $brand['text'] : bloginfo('name'); ?></title>
+    <?php if(get_field('line_1', 'option') && get_field('line_2', 'option')) {
+        $site_title = get_field('line_1', 'option') . ' ' . get_field('line_2', 'option');
+    } else {
+        $site_title = get_bloginfo('name');
+    } ?>
+
+    <title><?php echo is_front_page() ? $site_title : wp_title(''); ?> | <?php echo is_front_page() ? $brand['text'] : $site_title ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -92,7 +98,14 @@
                 <img class="mobile-close" src="<?php echo get_template_directory_uri(); ?>/_/img/close.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/close.png';this.onerror=null;">
             </div>
             <?php get_search_form(); ?>
-            <div id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
+            <div id="site-title"><a href="<?php echo home_url(); ?>">
+                <?php if(get_field('line_1', 'option') && get_field('line_2', 'option')) {
+                    echo '<div class="line-1">' . get_field('line_1', 'option') . '</div>';
+                    echo '<div class="line-2">' . get_field('line_2', 'option') . '</div>';
+                } else {
+                    echo bloginfo('name');
+                } ?>
+            </a></div>
         </div>
     </div>
 
