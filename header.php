@@ -51,14 +51,12 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon.ico">
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/_/img/apple-touch-icon.png">
 
-    <?php
-    /* Always have wp_head() just before the closing </head>
-     * tag of your theme, or you will break many plugins, which
-     * generally use this hook to add elements to <head> such
-     * as styles, scripts, and meta tags.
-     */
-    wp_head();
-    ?>
+    <?php wp_head(); ?>
+
+    <!--[if lt IE 9]>
+        <script src="<?php echo get_template_directory_uri(); ?>/_/js/modernizr.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/_/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <!--[if IE 7 ]>  <body <?php body_class('ie ie7 ie-lt10 ie-lt9 ie-lt8'); ?>> <![endif]-->

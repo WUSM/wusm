@@ -11,9 +11,7 @@ function acf_remove_menu_page() {
 }
 
 require_once( get_template_directory() . '/_/php/acf_fields.php' );
-require_once( get_template_directory() . '/_/php/load_js.php' );
 require_once( get_template_directory() . '/_/php/left-nav.php' );
-
 
 // Customize the footer in admin area
 function wpfme_footer_admin () {
@@ -46,6 +44,7 @@ function wusm_scripts() {
 	wp_deregister_style( 'open-sans' ); // De-register open-sans so we can add the 700 (bold) weight
 	wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C300%2C400%2C600%2C700&subset=latin%2Clatin-ext' );
 	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_script('wusm_functions', get_template_directory_uri() . '/_/js/functions.js', array( 'jquery' ), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
 
