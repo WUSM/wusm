@@ -648,10 +648,6 @@ article .callout h4 {
     margin-top: 0;
 }
 
-article .callout p {
-    margin-bottom: 10px;
-}
-
 article .callout p:last-child {
     margin-bottom: 0;
 }
