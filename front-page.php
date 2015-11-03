@@ -22,7 +22,8 @@
 
     	</div>
 
-    	<?php endwhile; endif; ?>
+    	<?php endwhile; endif; 
+    	do_action( 'wusm_front_page_additional_sections' );?>
 
     </div>
 
