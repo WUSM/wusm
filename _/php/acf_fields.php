@@ -56,6 +56,42 @@ if( function_exists('acf_add_options_page') ) {
         'hide_on_screen' => '',
     ));
 
+    acf_add_local_field_group(array (
+        'key' => 'group_562910a717be3',
+        'title' => 'Two Line Site Title',
+        'fields' => array (
+            array (
+                'key' => 'field_562910b0cb979',
+                'label' => 'Line 1',
+                'name' => 'line_1',
+                'type' => 'text',
+                'required' => 0,
+            ),
+            array (
+                'key' => 'field_562910b8cb97a',
+                'label' => 'Line 2',
+                'name' => 'line_2',
+                'type' => 'text',
+                'required' => 0,
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'header',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'left',
+        'instruction_placement' => 'label',
+        'active' => 1,
+    ));
+
     acf_add_options_page(array(
         'page_title'    => 'Footer',
         'menu_title'    => 'Footer',

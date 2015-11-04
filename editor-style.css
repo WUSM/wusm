@@ -3,7 +3,7 @@ body#tinymce.wp-editor {
 	font-size: 14px;
 	color: #333;
 	background-color: #f4f4f4;
-	max-width: 450px;
+	max-width: 645px;
 }
 
 body#tinymce.wp-editor a {
@@ -55,8 +55,10 @@ body#tinymce.wp-editor h1 + .accordion-header {
 
 body#tinymce.wp-editor .intro-text {
     color: #787878;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
 
 body#tinymce.wp-editor ul {
@@ -177,7 +179,6 @@ body#tinymce.wp-editor .disclaimer p {
     line-height: 17px;
 }
 
-body#tinymce.wp-editor a.call-to-action,
 body#tinymce.wp-editor a.wusm-button {
     display: inline-block;
 	line-height: 14px;
@@ -189,12 +190,11 @@ body#tinymce.wp-editor a.wusm-button {
     border-radius: 3px;
     letter-spacing: 1px;
     transition: background 0.1s ease;
-    margin: 0 20px 0 0;
+    margin: 0 20px 10px 0;
     cursor: pointer;
     font-weight: bold;
 }
 
-body#tinymce.wp-editor a.call-to-action:hover,
 body#tinymce.wp-editor a.wusm-button:hover {
 	background: #720000;
 	color: #fff;

@@ -5,16 +5,17 @@
 	if (have_posts()) :
 		while (have_posts()) :
 			the_post();
-			$class = '';
-			if (get_the_post_thumbnail() != '') {
-				$class = ' class="notch"';
-				echo '<div id="featured-image">';
-				the_post_thumbnail();
-				echo '</div>';
-			}
 ?>
 
 <div id="main" class="clearfix">
+	
+	<?php
+		if (get_the_post_thumbnail() != '') {
+			echo '<div id="featured-image">';
+			the_post_thumbnail();
+			echo '</div>';
+		}
+	?>
 
 	<div id="page-background"></div>
 
@@ -24,16 +25,17 @@
 
 		<?php get_sidebar( 'left' ); ?>
 
-		<article<?php echo $class; ?>>
+		<article>
 			<?php
 					the_title('<h1>', '</h1>');
 					the_content();
 				endwhile;
 			endif;
 			?>
-		</article>
 
-		<?php get_sidebar( 'right' ); ?>
+			<?php get_sidebar( 'right' ); ?>
+		
+		</article>
 
 	</div>
 

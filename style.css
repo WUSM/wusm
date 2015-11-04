@@ -4,7 +4,11 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
+<<<<<<< HEAD
+Version:     2015.10.23.0
+=======
 Version:     2015.11.02.0
+>>>>>>> 7f220a004fd2f312070e1f7dcd35e779afc1ade6
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -80,7 +84,7 @@ table {font-size: inherit; font: 100%;}
 
 small {font-size: 85%;}
 
-strong {font-weight: bold;}
+strong {font-weight: 600;}
 
 td, td img {vertical-align: top;} 
 
@@ -168,7 +172,7 @@ a:focus {
 
 #header-logo {
     float: left;
-    margin: 13px 10px 10px;
+    margin: 13px 0 10px 10px;
 }
 
 #header-logo a {
@@ -247,16 +251,35 @@ a:focus {
     right: 0;
 }
 
+#search-form p {
+    position: relative;
+}
+
+#search-form p br {
+    display: none;
+}
+
+#search-form label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: text;
+    color: #fff;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size:12px;
+}
+
 #search-box {
     margin: 0;
     width: 200px;
-    padding: 10px 30px 11px 10px;
+    padding: 10px 30px 10px 10px;
     border: none;
+    outline: 0;
     border-radius: 5px;
-    background: #a70000;
+    background-color: #a70000;
     color: #fff;
     letter-spacing: 1px;
-    font-style: italic;
     font-size: 12px;
 }
 
@@ -276,7 +299,7 @@ a:focus {
 }
 
 #site-title {
-    padding: 22px 0 22px 32px;
+    padding: 21px 0 23px 32px;
 }
 
 #site-title a {
@@ -286,6 +309,19 @@ a:focus {
 
 .ie7 #site-title a {
     padding-bottom: 22px;
+}
+
+#site-title .line-1 {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: -3px;
+}
+
+#site-title .line-2 {
+    line-height: 1;
+    margin-bottom: -2px;
 }
 
 #main-nav {
@@ -333,8 +369,8 @@ a:focus {
     max-width: 650px;
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 35px;
     text-align: center;
+    padding-bottom: 35px;
 }
 
 .homepage-content h1 {
@@ -349,7 +385,7 @@ a:focus {
 .homepage-content p {
     font-size: 18px;
     color: #838383;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
     line-height: 34px;
 }
 
@@ -393,7 +429,7 @@ a:focus {
 
 #page-background-inner {
     position: absolute;
-    width: 770px;
+    width: 745px;
     right: 0;
     top: 0;
     height: 100%;
@@ -407,8 +443,8 @@ a:focus {
 
 #left-col {
     float: left;
-    width: 180px;
-    padding: 45px 10px 45px 0;
+    width: 195px;
+    padding: 45px 20px 45px 0;
 }
 
 .home #left-col {
@@ -416,8 +452,7 @@ a:focus {
 }
 
 #left-nav li {
-    padding: 12px 0;
-    border-bottom: 1px solid #eae8e8;
+    padding: 10px 0;
 }
 
 #left-nav li:last-child {
@@ -425,7 +460,7 @@ a:focus {
 }
 
 #left-nav li a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 17px;
     margin-left: 10px;
@@ -465,46 +500,45 @@ a:focus {
 article {
     background-color: #f4f4f4;
     float: left;
-    max-width: 450px;
-    padding: 45px 35px 70px 35px;
+    max-width: 645px;
+    padding: 40px 50px 70px 50px;
     width: 100%;
-}
-
-article.notch {
-    margin-top: -58px;
-    border-top: 4px solid #006b7b;
-    padding-top: 24px;
 }
 
 article h1 {
     font-family: Georgia, serif;
     font-weight: normal;
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 35px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 article h2 {
     font-size: 21px;
+    font-weight: 600;
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
 article h3 {
     font-size: 17px;
+    font-weight: 600;
     margin-top: 36px;
     margin-bottom: 15px;
 }
 
 article h4 {
-    font-weight: bold;
     font-size: 14px;
+    font-weight: 600;
     margin-top: 50px;
     margin-bottom: 15px;
 }
 
 article p {
-    line-height: 25px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 25px;
 }
 
 article h1 + .accordion-header {
@@ -512,15 +546,17 @@ article h1 + .accordion-header {
 }
 
 article .intro-text {
+    font-size: 22px;
+    font-weight: 300;
     color: #787878;
-    font-size: 18px;
     line-height: 30px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 article ul {
     list-style-type: disc;
     margin-left: 40px;
+    font-size: 16px;
 }
 
 article > ul, article > ol {
@@ -533,10 +569,12 @@ article ul ul {
 
 article ol {
     margin-left: 40px;
+    font-size: 16px;
 }
 
 article ul li, article ol li {
     line-height: 25px;
+    margin-bottom: 10px;
 }
 
 article blockquote {
@@ -555,7 +593,6 @@ article blockquote p {
 
 article .wp-caption {
     max-width: 100%;
-    border-top: 1px solid #d7d7d7;
 }
 
 article .alignleft {
@@ -604,7 +641,7 @@ article p.wp-caption-text {
 article .callout {
     border: 1px solid #e5e5e5;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 18px;
     background: #fff;
     border-radius: 5px;
 }
@@ -615,28 +652,24 @@ article .callout h4 {
     margin-top: 0;
 }
 
-article .callout p {
-    margin-bottom: 10px;
-}
-
 article .callout p:last-child {
     margin-bottom: 0;
 }
 
 article .disclaimer {
+    margin-bottom: 25px;
+}
+
+article .disclaimer p {
+    line-height: 22px;
     font-size: 12px;
     color: #333;
 }
 
-article .disclaimer p {
-    line-height: 17px;
-}
-
-a.call-to-action,
 a.wusm-button {
     display: inline-block;
     line-height: 14px;
-    margin: 0;
+    margin: 15px 10px 0;
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
@@ -648,13 +681,11 @@ a.wusm-button {
     transition: background 0.1s ease;
 }
 
-a.call-to-action:hover,
 a.wusm-button:hover {
     background: #c40000;
     color: #fff;
 }
 
-article a.call-to-action,
 article a.wusm-button {
     margin: 0 20px 0 0;
 }
@@ -715,13 +746,18 @@ article td p:last-child {
     margin-bottom: 0;
 }
 
+article iframe {
+    width: 450px;
+    height: 300px;
+}
+
 .google-maps-container {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    height: auto;
+    clear: both;
 }
 
 .google-maps-container iframe,
@@ -734,17 +770,11 @@ article td p:last-child {
     height: 100%;
 }
 
-article iframe {
-    width: 450px;
-    height: 300px;
-}
-
 
 /* Right column
 -------------------------------------------------------------------------------*/
 
 #right-col {
-    float: left;
     padding: 45px 0 0 0;
     background-color: #f4f4f4;
 }
@@ -761,6 +791,12 @@ article iframe {
     font-size: 17px;
     border-bottom: 1px solid #d5d2d2;
     padding-bottom: 12px;
+    margin: 0;
+}
+
+#right-col aside.links ul {
+    list-style: none;
+    margin: 0;
 }
 
 #right-col aside.links li {
@@ -1286,11 +1322,10 @@ a#wusm-flickr:hover img {
 /* Media queries
 -------------------------------------------------------------------------------*/
 
-@media screen and (max-width:960px) {
+@media screen and (max-width: 970px) {
     .wrapper {
-        max-width: 640px;
+        max-width: 686px;
     }
-
     #page-background-inner {
         display: none;
     }
@@ -1407,6 +1442,10 @@ a#wusm-flickr:hover img {
         background-color: #f4f4f4;
     }
 
+    #main .wrapper {
+        max-width: 770px;
+    }
+
     #page-background {
         display: none;
     }
@@ -1417,21 +1456,7 @@ a#wusm-flickr:hover img {
 
     article {
         float: none;
-    }
-
-    article.notch {
-        margin-top: 0;
-        border-top: none;
-    }
-
-    #right-col {
-        padding: 0 35px 70px 35px;
-        width: 396px;
-    }
-
-    #right-col aside {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
 
     footer {
@@ -1448,6 +1473,8 @@ a#wusm-flickr:hover img {
     #site-footer {
         padding-top: 25px;
         padding-bottom: 25px;
+        max-width: 670px;
+        margin: 0 auto;
     }
 
     #site-footer-top {
@@ -1480,7 +1507,7 @@ a#wusm-flickr:hover img {
         height: 30px;
     }
 
-    a#site-facebook {
+    #site-social a:first-child {
         margin-left: 0;
     }
 
@@ -1490,14 +1517,14 @@ a#wusm-flickr:hover img {
     }
 
     #site-footer-bottom {
-        margin: 20px 10px 0 10px;
+        margin: 20px 10px 0;
         padding: 0;
     }
 
     #site-footer-bottom #col1 {
         float: none;
         width: auto;
-        padding-bottom: 20px;
+        padding: 0 0 20px;
         margin-bottom: 20px;
         border-bottom: 1px solid #bcbcbc;
     }
@@ -1594,8 +1621,14 @@ a#wusm-flickr:hover img {
     }
 }
 
-@media screen and (max-width:520px) {
-    article,
+@media screen and (max-width: 770px) {
+    article {
+        width: 88%;
+        padding: 7% 6% 70px;
+    }
+}
+
+@media screen and (max-width: 520px) {
     #site-footer,
     #wusm-footer-left,
     #wusm-footer-right {
@@ -1604,18 +1637,16 @@ a#wusm-flickr:hover img {
         padding-right: 10%;
     }
 
+    article h1 {
+        font-size: 28px;
+    }
+
     article blockquote {
         margin-left: 30px;
     }
 
     article th, article td {
         padding: 5px;
-    }
-
-    #right-col {
-        width: 80%;
-        padding-left: 10%;
-        padding-right: 10%;
     }
 }
 
@@ -1627,11 +1658,6 @@ a#wusm-flickr:hover img {
 
     article, #site-footer {
         background-color: #fff;
-    }
-
-    article.notch {
-        margin-top: 0;
-        border-top: none;
     }
 
     #site-footer-bottom {
