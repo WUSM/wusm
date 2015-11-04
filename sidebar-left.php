@@ -39,10 +39,10 @@
 
                         if ( sizeof($post->ancestors) == 0 && $children ) {
                             // Top-level page with children
-                            $top_level_page = '<li class="current_page_item top_level_page"><a href="/' . get_post($ptg)->post_name . '">' . $page_title . '</a></li>';
+                            $top_level_page = '<li class="current_page_item top_level_page"><a href="' . home_url() . '/' . get_post($ptg)->post_name . '">' . $page_title . '</a></li>';
                         } elseif ( sizeof($post->ancestors) > 0 && $children ) {
                             // Sub-page
-                            $top_level_page = '<li class="top_level_page"><a href="/' . get_post($ptg)->post_name . '">' . $page_title . '</a></li>';
+                            $top_level_page = '<li class="top_level_page"><a href="' . home_url() . '/' . get_post($ptg)->post_name . '">' . $page_title . '</a></li>';
                         }
 
                         if ( isset($children)) {

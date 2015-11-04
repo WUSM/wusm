@@ -8,7 +8,7 @@ if( function_exists('acf_add_options_page') ) {
         'menu_slug'     => 'header',
         'capability'    => 'edit_posts',
         'redirect'      => false,
-        'parent' => 'themes.php',
+        'parent'        => 'themes.php',
     ));
 
     register_field_group(array (
@@ -98,8 +98,20 @@ if( function_exists('acf_add_options_page') ) {
         'menu_slug'     => 'footer',
         'capability'    => 'edit_posts',
         'redirect'      => false,
-        'parent' => 'themes.php',
+        'parent'        => 'themes.php',
     ));
+
+    function wusm_acf_admin_head() { ?>
+        <style type="text/css">
+            .acf-field-56170aad6e798 .acf-label,
+            .acf-field-56170de365aba .acf-label { display: none; }
+            .acf-field-56170aad6e798 .acf-input p,
+            .acf-field-56170de365aba .acf-input p { margin-top: 0; }
+            .acf-field-56170aad6e798 .acf-input p:last-child,
+            .acf-field-56170de365aba .acf-input p:last-child { margin-bottom: 0; }
+        </style>
+    <?php }
+    add_action('acf/input/admin_head', 'wusm_acf_admin_head');
 
     register_field_group(array (
         'key' => 'group_5515beef13a82',
@@ -111,7 +123,7 @@ if( function_exists('acf_add_options_page') ) {
                 'name' => 'contact',
                 'prefix' => '',
                 'type' => 'wysiwyg',
-                'instructions' => '',
+                'instructions' => 'Edit the placeholder text below, making sure to keep the same styles and format (bold, punctuation, spacing, etc.). Remove any information that isn\'t needed.',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
@@ -150,8 +162,27 @@ if( function_exists('acf_add_options_page') ) {
 
     register_field_group(array (
         'key' => 'group_5515c1cbd596f',
-        'title' => 'Lists',
+        'title' => 'Link Lists',
         'fields' => array (
+            array (
+                'key' => 'field_56170aad6e798',
+                'label' => 'Editing Link Lists',
+                'name' => 'editing_link_lists',
+                'type' => 'message',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => 'If needed, use the list(s) to link to closely related websites or frequently accessed pages on your own site that may be difficult to find.
+
+                If you need two lists: Group all internal links (go to your site) separately from external links (go to another site). External links go in List 2.',
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
+            ),
             array (
                 'key' => 'field_5515c1e6bf0fc',
                 'label' => 'List 1',
@@ -174,7 +205,7 @@ if( function_exists('acf_add_options_page') ) {
                 'name' => 'list1_title',
                 'prefix' => '',
                 'type' => 'text',
-                'instructions' => '',
+                'instructions' => '(optional header for your links)',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
@@ -272,7 +303,7 @@ if( function_exists('acf_add_options_page') ) {
                 'name' => 'list2_title',
                 'prefix' => '',
                 'type' => 'text',
-                'instructions' => '',
+                'instructions' => '(optional header for your links)',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
@@ -371,6 +402,23 @@ if( function_exists('acf_add_options_page') ) {
         'title' => 'Social Media',
         'fields' => array (
             array (
+                'key' => 'field_56170de365aba',
+                'label' => 'Adding Social Media Links',
+                'name' => 'adding_social_media_links',
+                'type' => 'message',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => 'If your office/group has its own dedicated social media accounts you may add links below. Please make sure you are aware of the <a href="http://medicine.wustl.edu/brand/social-media/" target="_blank">WUSM Social Media Guidelines</a>, and contact Medical Public Affairs if you have any questions.',
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
+            ),
+            array (
                 'key' => 'field_5515af4274b0c',
                 'label' => 'Facebook',
                 'name' => 'facebook',
@@ -440,11 +488,11 @@ if( function_exists('acf_add_options_page') ) {
             ),
             array (
                 'key' => 'field_5515b1d274b10',
-                'label' => 'YouTube',
+                'label' => 'YouTube Playlist',
                 'name' => 'youtube',
                 'prefix' => '',
                 'type' => 'url',
-                'instructions' => '',
+                'instructions' => 'Contact Medical Public Affairs to have your videos uploaded to the official School of Medicine YouTube channel.',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array (
@@ -468,7 +516,7 @@ if( function_exists('acf_add_options_page') ) {
         'menu_order' => 2,
         'position' => 'normal',
         'style' => 'default',
-        'label_placement' => 'left',
+        'label_placement' => 'top',
         'instruction_placement' => 'label',
         'hide_on_screen' => '',
     ));
