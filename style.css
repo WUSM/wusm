@@ -746,11 +746,6 @@ article td p:last-child {
     margin-bottom: 0;
 }
 
-article iframe {
-    width: 450px;
-    height: 300px;
-}
-
 .google-maps-container {
     position: relative;
     padding-bottom: 56.25%;
