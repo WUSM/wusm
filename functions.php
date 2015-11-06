@@ -10,8 +10,9 @@ function acf_remove_menu_page() {
 	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
 }
 
-require_once( get_template_directory() . '/_/php/acf_fields.php' );
-require_once( get_template_directory() . '/_/php/left-nav.php' );
+
+add_action('acf/include_field_types', function() { include_once( get_template_directory() . '/_/php/acf_fields.php' ); }, 20);
+include_once( get_template_directory() . '/_/php/left-nav.php' );
 
 // Customize the footer in admin area
 function wpfme_footer_admin () {
