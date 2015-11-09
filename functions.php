@@ -6,6 +6,8 @@ if( !WP_DEBUG ) {
 	add_action( 'admin_menu', 'acf_remove_menu_page' );
 }
 
+if ( ! isset( $content_width ) ) $content_width = 645;
+
 function acf_remove_menu_page() {
 	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
 }
