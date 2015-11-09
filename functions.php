@@ -226,6 +226,23 @@ function cc_hide_admin_bar() {
 }
 add_action('set_current_user', 'cc_hide_admin_bar');
 
+
+// Remove Customize from admin menu
+function remove_customize_page(){
+	global $submenu;
+	unset($submenu['themes.php'][6]);
+}
+add_action( 'admin_menu', 'remove_customize_page');
+
+
+// Remove Customize from toolbar
+function remove_customize() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('customize');
+}
+add_action( 'wp_before_admin_bar_render', 'remove_customize' );
+
+
 // Remove extra 10px from width of wp-caption div
 // http://troychaplin.ca/2012/fix-automatically-generated-inline-style-on-wordpress-image-captions/
 function fixed_img_caption_shortcode($attr, $content = null) {
