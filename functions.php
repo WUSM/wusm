@@ -364,6 +364,15 @@ update_option('medium_size_h', NULL);
 update_option('large_size_w', 645);
 update_option('large_size_h', NULL);
 update_option('embed_size_w', 645);
+add_image_size('headshot', 145, 200, true);
+
+function wusm_image_size_choose( $sizes ) {
+    $custom_sizes = array(
+        'headshot' => 'Headshot',
+    );
+    return array_merge( $sizes, $custom_sizes );
+}
+add_filter( 'image_size_names_choose', 'wusm_image_size_choose' );
 
 
 // Set default values for Attachment Display Settings
