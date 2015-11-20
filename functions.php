@@ -292,6 +292,23 @@ function customize_mce( $settings ) {
 
 	$new_styles = array(
 		array(
+			'title'	=> 'WUSM Accordion Styles',
+			'items'	=> array(
+				array(
+					'title'    => 'Accordion Header',
+					'block' => 'div',
+					'classes'  => 'accordion-header',
+					'wrapper' => true
+				),
+				array(
+					'title'   => 'Accordion Body Text',
+					'block'   => 'div',
+					'classes' => 'accordion-body-text',
+					'wrapper' => true
+				)
+			),
+		),
+		array(
 			'title' => 'Signature',
 			'items' => array(
 				array(
@@ -348,6 +365,11 @@ function customize_mce( $settings ) {
 
 }
 add_filter('tiny_mce_before_init', 'customize_mce' );
+
+function accordion_shortcode( $atts, $content = null ) {
+	return "<p class='expand-all'>Expand all</p>";
+}
+add_shortcode( 'wusm_expand_all', 'accordion_shortcode' );
 
 
 // Remove h1 option from dropdown in editor
