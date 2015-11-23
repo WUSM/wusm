@@ -70,7 +70,8 @@ body#tinymce.wp-editor ol {
 	margin-left: 40px;
 }
 
-body#tinymce.wp-editor ul li, body#tinymce.wp-editor ol li {
+body#tinymce.wp-editor ul li,
+body#tinymce.wp-editor ol li {
 	line-height: 25px;
 	margin-bottom: 10px;
 }
@@ -111,19 +112,23 @@ body#tinymce.wp-editor .alignright {
 	float: right;
 }
 
-body#tinymce.wp-editor .wp-caption.alignright, body#tinymce.wp-editor img.alignright {
+body#tinymce.wp-editor .wp-caption.alignright,
+body#tinymce.wp-editor img.alignright {
 	margin-left: 10px;
 }
 
-body#tinymce.wp-editor .wp-caption.alignright p.wp-caption-text, body#tinymce.wp-editor img.alignright {
+body#tinymce.wp-editor .wp-caption.alignright p.wp-caption-text,
+body#tinymce.wp-editor img.alignright {
 	margin-bottom: 10px;
 }
 
-body#tinymce.wp-editor .wp-caption.alignleft, body#tinymce.wp-editor img.alignleft {
+body#tinymce.wp-editor .wp-caption.alignleft,
+body#tinymce.wp-editor img.alignleft {
 	margin-right: 10px;
 }
 
-body#tinymce.wp-editor .wp-caption.alignleft p.wp-caption-text, body#tinymce.wp-editor img.alignleft {
+body#tinymce.wp-editor .wp-caption.alignleft p.wp-caption-text,
+body#tinymce.wp-editor img.alignleft {
 	margin-bottom: 10px;
 }
 
@@ -168,6 +173,42 @@ body#tinymce.wp-editor .callout p {
 
 body#tinymce.wp-editor .callout p:last-child {
 	margin: 0;
+}
+
+body#tinymce.wp-editor .accordion-header {
+    border: 1px dashed red;
+    margin-bottom: 10px;
+}
+
+body#tinymce.wp-editor .accordion-header p,
+body#tinymce.wp-editor .accordion-header h2,
+body#tinymce.wp-editor .accordion-header h3,
+body#tinymce.wp-editor .accordion-header h4 {
+    padding: 15px;
+    margin: 0;
+    line-height: normal;
+}
+
+body#tinymce.wp-editor .accordion-body-text {
+	border: 1px dashed blue;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+body#tinymce.wp-editor .accordion-body-text > p {
+	margin: 0;
+}
+
+body#tinymce.wp-editor .accordion-body-text > p:last-child,
+body#tinymce.wp-editor .accordion-body-text > ul li:last-child,
+body#tinymce.wp-editor .accordion-body-text > ol li:last-child {
+    margin-bottom: 0;
+}
+
+body#tinymce.wp-editor .accordion-body-text > h2:first-child,
+body#tinymce.wp-editor .accordion-body-text > h3:first-child,
+body#tinymce.wp-editor .accordion-body-text > h4:first-child {
+	margin-top: 0;
 }
 
 body#tinymce.wp-editor .disclaimer {
@@ -217,7 +258,8 @@ body#tinymce.wp-editor a.wusm-button:hover {
 	vertical-align: top;
 }
 
-.mceItemTable th, .mceItemTable td {
+.mceItemTable th,
+.mceItemTable td {
 	padding: 10px;
 	border: none;
 	border-left: 1px solid #f4f4f4;
@@ -230,7 +272,8 @@ body#tinymce.wp-editor a.wusm-button:hover {
 	background-color: #fff;
 }
 
-.mceItemTable th:first-child, .mceItemTable td:first-child {
+.mceItemTable th:first-child,
+.mceItemTable td:first-child {
 	border: none;
 }
 

@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.11.10.0
+Version:     2015.11.20.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -651,6 +651,110 @@ article .callout h4 {
 
 article .callout p:last-child {
     margin-bottom: 0;
+}
+
+.accordion-header {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 14px 40px 16px 15px;
+    margin: 0 0 -1px 0;
+    cursor: pointer;
+    overflow-y: hidden;
+    color: #900;
+    position: relative;
+    font-size: 16px;
+}
+
+.accordion-header:hover {
+    background-color: #fff;
+}
+
+.accordion-header.open-accordion {
+    border-bottom: none;
+    margin-bottom: 7px;
+}
+
+.accordion-header p,
+.accordion-header h2,
+.accordion-header h3,
+.accordion-header h4 {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.d {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    margin-top: -11px;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.ie7 .accordion-header p,
+.ie7 .accordion-header h2,
+.ie7 .accordion-header h3,
+.ie7 .accordion-header h4,
+.ie7 .d {
+    zoom: 1;
+    display: inline;
+}
+
+.ie7 .d {
+    overflow-y: hidden;
+}
+
+.d1,
+.d2 {
+    position: absolute;
+}
+
+.d1 {
+    left: 10px;
+    width: 2px;
+    height: 22px;
+    background-color: #900;
+}
+
+.d2 {
+    top: 10px;
+    width: 22px;
+    height: 2px;
+    background-color: #900;
+}
+
+.accordion-body-text {
+    display: none;
+    padding: 0 30px 25px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.accordion-body-text > p:last-child,
+.accordion-body-text > ul li:last-child,
+.accordion-body-text > ol li:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-body-text > h2:first-child,
+.accordion-body-text > h3:first-child,
+.accordion-body-text > h4:first-child {
+    margin-top: 0;
+}
+
+.expand-all {
+    cursor: pointer;
+    color: #900;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: inline-block;
 }
 
 article .disclaimer {
@@ -1639,6 +1743,25 @@ a#wusm-flickr:hover img {
 
     article th, article td {
         padding: 5px;
+    }
+}
+
+@media screen and (max-width:518px) {
+    .accordion-header {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .accordion-header p,
+    .accordion-header h2,
+    .accordion-header h3,
+    .accordion-header h4 {
+        width: 82%;
+    }
+
+    .accordion-body-text {
+        padding: 0 5% 20px;
     }
 }
 
