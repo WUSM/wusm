@@ -734,9 +734,6 @@ article .callout p:last-child {
     padding: 0 30px 25px;
     font-size: 16px;
     line-height: 28px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 .accordion-body-text > p:last-child,
