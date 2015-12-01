@@ -302,6 +302,8 @@ a:focus {
 #site-title a {
     font-size: 24px;
     color: #fff;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .ie7 #site-title a {
