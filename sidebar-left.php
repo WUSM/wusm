@@ -8,8 +8,11 @@
 
                 <ul id="left-nav">
 
-                <?php if ( is_page() || $force_menu) {
-                    if ( is_page() && $post->post_parent ) {
+                <?php
+                global $force_menu;
+                
+                if ( is_page() || $force_menu ) {
+                    if ( $post->post_parent ) {
                         // This is a subpage
                         $get_children_of = ( isset( $post->ID ) ) ? (int) $post->ancestors[count($post->ancestors)-1] : 0;
                     } else {
