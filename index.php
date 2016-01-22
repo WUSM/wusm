@@ -32,8 +32,6 @@
 				endwhile;
 			endif;
 			?>
-
-			<?php get_sidebar( 'right' ); ?>
 		
 		</article>
 

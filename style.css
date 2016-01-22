@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:     2015.11.20.0
+Version:     2016.01.22.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -307,7 +307,7 @@ a:focus {
 }
 
 .ie7 #site-title a {
-    padding-bottom: 22px;
+    padding: 5px 0;
 }
 
 #site-title .line-1 {
@@ -468,10 +468,6 @@ a:focus {
     line-height: 17px;
     margin-left: 10px;
     display: block;
-}
-
-#left-nav li.top_level_page {
-    text-transform: uppercase;
 }
 
 #left-nav li.current_page_item > a {
@@ -870,101 +866,6 @@ article td p:last-child {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-
-/* Right column
--------------------------------------------------------------------------------*/
-
-#right-col {
-    padding: 45px 0 0 0;
-    background-color: #f4f4f4;
-}
-
-#right-col aside {
-    width: 238px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-}
-
-#right-col aside h2 {
-    font-size: 17px;
-    border-bottom: 1px solid #d5d2d2;
-    padding-bottom: 12px;
-    margin: 0;
-}
-
-#right-col aside.links ul {
-    list-style: none;
-    margin: 0;
-}
-
-#right-col aside.links li {
-    margin-top: 20px;
-}
-
-#right-col aside .secondary {
-    font-size: 12px;
-    color: #a0a0a0;
-    line-height: 17px;
-}
-
-#right-col aside p.secondary {
-    margin: 20px 0 25px 0;
-}
-
-#right-col aside.links {
-    padding: 5px 20px 25px 20px;
-    width: 198px;
-}
-
-#right-col aside.links h2 {
-    padding-top: 20px;
-}
-
-#right-col aside img {
-    border-radius: 5px 5px 0 0;
-}
-
-#right-col aside .sidebar-body {
-    padding: 20px 20px 0 20px;
-}
-
-#right-col aside.image-and-text h2 {
-    margin-bottom: 20px;
-}
-
-#right-col aside.image-and-text p {
-    margin-bottom: 20px;
-    line-height: 23px;
-}
-
-#right-col aside.image-and-text ul {
-    list-style: disc;
-    margin-left: 40px;
-    margin-bottom: 20px;
-}
-
-#right-col aside.image-and-text ol {
-    margin-left: 40px;
-    margin-bottom: 20px;
-}
-
-#right-col aside a.opt-link {
-    display: block;
-    text-align: center;
-    padding: 12px 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color: #f1f0f0;
-    border-radius: 0 0 5px 5px;
-}
-
-#right-col aside a.opt-link:hover {
-    color: #990000;
-    background-color: #dadada;
 }
 
 
@@ -1773,7 +1674,7 @@ a#wusm-flickr:hover img {
 
 /* Print Styles */
 @media print {
-    #utility-bar, #search-form, #main-nav, #page-background, #page-background-inner, #left-col, #right-col, #site-footer-top, #site-footer-bottom #col2, #site-footer-bottom #col3, #wusm-footer {
+    #utility-bar, #search-form, #main-nav, #page-background, #page-background-inner, #left-col, #site-footer-top, #site-footer-bottom #col2, #site-footer-bottom #col3, #wusm-footer {
         display: none;
     }
 
