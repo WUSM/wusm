@@ -1,0 +1,38 @@
+{
+	"key": "group_562910a717be3",
+	"title": "Two Line Site Title",
+	"fields": [
+		{
+			"key": "field_562910b0cb979",
+			"label": "Line 1",
+			"name": "line_1",
+			"type": "text",
+			"required": 0
+		},
+		{
+			"key": "field_562910b8cb97a",
+			"label": "Line 2",
+			"name": "line_2",
+			"type": "text",
+			"required": 0
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "header"
+			}
+		]
+	],
+	"menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1455210938
+}
