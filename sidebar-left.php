@@ -31,11 +31,8 @@
 						'meta_query'   => array(
 							array(
 								'key'   => 'hide_in_left_nav',
-								'value' => 0
-							),
-							array(
-								'key'     => 'hide_in_left_nav',
-								'compare' => 'NOT EXISTS'
+								'meta_compare' => '!=',
+								'value' => 1
 							)
 						)
 					));
