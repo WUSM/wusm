@@ -12,7 +12,6 @@ function acf_remove_menu_page() {
 	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
 }
 
-
 add_action('acf/include_field_types', function() { include_once( get_template_directory() . '/_/php/acf_fields.php' ); }, 20);
 include_once( get_template_directory() . '/_/php/left-nav.php' );
 
@@ -21,7 +20,6 @@ function wpfme_footer_admin () {
 	echo 'Theme designed and developed by WUSTL Medical Public Affairs and powered by <a href="http://wordpress.org" target="_blank">WordPress</a>.';
 }
 add_filter('admin_footer_text', 'wpfme_footer_admin');
-
 
 // Intialize all the theme options
 function theme_init() {
@@ -38,7 +36,6 @@ function theme_init() {
 }
 add_action( 'init', 'theme_init' );
 
-
 /**
  * Enqueue scripts and styles.
  */
@@ -50,7 +47,6 @@ function wusm_scripts() {
 	wp_enqueue_script('wusm_functions', get_template_directory_uri() . '/_/js/functions.js', array( 'jquery' ), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
-
 
 function create_default_wusm_settings() {
 
@@ -159,19 +155,16 @@ function create_default_wusm_settings() {
 }
 add_action( 'after_switch_theme', 'create_default_wusm_settings');
 
-
 // Set default timezone
 function set_timezone() {
 	update_option( 'timezone_string', 'America/Chicago' );
 }
 add_action( 'init', 'set_timezone' );
 
-
 function enable_editor_styles() {
 	add_editor_style( 'editor-style.css' );
 }
 add_action( 'init', 'enable_editor_styles' );
-
 
 /*********************
 WP_HEAD GOODNESS
@@ -204,7 +197,6 @@ function head_cleanup() {
 } /* end bones head cleanup */
 add_action('init', 'head_cleanup');
 
-
 // Remove WP version from scripts
 function remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
@@ -212,11 +204,9 @@ function remove_wp_ver_css_js( $src ) {
 	return $src;
 }
 
-
 // Remove WP version from RSS
 function strip_rss_version() { return ''; }
 add_filter('the_generator', 'strip_rss_version');
-
 
 // Hide admin bar for subscribers. Probably won't be needed, but just in case.
 function cc_hide_admin_bar() {
@@ -226,7 +216,6 @@ function cc_hide_admin_bar() {
 }
 add_action('set_current_user', 'cc_hide_admin_bar');
 
-
 // Remove Customize from admin menu
 function remove_customize_page(){
 	global $submenu;
@@ -234,14 +223,12 @@ function remove_customize_page(){
 }
 add_action( 'admin_menu', 'remove_customize_page');
 
-
 // Remove Customize from toolbar
 function remove_customize() {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('customize');
 }
 add_action( 'wp_before_admin_bar_render', 'remove_customize' );
-
 
 // Remove extra 10px from width of wp-caption div
 // http://troychaplin.ca/2012/fix-automatically-generated-inline-style-on-wordpress-image-captions/
@@ -270,12 +257,10 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
 add_shortcode('caption', 'fixed_img_caption_shortcode');
 
-
 function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
 
 // Add style selector drop down on the second row of the Visual editor
 function wusm_mce_buttons_2( $buttons ) {
@@ -371,7 +356,6 @@ function accordion_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'wusm_expand_all', 'accordion_shortcode' );
 
-
 // Remove h1 option from dropdown in editor
 function wusm_remove_h1($arr){
     $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4';
@@ -379,14 +363,16 @@ function wusm_remove_h1($arr){
   }
 add_filter('tiny_mce_before_init', 'wusm_remove_h1');
 
-
 // Image sizes (Settings / Media)
-update_option('medium_size_w', 300);
-update_option('medium_size_h', NULL);
-update_option('large_size_w', 645);
-update_option('large_size_h', NULL);
-update_option('embed_size_w', 645);
-add_image_size('headshot', 145, 200, true);
+function wusm_image_settings() {
+	update_option('medium_size_w', 300);
+	update_option('medium_size_h', NULL);
+	update_option('large_size_w', 645);
+	update_option('large_size_h', NULL);
+	update_option('embed_size_w', 645);
+	add_image_size('headshot', 145, 200, true);
+}
+add_filter( 'after_switch_theme', 'wusm_image_settings' );
 
 function wusm_image_size_choose( $sizes ) {
     $custom_sizes = array(
@@ -396,16 +382,13 @@ function wusm_image_size_choose( $sizes ) {
 }
 add_filter( 'image_size_names_choose', 'wusm_image_size_choose' );
 
-
 // Set default values for Attachment Display Settings
 function attachment_display_settings() {
 	update_option('image_default_align', 'none' );
 	update_option('image_default_link_type', 'none' );
 	update_option('image_default_size', 'large' );
 }
-add_action('after_setup_theme', 'attachment_display_settings');
-
-
+add_action( 'after_setup_theme', 'attachment_display_settings' );
 
 function wusm_button() {
 	add_filter( "mce_external_plugins", "wusm_add_button" );
@@ -419,7 +402,6 @@ function wusm_register_button( $buttons ) {
 	if( ! in_array( 'wusmbutton', $buttons) ) {
 		array_push( $buttons, 'wusmbutton' );
 	}
-	
 	return $buttons;
 }
 add_action( 'admin_head', 'wusm_button' );

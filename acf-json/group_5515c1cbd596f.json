@@ -1,0 +1,237 @@
+{
+	"key": "group_5515c1cbd596f",
+	"title": "Link Lists",
+	"fields": [
+		{
+			"key": "field_56170aad6e798",
+			"label": "Editing Link Lists",
+			"name": "editing_link_lists",
+			"type": "message",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"message": "If needed, use the list(s) to link to closely related websites or frequently accessed pages on your own site that may be difficult to find.\n\nIf you need two lists: Group all internal links (go to your site) separately from external links (go to another site). External links go in List 2.",
+			"new_lines": "wpautop",
+			"esc_html": 0
+		},
+		{
+			"key": "field_5515c1e6bf0fc",
+			"label": "List 1",
+			"name": "",
+			"prefix": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 50,
+				"class": "",
+				"id": ""
+			},
+			"placement": "top"
+		},
+		{
+			"key": "field_551ab2813c52c",
+			"label": "Title",
+			"name": "list1_title",
+			"prefix": "",
+			"type": "text",
+			"instructions": "(optional header for your links)",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_551ab30092499",
+			"label": "Links",
+			"name": "list1_links",
+			"prefix": "",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"min": "",
+			"max": "",
+			"layout": "table",
+			"button_label": "Add Link",
+			"sub_fields": [
+				{
+					"key": "field_551ab3009249a",
+					"label": "Link Text",
+					"name": "link_text",
+					"prefix": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": "",
+					"readonly": 0,
+					"disabled": 0
+				},
+				{
+					"key": "field_551ab3009249b",
+					"label": "URL",
+					"name": "url",
+					"prefix": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": ""
+				}
+			]
+		},
+		{
+			"key": "field_5515c255ffba1",
+			"label": "List 2",
+			"name": "",
+			"prefix": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 50,
+				"class": "",
+				"id": ""
+			},
+			"placement": "top"
+		},
+		{
+			"key": "field_551ab2b992492",
+			"label": "Title",
+			"name": "list2_title",
+			"prefix": "",
+			"type": "text",
+			"instructions": "(optional header for your links)",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_551ab2e492496",
+			"label": "Links",
+			"name": "list2_links",
+			"prefix": "",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"min": "",
+			"max": "",
+			"layout": "table",
+			"button_label": "Add Link",
+			"sub_fields": [
+				{
+					"key": "field_551ab2ed92497",
+					"label": "Link Text",
+					"name": "link_text",
+					"prefix": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": "",
+					"readonly": 0,
+					"disabled": 0
+				},
+				{
+					"key": "field_551ab2f292498",
+					"label": "URL",
+					"name": "url",
+					"prefix": "",
+					"type": "url",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": ""
+				}
+			]
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "footer"
+			}
+		]
+	],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1455210938
+}
