@@ -370,9 +370,10 @@ function wusm_image_settings() {
 	update_option('large_size_w', 645);
 	update_option('large_size_h', NULL);
 	update_option('embed_size_w', 645);
-	add_image_size('headshot', 145, 200, true);
 }
 add_filter( 'after_switch_theme', 'wusm_image_settings' );
+
+add_image_size('headshot', 145, 200, true);
 
 function wusm_image_size_choose( $sizes ) {
     $custom_sizes = array(
