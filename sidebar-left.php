@@ -1,16 +1,25 @@
 <nav id="left-col">
 
-	<?php if ( isset( $post->ID ) ) : $id = $post->ID;
+	<?php 
+    global $force_menu;
+    
+    if ( isset( $post->ID ) ) {
 
-		if ( (in_menu( $id ) || is_page() || (count( $post->ancestors ) > 0)) && ! (is_search()) ) {
+        $id = $post->ID;
+
+        if( is_home() ) {
+
+            $id = get_option( 'page_for_posts' );
+            $post = get_post( $id );
+        }
+
+		if ( ( in_menu( $id ) || is_page() || ( count( $post->ancestors ) > 0 ) || $force_menu ) && ! is_search() ) {
 
 				$walker = new Razorback_Walker_Page_Selective_Children(); ?>
 
 				<ul id="left-nav">
 
 				<?php
-				global $force_menu;
-
 				if ( is_page() || $force_menu ) {
 					if ( $post->post_parent ) {
 						// This is a subpage.
@@ -32,7 +41,7 @@
 							array(
 								'key'   => 'hide_in_left_nav',
 								'meta_compare' => '!=',
-								'value' => 1
+								'value' => 1,
 							)
 						)
 					));
@@ -61,8 +70,7 @@
 					}
 				} ?>
 				</ul>
-			<?php } ?>
-
-	<?php endif; ?>
+		<?php } 
+    } ?>
 
 </nav>
