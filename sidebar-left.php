@@ -17,7 +17,7 @@
 
 				$walker = new Razorback_Walker_Page_Selective_Children(); ?>
 
-				<ul id="left-nav">
+				<ul class="left-nav">
 
 				<?php
 				if ( is_page() || $force_menu ) {
