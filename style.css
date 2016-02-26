@@ -469,7 +469,8 @@ a:focus {
     display: block;
 }
 
-.left-nav li.current_page_item > a {
+.left-nav li.current_page_item > a,
+.current-cat >a {
     color: #717171;
 }
 
