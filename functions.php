@@ -8,6 +8,8 @@ if( !WP_DEBUG ) {
 
 if ( ! isset( $content_width ) ) $content_width = 645;
 
+add_filter( 'acf/settings/load_json', function( $paths ) { $paths[] = get_template_directory() . '/acf-json'; return $paths; } );
+
 function acf_remove_menu_page() {
 	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
 }
