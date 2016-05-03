@@ -360,8 +360,8 @@ add_shortcode( 'wusm_expand_all', 'accordion_shortcode' );
 
 // Remove h1 option from dropdown in editor
 function wusm_remove_h1($arr){
-    $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4';
-    return $arr;
+	$arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4';
+	return $arr;
   }
 add_filter('tiny_mce_before_init', 'wusm_remove_h1');
 
@@ -378,10 +378,10 @@ add_filter( 'after_switch_theme', 'wusm_image_settings' );
 add_image_size('headshot', 145, 200, true);
 
 function wusm_image_size_choose( $sizes ) {
-    $custom_sizes = array(
-        'headshot' => 'Headshot',
-    );
-    return array_merge( $sizes, $custom_sizes );
+	$custom_sizes = array(
+		'headshot' => 'Headshot',
+	);
+	return array_merge( $sizes, $custom_sizes );
 }
 add_filter( 'image_size_names_choose', 'wusm_image_size_choose' );
 
