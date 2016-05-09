@@ -17,30 +17,6 @@ function acf_remove_menu_page() {
 add_action('acf/include_field_types', function() { include_once( get_template_directory() . '/_/php/acf_fields.php' ); }, 20);
 include_once( get_template_directory() . '/_/php/left-nav.php' );
 
-// Require ACF to be installed.
-require_once( get_template_directory() . '/_/php/class-tgm-plugin-activation.php' );
-
-function wusm_register_required_plugins() {
-	$plugins = array(
-		array(
-			'name'			=> 'Advanced Custom Fields PRO',
-			'slug'			=> 'advanced-custom-fields-pro',
-			'source'		=> '',
-			'required'		=> true,
-			'external_url'	=> 'https://www.advancedcustomfields.com/pro/'
-		)
-	);
-	$config = array(
-		'id'			=> 'tgmpa-wusm',
-		'has_notices'	=> true,
-		'dismissable'	=> false,
-		'dismiss_msg'	=> 'Pages will not display until ACF Pro is installed.',
-		'is_automatic'	=> true
-	);
-	tgmpa( $plugins, $config );
-}
-add_action( 'tgmpa_register', 'wusm_register_required_plugins' );
-
 // Customize the footer in admin area
 function wpfme_footer_admin () {
 	echo 'Theme designed and developed by WUSTL Medical Public Affairs and powered by <a href="http://wordpress.org" target="_blank">WordPress</a>.';
