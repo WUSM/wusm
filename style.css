@@ -955,7 +955,8 @@ article .callout p:last-child {
 
 .wusmcards ul {
 	list-style: none;
-	margin: 0 -10px;
+	margin: 0;
+	text-align: center;
 }
 
 .wusmcards li {
@@ -963,6 +964,7 @@ article .callout p:last-child {
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 0 5px;
+	text-align: left;
 }
 
 .wusmcards .wrap {
@@ -1002,7 +1004,11 @@ article .callout p:last-child {
 .wusmcards li h2 {
 	font-size: 18px;
 	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 1.5;
 	margin: 0;
+	padding-bottom: 10px;
+	text-align: left;
 }
 
 .wusmcards .wusmcard-text {
@@ -1841,9 +1847,6 @@ a#wusm-flickr:hover img {
 
 	/* Cards
 	--------------------------------------------------------------*/
-	
-	.wusmcards ul,
-	.wusmcards ul.wrapper,
 	.wusmcards li {
 		margin: 0 auto;
 		max-width: 300px;
