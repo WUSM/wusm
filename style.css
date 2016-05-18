@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:	 2016.05.02.0
+Version:	 2016.05.17.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -21,9 +21,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	## Featured Image
 	## Left Column
 	## Content
-	## Callout
-	## Accordion
-	## Cards
+		### Callout
+		### Accordion
+		### Cards
 	## Search Results
 	## Misc
 # Footer
@@ -934,9 +934,7 @@ article .callout p:last-child {
 /* ### Cards
 --------------------------------------------------------------*/
 .wusmcards {
-	font-size: 0;
-	max-width: 940px;
-	margin: 0 auto;
+	max-width: 100%;
 }
 
 .news-type-title {
@@ -955,18 +953,22 @@ article .callout p:last-child {
 
 .wusmcards ul {
 	list-style: none;
-	margin: 0 -10px;
+	margin: 0;
+	text-align: center;
 }
 
 .wusmcards li {
-	width: 320px;
+	width: 300px;
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 0 5px;
+	text-align: left;
 }
 
 .wusmcards .wrap {
-	background: #fff;
+	font-size: 0;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 .wusmcards li > div {
@@ -1002,7 +1004,11 @@ article .callout p:last-child {
 .wusmcards li h2 {
 	font-size: 18px;
 	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 1.5;
 	margin: 0;
+	padding-bottom: 10px;
+	text-align: left;
 }
 
 .wusmcards .wusmcard-text {
@@ -1066,6 +1072,30 @@ article .callout p:last-child {
 	font-size: 12px;
 	line-height: 1.3;
 	margin-top: 15px;
+}
+
+
+/* ### General Module Styles
+--------------------------------------------------------------*/
+.wusmcards,
+.sixpack,
+.home-image,
+.home-video {
+	padding: 60px 0 70px;
+}
+
+section.white {
+	background: #fff;
+}
+
+h2.headline {
+	font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    margin: -5px auto 0;
+    max-width: 750px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -1655,7 +1685,7 @@ a#wusm-flickr:hover img {
 	}
 	
 	.wusmcards ul {
-		margin: 0 10px;
+		margin: 0 auto;
 	}
 	
 	.wusmcards li {
@@ -1838,17 +1868,6 @@ a#wusm-flickr:hover img {
 }
 
 @media screen and (max-width: 600px) {
-
-	/* Cards
-	--------------------------------------------------------------*/
-	
-	.wusmcards ul,
-	.wusmcards ul.wrapper,
-	.wusmcards li {
-		margin: 0 auto;
-		max-width: 300px;
-		width: 100%;
-	}
 	
 }
 
