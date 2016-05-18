@@ -653,7 +653,7 @@ ul.children li:last-child {
 --------------------------------------------------------------*/
 article {
 	background-color: #f4f4f4;
-	float: left;
+	float: right;
 	max-width: 645px;
 	padding: 40px 50px 70px 50px;
 	width: 100%;
