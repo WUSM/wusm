@@ -1,5 +1,6 @@
 <?php
     get_header();
+    $search_terms = get_search_query();
     //query_posts("$query_string . '&posts_per_page=-1'");
 ?>
 
@@ -15,7 +16,7 @@
         <?php get_sidebar( 'left' ); ?>
 
         <article class="search-results">
-            <h1>Search Results</h1>
+            <h1>Your Search: <em><?php echo $search_terms; ?></em></h1>
 
             <?php if ( have_posts() ) :
                 while (have_posts()): the_post(); ?>
