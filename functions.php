@@ -42,7 +42,8 @@ add_action( 'init', 'theme_init' );
  * Enqueue scripts and styles.
  */
 function wusm_scripts() {
-	wp_enqueue_style( 'wusm', get_stylesheet_uri() );
+	$theme = wp_get_theme();
+	wp_enqueue_style( 'wusm', get_stylesheet_uri(), false, $theme->get( 'Version' ) );
 	wp_deregister_style( 'open-sans' ); // De-register open-sans so we can add the 700 (bold) weight
 	wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C300%2C400%2C600%2C700&subset=latin%2Clatin-ext' );
 	wp_enqueue_style( 'dashicons' );
@@ -192,10 +193,6 @@ function head_cleanup() {
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 	// WP version
 	remove_action( 'wp_head', 'wp_generator' );
-	// remove WP version from css
-	add_filter( 'style_loader_src', 'remove_wp_ver_css_js', 9999 );
-	// remove Wp version from scripts
-	add_filter( 'script_loader_src', 'remove_wp_ver_css_js', 9999 );
 } /* end bones head cleanup */
 add_action('init', 'head_cleanup');
 
