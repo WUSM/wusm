@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:	 2016.06.21.0
+Version:	 2016.08.11.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -58,15 +58,15 @@ img {max-width: 100%;height:auto;}
 /* # force a vertical scrollbar to prevent a jumpy page */
 html {overflow-y: scroll;}
 
-/* # we use a lot of ULs that aren't bulleted. 
+/* # we use a lot of ULs that aren't bulleted.
 	don't forget to restore the bullets within content. */
 ul {list-style: none;}
 
 blockquote, q {quotes: none;}
 
-blockquote:before, 
-blockquote:after, 
-q:before, 
+blockquote:before,
+blockquote:after,
+q:before,
 q:after {content: ''; content: none;}
 
 a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
@@ -104,7 +104,7 @@ small {font-size: 85%;}
 
 strong {font-weight: 600;}
 
-td, td img {vertical-align: top;} 
+td, td img {vertical-align: top;}
 
 /* # Make sure sup and sub don't screw with your line-heights
 	gist.github.com/413930 */
@@ -117,10 +117,10 @@ pre, code, kbd, samp {font-family: monospace, sans-serif;}
 
 /* # hand cursor on clickable elements */
 .clickable,
-label, 
-input[type=button], 
-input[type=submit], 
-input[type=file], 
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
 button {cursor: pointer;}
 
 /* # Webkit browsers add a 2px margin outside the chrome of form elements */
@@ -129,14 +129,14 @@ button, input, select, textarea {margin: 0;}
 /* # make buttons play nice in IE */
 button,
 input[type=button] {width: auto; overflow: visible;}
- 
+
 /* # scale images in IE7 more attractively */
 .ie7 img {-ms-interpolation-mode: bicubic;}
 
 /* # let's clear some floats */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
-.clearfix:after { clear: both; }  
-.clearfix { zoom: 1; }  
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
 
 /* # Hide only visually, but have it available for screenreaders */
 .visuallyhidden {
@@ -474,7 +474,7 @@ a:focus {
 	border-bottom: none;
 }
 
-#mobile-nav ul.children { 
+#mobile-nav ul.children {
 	background: #f0f0f0;
 	border-top: 1px solid #e3e3e3;
 	display: none;
@@ -494,7 +494,7 @@ a:focus {
 }
 
 #mobile-nav .expand {
-	border-left: 1px solid #e3e3e3;    
+	border-left: 1px solid #e3e3e3;
 	padding: 19px 10px;
 	cursor: pointer;
 	position: absolute;
@@ -630,10 +630,19 @@ a:focus {
 	color: #717171;
 }
 
+ul#left-nav ul.children li {
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+ul#left-nav ul.children li:first-child {
+	padding-top: 20px;
+}
+
 ul.children li {
 	margin-left: 20px;
 	border-bottom: none;
-	padding: 8px 0;
+	padding: 8px 0 0;
 }
 
 ul.children li:first-child {
@@ -695,6 +704,10 @@ article p {
 	margin-bottom: 25px;
 }
 
+.accordion-body-text > article p {
+	margin-bottom: 10px;
+}
+
 article h1 + .accordion-header {
 	margin-top: 45px;
 }
@@ -726,9 +739,24 @@ article ol {
 	font-size: 16px;
 }
 
-article ul li, article ol li {
-	line-height: 25px;
+article p > ul {
+	margin-bottom: 0;
+}
+
+article ul li,
+article ol li {
+	line-height: 28px;
 	margin-bottom: 10px;
+}
+
+article ul li ul,
+article ol li ol {
+	margin-top: 10px;
+}
+
+article .callout ul li:last-child,
+article .callout ol li:last-child {
+	margin-bottom: 0;
 }
 
 article blockquote {
@@ -798,7 +826,7 @@ article p.wp-caption-text {
 article .callout {
 	border: 1px solid #e5e5e5;
 	margin-bottom: 10px;
-	padding: 18px;
+	padding: 20px;
 	background: #fff;
 	border-radius: 5px;
 }
@@ -1013,7 +1041,7 @@ article .callout p:last-child {
 
 .wusmcards .wusmcard-text {
 	position: relative;
-	padding: 10px 23px 24px; 
+	padding: 10px 23px 24px;
 }
 
 .wusmcards li.headshot div.wusmcard:before {
@@ -1539,11 +1567,11 @@ a#wusm-flickr:hover img {
 /* # Media Queries
 --------------------------------------------------------------*/
 @media screen and (max-width: 970px) {
-	
+
 	.wrapper {
 		max-width: 686px;
 	}
-	
+
 	#page-background-inner {
 		display: none;
 	}
@@ -1676,22 +1704,22 @@ a#wusm-flickr:hover img {
 	#left-col {
 		display: none;
 	}
-	
+
 	/* Cards
 	--------------------------------------------------------------*/
-	
+
 	.wusmcards > ul.wrapper {
 		max-width: 100%;
 	}
-	
+
 	.wusmcards ul {
 		margin: 0 auto;
 	}
-	
+
 	.wusmcards li {
 		width: 33.333333%;
 	}
-	
+
 	/* Footer
 	--------------------------------------------------------------*/
 
@@ -1855,20 +1883,20 @@ a#wusm-flickr:hover img {
 	#wusm-footer-right nav a.last-child {
 		padding-right: 12px;
 	}
-	
+
 }
 
 @media screen and (max-width: 770px) {
-	
+
 	article {
 		width: 88%;
 		padding: 7% 6% 70px;
 	}
-	
+
 }
 
 @media screen and (max-width: 600px) {
-	
+
 }
 
 @media screen and (max-width: 520px) {
@@ -1884,7 +1912,7 @@ a#wusm-flickr:hover img {
 	article th, article td {
 		padding: 5px;
 	}
-	
+
 	#site-footer,
 	#wusm-footer-left,
 	#wusm-footer-right {
@@ -1892,11 +1920,11 @@ a#wusm-flickr:hover img {
 		padding-left: 10%;
 		padding-right: 10%;
 	}
-	
+
 }
 
 @media screen and (max-width: 518px) {
-	
+
 	.accordion-header {
 		width: 90%;
 		padding-left: 5%;
@@ -1913,14 +1941,14 @@ a#wusm-flickr:hover img {
 	.accordion-body-text {
 		padding: 0 5% 20px;
 	}
-	
+
 }
 
 
 /* # Print Styles
 --------------------------------------------------------------*/
 @media print {
-	
+
 	#utility-bar,
 	#search-form,
 	#main-nav,
@@ -1942,5 +1970,5 @@ a#wusm-flickr:hover img {
 	#site-footer-bottom {
 		margin-left: 35px;
 	}
-	
+
 }
