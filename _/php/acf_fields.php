@@ -6,7 +6,7 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title'    => 'Front Page',
 		'menu_title'    => 'Front Page',
 		'menu_slug'     => 'front-page',
-		'capability'    => 'edit_posts',
+		'capability'    => 'edit_themes',
 		'redirect'      => false,
 		'parent'        => 'themes.php',
 	));
