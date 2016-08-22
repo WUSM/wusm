@@ -391,17 +391,22 @@ function attachment_display_settings() {
 add_action( 'after_setup_theme', 'attachment_display_settings' );
 
 function wusm_button() {
-	add_filter( "mce_external_plugins", "wusm_add_button" );
+	add_filter( 'mce_external_plugins', 'wusm_add_button' );
 	add_filter( 'mce_buttons', 'wusm_register_button' );
 }
 function wusm_add_button( $plugin_array ) {
 	$plugin_array['wusmbutton'] = get_template_directory_uri() . '/_/js/wusmbutton.js';
+	$plugin_array['wusm_columns'] = get_template_directory_uri() . '/_/js/wusm-columns.js';
 	return $plugin_array;
 }
 function wusm_register_button( $buttons ) {
 	if( ! in_array( 'wusmbutton', $buttons) ) {
 		array_push( $buttons, 'wusmbutton' );
 	}
+	if( ! in_array( 'wusm_columns', $buttons) ) {
+		array_push( $buttons, 'wusm_columns' );
+	}
 	return $buttons;
 }
 add_action( 'admin_head', 'wusm_button' );
+

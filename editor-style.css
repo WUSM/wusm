@@ -289,3 +289,34 @@ body#tinymce.wp-editor a.wusm-button:hover {
 .mceItemTable td p:last-child {
 	margin-bottom: 0;
 }
+
+.wusm-cols {
+	box-sizing: border-box;
+	padding: 10px;
+	display: inline-block;
+	margin-right: -2px;
+	vertical-align: top;
+	border: 1px dashed #666;
+}
+
+.cols-2 {
+	width: 49%;
+}
+
+.cols-3 {
+	width: 33%;
+}
+
+.cols-4 {
+	width: 24%;
+}
+
+@media screen and ( max-width: 570px ) {
+	.wusm-cols,
+	.cols-2,
+	.cols-3,
+	.cols-4 {
+		width: 100%;
+		padding: 0;
+	}
+}
