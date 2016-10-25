@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:	 2016.10.12.0
+Version:	 2016.10.25.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -139,10 +139,14 @@ input[type=button] {width: auto; overflow: visible;}
 .clearfix { zoom: 1; }
 
 /* # Hide only visually, but have it available for screenreaders */
-.visuallyhidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* # IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+/* https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/ */
+.visuallyhidden,
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 html {
@@ -1307,6 +1311,31 @@ article td p:last-child {
 
 .cols-4 {
 	width: 25%;
+}
+
+.page-numbers {
+	max-width: 30px;
+	max-height: 30px;
+	padding: 5px 10px;
+	display: inline-block;
+	font-weight: 700;
+	background-color: #E3E3E3;
+	border-radius: 3px;
+	color: #3C3C3D;
+}
+
+.page-numbers:hover {
+	background-color: #EEE;
+}
+
+.current {
+	color: #FFF;
+	background-color: #990000;
+}
+
+.next,
+.prev {
+	max-width: none;
 }
 
 /* # Footer
