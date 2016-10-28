@@ -1331,10 +1331,12 @@ a.page-numbers:hover {
 	background-color: #990000;
 }
 
-.next,
-.prev {
-	max-width: none;
+.dots {
+	border: 1px solid #e3e3e3;
+    background: transparent;
+    padding: 4px 8px 5px;
 }
+
 
 /* # Footer
 --------------------------------------------------------------*/
