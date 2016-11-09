@@ -12,6 +12,11 @@ This plugin requires [Advanced Custom Fields Pro](https://www.advancedcustomfiel
 
 ## Changelog
 
+### 2016.11.09.2
+
+* Changed wording on ACF banner fields.
+* Fixed button padding on mobile.
+
 ### 2016.11.09.1
 
 * Fixed expanded header's h1 tag.
