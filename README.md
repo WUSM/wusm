@@ -12,6 +12,11 @@ This plugin requires [Advanced Custom Fields Pro](https://www.advancedcustomfiel
 
 ## Changelog
 
+### 2016.11.09.0
+
+* Added the expanded/collapsed banner option. [(Basecamp Ticket)](https://3.basecamp.com/3416805/buckets/1403746/todos/281042652)
+* Blockquote style fixed. [(Basecamp Ticket)](https://3.basecamp.com/3416805/buckets/1403746/todos/280647062)
+
 ### 2016.10.12.0
 
 * Brought site title into alignment with body text and footer. [(Basecamp Ticket)](https://3.basecamp.com/3416805/buckets/1403746/todos/230009430)

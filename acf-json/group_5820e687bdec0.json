@@ -1,0 +1,141 @@
+{
+    "key": "group_5820e687bdec0",
+    "title": "WUSM Homepage Banner",
+    "fields": [
+        {
+            "key": "field_5820e699459db",
+            "label": "Expanded banner or collapsed?",
+            "name": "banner_selection",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "expanded": "Expanded",
+                "condensed": "Condensed"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_58222bfa89b85",
+            "label": "Light or dark banner?",
+            "name": "light_or_dark",
+            "type": "radio",
+            "instructions": "Depending on the image, the banner may need to be color swapped.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5820e699459db",
+                        "operator": "==",
+                        "value": "condensed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "dark",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5820ef75459dc",
+            "label": "Button Text",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5820e699459db",
+                        "operator": "==",
+                        "value": "condensed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 45
+        },
+        {
+            "key": "field_5820efe3459dd",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5820e699459db",
+                        "operator": "==",
+                        "value": "condensed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1478634801
+}
