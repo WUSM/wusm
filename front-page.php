@@ -31,7 +31,7 @@
     		</div>
     		<div class="wrapper">
     			<div class="homepage-content">
-    				<?php the_title('<span class="featured-title">', '</span>'); ?>
+                    <?php the_title('<h1>', '</h1>'); ?>
             		<?php the_content(); ?>
             	</div>
         	</div>

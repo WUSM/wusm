@@ -12,6 +12,10 @@ This plugin requires [Advanced Custom Fields Pro](https://www.advancedcustomfiel
 
 ## Changelog
 
+### 2016.11.09.1
+
+* Fixed expanded header's h1 tag.
+
 ### 2016.11.09.0
 
 * Added the expanded/collapsed banner option. [(Basecamp Ticket)](https://3.basecamp.com/3416805/buckets/1403746/todos/281042652)
