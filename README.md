@@ -12,6 +12,10 @@ This plugin requires [Advanced Custom Fields Pro](https://www.advancedcustomfiel
 
 ## Changelog
 
+### 2016.11.10.0
+
+* "File Size" is now an optional view in the Media Gallery.
+
 ### 2016.11.09.2
 
 * Changed wording on ACF banner fields.
