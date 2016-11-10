@@ -4,7 +4,7 @@ Theme URI:   http://medicine.wustl.edu
 Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
-Version:	 2016.10.12.0
+Version:	 2016.11.10.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -139,10 +139,14 @@ input[type=button] {width: auto; overflow: visible;}
 .clearfix { zoom: 1; }
 
 /* # Hide only visually, but have it available for screenreaders */
-.visuallyhidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* # IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+/* https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/ */
+.visuallyhidden,
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 html {
@@ -572,19 +576,86 @@ a:focus {
 /* ## Featured Image
 --------------------------------------------------------------*/
 #featured-image-home {
+	font-size: 0;
+	margin: 0 auto;
 	max-width: 1440px;
+	position: relative;
 	width: 100%;
-	margin: 0 auto;
 }
 
-#featured-image {
+#featured-image-home img {
 	text-align: center;
+	z-index: 1;
 }
 
-#featured-image-home img,
-#featured-image img {
-	display: block;
+.featured-banner {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+.featured-banner.dark {
+	background-color: rgba(0, 0, 0, .85);
+	color: #fff;
+}
+
+.featured-banner.light {
+	background-color: rgba(255, 255, 255, .85);
+	color: #333;
+}
+
+.featured-banner .wrap {
 	margin: 0 auto;
+	max-width: 940px;
+}
+
+.featured-text {
+	display: inline-block;
+	max-width: 620px;
+	padding: 20px 20px 20px 0;
+}
+
+.featured-text h1 {
+	-webkit-font-smoothing: antialiased;
+	font-family: Georgia, serif;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.featured-text p {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	-webkit-font-smoothing: antialiased;
+	font-size: 18px;
+	line-height: 30px;
+	padding-top: 5px;
+}
+
+.featured-button {
+	display: inline;
+	float: right;
+	height: auto;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY( -50% );
+	width: 300px;
+}
+
+.featured-button a.wusm-button {
+	margin: 0 auto;
+}
+
+.featured-banner.dark .featured-button a.wusm-button {
+	background-color: #fff;
+	color: #990000;
+	transition: background 0.1s ease;
+}
+
+.featured-banner.dark .featured-button a.wusm-button:hover {
+	background-color: #EEEEEE;
 }
 
 
@@ -760,16 +831,17 @@ article .callout ol li:last-child {
 }
 
 article blockquote {
-	margin: 30px 0 45px 95px;
-	padding-left: 20px;
-	border-left: 3px solid #990000;
+	margin: 35px 0 35px 40px;
+	padding-left: 25px;
+	border-left: 2px solid #990000;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 32px;
 }
 
 article blockquote p {
 	line-height: 32px;
+	font-size: 22px;
 	margin-bottom: 45px;
 }
 
@@ -1112,6 +1184,10 @@ article .callout p:last-child {
 	padding: 60px 0 70px;
 }
 
+section.gray {
+	background: #f4f4f4;
+}
+
 section.white {
 	background: #fff;
 }
@@ -1308,6 +1384,31 @@ article td p:last-child {
 .cols-4 {
 	width: 25%;
 }
+
+.page-numbers {
+	padding: 5px 11px 6px;
+	display: inline-block;
+	font-weight: 700;
+	background-color: #E3E3E3;
+	border-radius: 3px;
+	color: #3C3C3D;
+}
+
+a.page-numbers:hover {
+	background-color: #EEE;
+}
+
+.current {
+	color: #FFF;
+	background-color: #990000;
+}
+
+.dots {
+	border: 1px solid #e3e3e3;
+    background: transparent;
+    padding: 4px 8px 5px;
+}
+
 
 /* # Footer
 --------------------------------------------------------------*/
@@ -1734,6 +1835,55 @@ a#wusm-flickr:hover img {
 		display: none;
 	}
 
+	#featured-image-home img {
+		display: block;
+	}
+
+	.featured-banner {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing:    border-box;
+		box-sizing:         border-box;
+		display: block;
+		margin: 0 auto;
+		padding: 0 20px;
+		position: relative;
+		text-align: center;
+	}
+
+	.featured-banner.light {
+		color: #333;
+	}
+
+	.featured-text,
+	.featured-button {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.featured-text {
+		padding-bottom: 0;
+	}
+
+	.featured-button {
+		padding: 20px 0 25px;
+		position: relative;
+		top: 0;
+		transform: none;
+	}
+
+	.featured-text h1,
+	.featured-text p {
+		margin: 0 auto;
+		max-width: 620px;
+	}
+
+	.featured-text p {
+		margin-top: 5px;
+	}
+
 	/* Cards
 	--------------------------------------------------------------*/
 
@@ -1925,6 +2075,12 @@ a#wusm-flickr:hover img {
 }
 
 @media screen and (max-width: 600px) {
+
+	.featured-banner {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing:    border-box;
+		box-sizing:         border-box;
+	}
 
 	.cols-2,
 	.cols-3,

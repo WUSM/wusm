@@ -410,3 +410,36 @@ function wusm_register_button( $buttons ) {
 }
 add_action( 'admin_head', 'wusm_button' );
 
+
+
+function wusm_media_file_size($column_name, $post_ID) {
+	if ($column_name == 'size') {
+		echo human_filesize( filesize( get_attached_file( $post_ID ) ) );
+	}
+}
+add_action('manage_media_custom_column', 'wusm_media_file_size', 10, 2);
+
+function human_filesize($bytes, $decimals = 2) {
+	$sz = 'BKMGTP';
+	$factor = floor((strlen($bytes) - 1) / 3);
+	return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
+}
+
+function wusm_add_media_file_size( $posts_columns ) {
+	$posts_columns['size'] = 'File Size';
+	return $posts_columns;
+}
+add_filter( 'manage_media_columns', 'wusm_add_media_file_size', 10, 1 );
+
+
+
+
+
+
+
+
+
+
+
+
+
