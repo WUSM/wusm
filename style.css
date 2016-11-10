@@ -594,6 +594,7 @@ a:focus {
 	position: absolute;
 	width: 100%;
 	z-index: 100;
+	text-align: left;
 }
 
 .featured-banner.dark {
@@ -615,7 +616,6 @@ a:focus {
 	display: inline-block;
 	max-width: 620px;
 	padding: 20px 20px 20px 0;
-	text-align: left;
 }
 
 .featured-text h1 {
