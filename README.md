@@ -12,6 +12,10 @@ This plugin requires [Advanced Custom Fields Pro](https://www.advancedcustomfiel
 
 ## Changelog
 
+### 2016.11.10.2
+
+* Fix for the homepage...again.
+
 ### 2016.11.10.1
 
 * Fix for featured images not centering on pages.
