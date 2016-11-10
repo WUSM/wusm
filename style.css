@@ -18,7 +18,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	## Mobile Navigation
 # Body
 	## Homepage
-	## Featured Image
+	## Featured Image (Home)
+	## Featured Image (Page)
 	## Left Column
 	## Content
 		### Callout
@@ -661,7 +662,8 @@ a:focus {
 
 /* ## Featured Image (Pages)
 --------------------------------------------------------------*/
-#featured-image {
+#featured-image,
+#featured-image-home {
 	text-align: center;
 }
 
