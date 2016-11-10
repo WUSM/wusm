@@ -12,6 +12,10 @@ This plugin requires [Advanced Custom Fields Pro](https://www.advancedcustomfiel
 
 ## Changelog
 
+### 2016.11.10.1
+
+* Fix for featured images not centering on pages.
+
 ### 2016.11.10.0
 
 * "File Size" is now an optional view in the Media Gallery.
