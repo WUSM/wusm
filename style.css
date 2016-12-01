@@ -1752,9 +1752,12 @@ a#wusm-flickr:hover img {
 		margin-top: 10px;
 	}
 
+	.featured-banner {
+		z-index: 0;
+	}
+
 	.mobile-container {
 		display: block;
-		z-index: 100;
 	}
 
 	#mobile-menu-icon,
