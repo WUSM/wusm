@@ -1754,6 +1754,7 @@ a#wusm-flickr:hover img {
 
 	.mobile-container {
 		display: block;
+		z-index: 100;
 	}
 
 	#mobile-menu-icon,
@@ -1848,10 +1849,6 @@ a#wusm-flickr:hover img {
 
 	#left-col {
 		display: none;
-	}
-
-	#featured-image-home {
-		z-index: -1;
 	}
 
 	#featured-image-home img {
