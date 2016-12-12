@@ -1280,6 +1280,7 @@ article .disclaimer p {
 	color: #fff;
 	background: #990000;
 	padding: 15px 25px;
+	border: none;
 	border-radius: 3px;
 	letter-spacing: 1px;
 	font-weight: 600;
