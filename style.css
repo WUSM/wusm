@@ -1425,6 +1425,17 @@ a.page-numbers:hover {
     padding: 4px 8px 5px;
 }
 
+.blog time {
+	color: #707070;
+	font-size: 12px;
+	line-height: 20px;
+
+	text-transform: uppercase;
+}
+
+.blog h2 {
+	margin: 0;
+}
 
 /* # Footer
 --------------------------------------------------------------*/
