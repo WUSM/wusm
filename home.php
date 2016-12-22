@@ -34,6 +34,8 @@
 
 				wp_reset_postdata();
 
+				wp_list_categories();
+
 			?>
 			
 			<?php
