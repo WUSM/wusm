@@ -646,17 +646,17 @@ a:focus {
 	width: 300px;
 }
 
-.featured-button a.wusm-button {
+.featured-button .wusm-button {
 	margin: 0 auto;
 }
 
-.featured-banner.dark .featured-button a.wusm-button {
+.featured-banner.dark .featured-button .wusm-button {
 	background-color: #fff;
 	color: #990000;
 	transition: background 0.1s ease;
 }
 
-.featured-banner.dark .featured-button a.wusm-button:hover {
+.featured-banner.dark .featured-button .wusm-button:hover {
 	background-color: #EEEEEE;
 }
 
@@ -1271,7 +1271,7 @@ article .disclaimer p {
 	color: #333;
 }
 
-a.wusm-button {
+.wusm-button {
 	display: inline-block;
 	line-height: 14px;
 	margin: 15px 10px 0;
@@ -1280,6 +1280,7 @@ a.wusm-button {
 	color: #fff;
 	background: #990000;
 	padding: 15px 25px;
+	border: none;
 	border-radius: 3px;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -1287,12 +1288,12 @@ a.wusm-button {
 	text-align: center;
 }
 
-a.wusm-button:hover {
+.wusm-button:hover {
 	background: #c40000;
 	color: #fff;
 }
 
-article a.wusm-button {
+article .wusm-button {
 	margin: 0 20px 0 0;
 }
 
