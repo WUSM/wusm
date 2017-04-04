@@ -1,13 +1,6 @@
 <?php get_header(); ?>
 
 <div id="main" class="clearfix">
-	<?php
-	if (get_the_post_thumbnail() != '') {
-		echo '<div id="featured-image">';
-		the_post_thumbnail();
-		echo '</div>';
-	}
-	?>
 	<div id="page-background"></div>
 	<div class="wrapper clearfix">
 		<div id="page-background-inner"></div>
