@@ -11,7 +11,7 @@ if ( ! isset( $content_width ) ) $content_width = 645;
 add_filter( 'acf/settings/load_json', function( $paths ) { $paths[] = get_template_directory() . '/acf-json'; return $paths; } );
 
 function acf_remove_menu_page() {
-	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
+	remove_menu_page( 'edit.php?post_type=acf-field-group' );
 }
 
 add_action('acf/include_field_types', function() { include_once( get_template_directory() . '/_/php/acf_fields.php' ); }, 20);
@@ -96,7 +96,7 @@ function create_default_wusm_settings() {
 			);
 
 			$post_id = get_page_by_title($home_page_title);
-			
+
 			// Create the attachment
 			$attach_id = wp_insert_attachment( $attachment, $file, 0 );
 
@@ -110,7 +110,7 @@ function create_default_wusm_settings() {
 
 			// Assign featured image to post
 			set_post_thumbnail( $post_id, $attach_id );
-			
+
 			update_option( 'page_on_front', $home_page_id );
 			update_option( 'show_on_front', 'page' );
 		}
@@ -414,12 +414,12 @@ add_action( 'admin_head', 'wusm_button' );
 
 function wusm_media_file_size($column_name, $post_ID) {
 	if ($column_name == 'size') {
-		echo human_filesize( filesize( get_attached_file( $post_ID ) ) );
+		echo wusm_human_filesize( filesize( get_attached_file( $post_ID ) ) );
 	}
 }
 add_action('manage_media_custom_column', 'wusm_media_file_size', 10, 2);
 
-function human_filesize($bytes, $decimals = 2) {
+function wusm_human_filesize($bytes, $decimals = 2) {
 	$sz = 'BKMGTP';
 	$factor = floor((strlen($bytes) - 1) / 3);
 	return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
@@ -430,16 +430,3 @@ function wusm_add_media_file_size( $posts_columns ) {
 	return $posts_columns;
 }
 add_filter( 'manage_media_columns', 'wusm_add_media_file_size', 10, 1 );
-
-
-
-
-
-
-
-
-
-
-
-
-
