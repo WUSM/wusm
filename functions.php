@@ -419,10 +419,12 @@ function wusm_media_file_size($column_name, $post_ID) {
 }
 add_action('manage_media_custom_column', 'wusm_media_file_size', 10, 2);
 
-function human_filesize($bytes, $decimals = 2) {
-	$sz = 'BKMGTP';
-	$factor = floor((strlen($bytes) - 1) / 3);
-	return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
+if (!function_exists('human_filesize')) {
+    function human_filesize($bytes, $decimals = 2) {
+        $sz = 'BKMGTP';
+        $factor = floor((strlen($bytes) - 1) / 3);
+        return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
+    }
 }
 
 function wusm_add_media_file_size( $posts_columns ) {
@@ -430,16 +432,3 @@ function wusm_add_media_file_size( $posts_columns ) {
 	return $posts_columns;
 }
 add_filter( 'manage_media_columns', 'wusm_add_media_file_size', 10, 1 );
-
-
-
-
-
-
-
-
-
-
-
-
-
