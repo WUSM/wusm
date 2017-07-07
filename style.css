@@ -1648,6 +1648,7 @@ a#site-youtube:hover {
 
 a#wusm-facebook,
 a#wusm-twitter,
+a#wusm-ig,
 a#wusm-flickr {
 	display: inline-block;
 	margin-left: 8px;
@@ -1655,6 +1656,7 @@ a#wusm-flickr {
 
 a#wusm-facebook img,
 a#wusm-twitter img,
+a#wusm-ig img,
 a#wusm-flickr img {
 	opacity: 0.8;
 }
@@ -1680,6 +1682,18 @@ a#wusm-twitter:hover {
 }
 
 a#wusm-twitter:hover img {
+	opacity: 1;
+}
+
+a#wusm-ig {
+	background: #5c5c5c;
+}
+
+a#wusm-ig:hover {
+	background: #833ab4;
+}
+
+a#wusm-ig:hover img {
 	opacity: 1;
 }
 
