@@ -1425,9 +1425,6 @@ a.page-numbers:hover {
     padding: 4px 8px 5px;
 }
 
-.washu-ppi-filter-bar ul.children {
-	width: auto;
-}
 
 .washu-ppi-filter-bar ul.children a {
 	box-sizing: border-box;
