@@ -1425,9 +1425,6 @@ a.page-numbers:hover {
     padding: 4px 8px 5px;
 }
 
-.washu-ppi-filter-bar ul.children {
-	width: auto;
-}
 
 .washu-ppi-filter-bar ul.children a {
 	box-sizing: border-box;
@@ -1437,6 +1434,22 @@ a.page-numbers:hover {
 	background: #ffffff;
 }
 
+.washu-ppi-filter-bar > .current-cat-ancestor > a,
+.washu-ppi-filter-bar > .current-cat > a,
+.washu-ppi-filter-bar > .current-cat-ancestor > a:hover,
+.washu-ppi-filter-bar > .current-cat > a:hover {
+    background-color: #990000;
+    color: #fff;
+}
+
+.cat-with-children .dashicons,
+.washu-ppi-filter-bar li a {
+    color: #990000;
+}
+
+.washu-ppi-filter-bar li a:hover {
+    border-bottom: 2px solid #990000;
+}
 
 /* # Footer
 --------------------------------------------------------------*/
