@@ -4,8 +4,10 @@
 	<div id="page-background"></div>
 	<div class="wrapper clearfix">
 		<div id="page-background-inner"></div>
-		<?php get_sidebar( 'left' );
-		if ( have_posts() ) : ?>
+		<?php
+		get_sidebar( 'left' );
+		if ( have_posts() ) :
+		?>
 			<article>
 			<h1>People</h1>
 			<?php
@@ -16,7 +18,8 @@
 					require( WASHU_PPI_PLUGIN_DIR . 'templates/partials/_people-list.php' );
 				} );
 			}
-		endif; ?>
+		endif;
+		?>
 		</article>
 	</div>
 
