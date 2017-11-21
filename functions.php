@@ -432,3 +432,12 @@ function wusm_add_media_file_size( $posts_columns ) {
 	return $posts_columns;
 }
 add_filter( 'manage_media_columns', 'wusm_add_media_file_size', 10, 1 );
+
+add_action( 'customize_register', 'prefix_remove_css_section', 15 );
+/**
+ * Remove the additional CSS section, introduced in 4.7, from the Customizer.
+ * @param $wp_customize WP_Customize_Manager
+ */
+function prefix_remove_css_section( $wp_customize ) {
+	$wp_customize->remove_section( 'custom_css' );
+}
