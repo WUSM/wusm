@@ -69,7 +69,7 @@ function create_default_wusm_settings() {
 			$home_page_id = wp_insert_post($home_page);
 
 			// Add Featured Image to Post
-			$image_url  = 'http://mpaweb1.wustl.edu/~medschool/tierone-default.jpg';
+			$image_url  = 'https://medicine.wustl.edu/wp-content/uploads/tierone-default.jpg';
 			$upload_dir = wp_upload_dir();
 			$image_data = file_get_contents($image_url);
 			$filename   = basename($image_url);
