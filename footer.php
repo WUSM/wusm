@@ -1,6 +1,6 @@
 <footer>
 
-    
+
     <?php if ( file_exists( trailingslashit( get_stylesheet_directory() ) . 'site-footer.php' ) ) {
         include_once( trailingslashit( get_stylesheet_directory() ) . '/site-footer.php');
     } else {
@@ -18,7 +18,7 @@
 
             <div id="wusm-footer-right">
                 <div id="wusm-social">
-                    <a onclick="__gaTracker('send', 'event', 'wusm-footer', 'https://www.facebook.com/WUSTLmedicine.health', 'Facebook');" id="wusm-facebook" title="Facebook" href="https://www.facebook.com/WUSTLmedicine.health"><img src="<?php echo get_template_directory_uri(); ?>/_/img/facebook.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/facebook.png';this.onerror=null;"></a><a onclick="__gaTracker('send', 'event', 'wusm-footer', 'http://twitter.com/WUSTLmed', 'Twitter');" id="wusm-twitter" title="Twitter" href="http://twitter.com/WUSTLmed"><img src="<?php echo get_template_directory_uri(); ?>/_/img/twitter.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/twitter.png';this.onerror=null;"></a><a onclick="__gaTracker('send', 'event', 'wusm-footer', 'https://www.flickr.com/photos/wustlmedicine/', 'Flickr');" id="wusm-flickr" title="Flickr" href="https://www.flickr.com/photos/wustlmedicine/"><img src="<?php echo get_template_directory_uri(); ?>/_/img/flickr.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/flickr.png';this.onerror=null;"></a>
+                    <a onclick="__gaTracker('send', 'event', 'wusm-footer', 'https://www.facebook.com/WUSTLmedicine.health', 'Facebook');" id="wusm-facebook" title="Facebook" href="https://www.facebook.com/WUSTLmedicine.health"><img src="<?php echo get_template_directory_uri(); ?>/_/img/facebook.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/facebook.png';this.onerror=null;"></a><a onclick="__gaTracker('send', 'event', 'wusm-footer', 'http://twitter.com/WUSTLmed', 'Twitter');" id="wusm-twitter" title="Twitter" href="http://twitter.com/WUSTLmed"><img src="<?php echo get_template_directory_uri(); ?>/_/img/twitter.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/twitter.png';this.onerror=null;"></a><a onclick="__gaTracker('send', 'event', 'wusm-footer', 'https://www.instagram.com/washumedicine', 'Instagram');" id="wusm-ig" title="Instagram" href="https://www.instagram.com/washumedicine"><img src="<?php echo get_template_directory_uri(); ?>/_/img/ig-white.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/ig-white.png';this.onerror=null;"></a><a onclick="__gaTracker('send', 'event', 'wusm-footer', 'https://www.flickr.com/photos/wustlmedicine/', 'Flickr');" id="wusm-flickr" title="Flickr" href="https://www.flickr.com/photos/wustlmedicine/"><img src="<?php echo get_template_directory_uri(); ?>/_/img/flickr.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/flickr.png';this.onerror=null;"></a>
                 </div>
 
                 <nav>

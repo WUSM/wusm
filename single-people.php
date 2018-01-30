@@ -11,6 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry-content') ?>>
 
 	<?php
+	$show_images = true;
 	$dir = plugin_dir_path( __FILE__ );
 	require_once( $dir . '../../plugins/washu-people-places-items/templates/partials/people-list.php' );
 	?>

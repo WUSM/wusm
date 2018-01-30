@@ -11,7 +11,7 @@ if ( ! isset( $content_width ) ) $content_width = 645;
 add_filter( 'acf/settings/load_json', function( $paths ) { $paths[] = get_template_directory() . '/acf-json'; return $paths; } );
 
 function acf_remove_menu_page() {
-	remove_menu_page( 'edit.php?post_type=acf-field-group' ); 
+	remove_menu_page( 'edit.php?post_type=acf-field-group' );
 }
 
 add_action('acf/include_field_types', function() { include_once( get_template_directory() . '/_/php/acf_fields.php' ); }, 20);
@@ -96,7 +96,7 @@ function create_default_wusm_settings() {
 			);
 
 			$post_id = get_page_by_title($home_page_title);
-			
+
 			// Create the attachment
 			$attach_id = wp_insert_attachment( $attachment, $file, 0 );
 
@@ -110,7 +110,7 @@ function create_default_wusm_settings() {
 
 			// Assign featured image to post
 			set_post_thumbnail( $post_id, $attach_id );
-			
+
 			update_option( 'page_on_front', $home_page_id );
 			update_option( 'show_on_front', 'page' );
 		}

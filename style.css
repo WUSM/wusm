@@ -1426,6 +1426,31 @@ a.page-numbers:hover {
 }
 
 
+.washu-ppi-filter-bar ul.children a {
+	box-sizing: border-box;
+}
+
+.washu-ppi-list-card {
+	background: #ffffff;
+}
+
+.washu-ppi-filter-bar > .current-cat-ancestor > a,
+.washu-ppi-filter-bar > .current-cat > a,
+.washu-ppi-filter-bar > .current-cat-ancestor > a:hover,
+.washu-ppi-filter-bar > .current-cat > a:hover {
+    background-color: #990000;
+    color: #fff;
+}
+
+.cat-with-children .dashicons,
+.washu-ppi-filter-bar li a {
+    color: #990000;
+}
+
+.washu-ppi-filter-bar li a:hover {
+    border-bottom: 2px solid #990000;
+}
+
 /* # Footer
 --------------------------------------------------------------*/
 footer {
@@ -1636,6 +1661,7 @@ a#site-youtube:hover {
 
 a#wusm-facebook,
 a#wusm-twitter,
+a#wusm-ig,
 a#wusm-flickr {
 	display: inline-block;
 	margin-left: 8px;
@@ -1643,6 +1669,7 @@ a#wusm-flickr {
 
 a#wusm-facebook img,
 a#wusm-twitter img,
+a#wusm-ig img,
 a#wusm-flickr img {
 	opacity: 0.8;
 }
@@ -1668,6 +1695,18 @@ a#wusm-twitter:hover {
 }
 
 a#wusm-twitter:hover img {
+	opacity: 1;
+}
+
+a#wusm-ig {
+	background: #5c5c5c;
+}
+
+a#wusm-ig:hover {
+	background: #833ab4;
+}
+
+a#wusm-ig:hover img {
 	opacity: 1;
 }
 
