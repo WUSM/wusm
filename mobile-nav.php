@@ -5,7 +5,7 @@
 
 	<nav id="mobile-nav">
 		<ul>
-			<li class="page_item<?php echo is_front_page() ? ' current_page_item' : ''; ?>"><a href="<?php echo home_url(); ?>"><?php _e( 'Home', 'wusm' ); ?></a></li>
+			<li class="page_item<?php echo is_front_page() ? ' current_page_item' : ''; ?>"><a href="<?php echo home_url() . '">' . __( 'Home', 'wusm' ); ?></a></li>
 
 			<?php
 			$frontpage_id = get_option( 'page_on_front' );
