@@ -16,7 +16,7 @@
         <?php get_sidebar( 'left' ); ?>
 
         <article class="search-results">
-            <h1>Your Search: <em><?php echo $search_terms; ?></em></h1>
+            <h1><?php _e( 'Your Search:', 'wusm' ); ?> <em><?php echo $search_terms; ?></em></h1>
 
             <?php if ( have_posts() ) :
                 while (have_posts()): the_post(); ?>
