@@ -69,7 +69,7 @@ function create_default_wusm_settings() {
 			$home_page_id = wp_insert_post($home_page);
 
 			// Add Featured Image to Post
-			$image_url  = 'http://mpaweb1.wustl.edu/~medschool/tierone-default.jpg';
+			$image_url  = 'https://medicine.wustl.edu/wp-content/uploads/tierone-default.jpg';
 			$upload_dir = wp_upload_dir();
 			$image_data = file_get_contents($image_url);
 			$filename   = basename($image_url);
@@ -432,3 +432,12 @@ function wusm_add_media_file_size( $posts_columns ) {
 	return $posts_columns;
 }
 add_filter( 'manage_media_columns', 'wusm_add_media_file_size', 10, 1 );
+
+add_action( 'customize_register', 'prefix_remove_css_section', 15 );
+/**
+ * Remove the additional CSS section, introduced in 4.7, from the Customizer.
+ * @param $wp_customize WP_Customize_Manager
+ */
+function prefix_remove_css_section( $wp_customize ) {
+	$wp_customize->remove_section( 'custom_css' );
+}
