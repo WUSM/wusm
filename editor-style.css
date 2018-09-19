@@ -6,6 +6,10 @@ body#tinymce.wp-editor {
 	max-width: 645px;
 }
 
+body#tinymce.wp-editor div.wpview {
+	width: 800px;
+}
+
 body#tinymce.wp-editor a {
 	text-decoration: none;
 	color: #980006;
