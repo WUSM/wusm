@@ -1504,7 +1504,8 @@ a#site-facebook,
 a#site-twitter,
 a#site-instagram,
 a#site-linkedin,
-a#site-youtube {
+a#site-youtube,
+a#site-pinterest {
 	display: inline-block;
 	margin-left: 8px;
 }
@@ -1546,6 +1547,14 @@ a#site-youtube {
 }
 
 a#site-youtube:hover {
+	background-color: #f4413d;
+}
+
+a#site-pinterest {
+	background: #e60023;
+}
+
+a#site-pinterest:hover {
 	background-color: #f4413d;
 }
 
