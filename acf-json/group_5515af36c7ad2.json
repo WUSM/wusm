@@ -1,120 +1,131 @@
 {
-	"key": "group_5515af36c7ad2",
-	"title": "Social Media",
-	"fields": [
-		{
-			"key": "field_56170de365aba",
-			"label": "Adding Social Media Links",
-			"name": "adding_social_media_links",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"message": "If your office/group has its own dedicated social media accounts you may add links below. Please make sure you are aware of the <a href=\"http://medicine.wustl.edu/brand/social-media/\" target=\"_blank\">WUSM Social Media Guidelines</a>, and contact Medical Public Affairs if you have any questions.",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_5515af4274b0c",
-			"label": "Facebook",
-			"name": "facebook",
-			"prefix": "",
-			"type": "url",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"default_value": "",
-			"placeholder": ""
-		},
-		{
-			"key": "field_5515af6774b0e",
-			"label": "Twitter",
-			"name": "twitter",
-			"prefix": "",
-			"type": "url",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"default_value": "",
-			"placeholder": ""
-		},
-		{
-			"key": "field_557736f387c3f",
-			"label": "Instagram",
-			"name": "instagram",
-			"prefix": "",
-			"type": "url",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"default_value": "",
-			"placeholder": ""
-		},
-		{
-			"key": "field_5515af7a74b0f",
-			"label": "LinkedIn",
-			"name": "linkedin",
-			"prefix": "",
-			"type": "url",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"default_value": "",
-			"placeholder": ""
-		},
-		{
-			"key": "field_5515b1d274b10",
-			"label": "YouTube Playlist",
-			"name": "youtube",
-			"prefix": "",
-			"type": "url",
-			"instructions": "Contact Medical Public Affairs to have your videos uploaded to the official School of Medicine YouTube channel.",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"default_value": "",
-			"placeholder": ""
-		}
-	],
-	"location": [
-		[
-			{
-				"param": "options_page",
-				"operator": "==",
-				"value": "footer"
-			}
-		]
-	],
-	"menu_order": 2,
+    "key": "group_5515af36c7ad2",
+    "title": "Social Media",
+    "fields": [
+        {
+            "key": "field_56170de365aba",
+            "label": "Adding Social Media Links",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "If your office\/group has its own dedicated social media accounts you may add links below. Please make sure you are aware of the <a href=\"http:\/\/medicine.wustl.edu\/brand\/social-media\/\" target=\"_blank\">WUSM Social Media Guidelines<\/a>, and contact Medical Public Affairs if you have any questions.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5515af4274b0c",
+            "label": "Facebook",
+            "name": "facebook",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5515af6774b0e",
+            "label": "Twitter",
+            "name": "twitter",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_557736f387c3f",
+            "label": "Instagram",
+            "name": "instagram",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5515af7a74b0f",
+            "label": "LinkedIn",
+            "name": "linkedin",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5515b1d274b10",
+            "label": "YouTube Playlist",
+            "name": "youtube",
+            "type": "url",
+            "instructions": "Contact Medical Public Affairs to have your videos uploaded to the official School of Medicine YouTube channel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c93aa1875b02",
+            "label": "Pinterest",
+            "name": "pinterest",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "footer"
+            }
+        ]
+    ],
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -122,5 +133,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1455210938
+    "modified": 1553181277
 }
