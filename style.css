@@ -5,7 +5,7 @@ Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
 Text Domain: wusm
-Version:     2018.01.30.0
+Version:     2019.03.21.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -1504,7 +1504,8 @@ a#site-facebook,
 a#site-twitter,
 a#site-instagram,
 a#site-linkedin,
-a#site-youtube {
+a#site-youtube,
+a#site-pinterest {
 	display: inline-block;
 	margin-left: 8px;
 }
@@ -1546,6 +1547,14 @@ a#site-youtube {
 }
 
 a#site-youtube:hover {
+	background-color: #f4413d;
+}
+
+a#site-pinterest {
+	background: #e60023;
+}
+
+a#site-pinterest:hover {
 	background-color: #f4413d;
 }
 

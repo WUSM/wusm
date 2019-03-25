@@ -7,10 +7,10 @@
         'fallback_cb'    => false,
         'echo'           => false,
     ) ); ?>
-    <?php if( $footer_menu || get_field('facebook', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option') || get_field('youtube', 'option') ): ?>
+    <?php if( $footer_menu || get_field('facebook', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option') || get_field('youtube', 'option') || get_field('pinterest', 'option') ): ?>
         <div id="site-footer-top" class="clearfix">
         <?php echo $footer_menu; ?>
-        <?php if(get_field('facebook', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option') || get_field('youtube', 'option')): ?>
+        <?php if(get_field('facebook', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option') || get_field('youtube', 'option') || get_field('pinterest', 'option')): ?>
             <div id="site-social">
             <?php if(get_field('facebook', 'option')): ?>
                 <a onclick="__gaTracker('send', 'event', 'site-footer', '', 'Facebook');" id="site-facebook" title="Facebook" href="<?php the_field('facebook', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/_/img/facebook.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/facebook.png';this.onerror=null;"></a>
@@ -26,6 +26,9 @@
             <?php endif; ?>
             <?php if(get_field('youtube', 'option')): ?>
                 <a onclick="__gaTracker('send', 'event', 'site-footer', '', 'YouTube');" id="site-youtube" title="YouTube" href="<?php the_field('youtube', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/_/img/youtube.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/youtube.png';this.onerror=null;"></a>
+            <?php endif; ?>
+            <?php if(get_field('pinterest', 'option')): ?>
+                <a onclick="__gaTracker('send', 'event', 'site-footer', '', 'Pinterest');" id="site-pinterest" title="Pinterest" href="<?php the_field('pinterest', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/_/img/pinterest.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/pinterest.png';this.onerror=null;"></a>
             <?php endif; ?>
             </div>
         <?php endif; ?>
