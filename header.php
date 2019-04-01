@@ -73,14 +73,14 @@ switch ( get_field( 'logo', 'option' ) ) {
 
 			<div id="header-logo"><a onclick="__gaTracker( 'send', 'event', 'header-logo', '<?php echo $brand['url']; ?>', '<?php echo $brand['event_label']; ?>' );" href="<?php echo $brand['url']; ?>"><img width="<?php echo $brand['logo-width']; ?>" height="23" src="<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/<?php echo $brand['logo']; ?>.png';this.onerror=null;" alt="<?php echo $brand['text']; ?>"></a></div>
 
-			<?php if ( get_field( 'logo', 'option' ) != 'WUSTL' ) : ?>
+	<?php if ( get_field( 'logo', 'option' ) != 'WUSTL' ) : ?>
 			<nav id="utility-bar">
 				<ul id="utility-nav">
 					<li><a onclick="__gaTracker( 'send', 'event', 'utility-nav', 'http://wustl.edu', 'WUSTL' );" href="http://wustl.edu/">WUSTL</a></li>
 					<li class="last-child"><a onclick="__gaTracker( 'send', 'event', 'utility-nav', 'http://medicine.wustl.edu/directory', 'Directory' );" href="http://medicine.wustl.edu/directory">Directories</a></li>
 				</ul>
 			</nav>
-			<?php endif; ?>
+	<?php endif; ?>
 
 		</div>
 
@@ -96,7 +96,7 @@ switch ( get_field( 'logo', 'option' ) ) {
 				<img class="mobile-open" src="<?php echo get_template_directory_uri(); ?>/_/img/menu.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/menu.png';this.onerror=null;">
 				<img class="mobile-close" src="<?php echo get_template_directory_uri(); ?>/_/img/close.svg" onerror="this.src='<?php echo get_template_directory_uri(); ?>/_/img/close.png';this.onerror=null;">
 			</div>
-			<?php get_search_form(); ?>
+	<?php get_search_form(); ?>
 			<div id="site-title"><a href="<?php echo home_url(); ?>">
 				<?php
 				if ( get_field( 'line_1', 'option' ) && get_field( 'line_2', 'option' ) ) {
@@ -111,14 +111,16 @@ switch ( get_field( 'logo', 'option' ) ) {
 	</div>
 
 	<?php
-		wp_nav_menu( array(
+	wp_nav_menu(
+		array(
 			'theme_location' => 'header-menu',
 			'container'      => 'nav',
 			'container_id'   => 'main-nav',
 			'items_wrap'     => '<div class="wrapper"><ul>%3$s</ul></div>',
-		) );
+		)
+	);
 
-		include 'mobile-nav.php'
+	require 'mobile-nav.php'
 
 	?>
 </header>

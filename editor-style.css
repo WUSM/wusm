@@ -54,15 +54,15 @@ body#tinymce.wp-editor h1 + p {
 }
 
 body#tinymce.wp-editor h1 + .accordion-header {
-    margin-top: 45px;
+	margin-top: 45px;
 }
 
 body#tinymce.wp-editor .intro-text {
-    color: #787878;
-    font-size: 22px;
-    line-height: 30px;
-    font-weight: 300;
-    margin-bottom: 30px;
+	color: #787878;
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 300;
+	margin-bottom: 30px;
 }
 
 body#tinymce.wp-editor ul {
@@ -81,17 +81,17 @@ body#tinymce.wp-editor ol li {
 }
 
 body#tinymce.wp-editor blockquote {
-    margin: 30px 0 45px 95px;
-    padding-left: 20px;
-    border-left: 3px solid #900;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 32px;
+	margin: 30px 0 45px 95px;
+	padding-left: 20px;
+	border-left: 3px solid #900;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 32px;
 }
 
 body#tinymce.wp-editor blockquote p {
-    line-height: 32px;
-    margin-bottom: 45px;
+	line-height: 32px;
+	margin-bottom: 45px;
 }
 
 body#tinymce.wp-editor .wp-caption {
@@ -145,24 +145,24 @@ body#tinymce.wp-editor .wp-caption-dd {
 }
 
 body#tinymce.wp-editor .signature-name {
-    font-size: 16px;
-    margin-bottom: 0;
-    line-height: 24px;
+	font-size: 16px;
+	margin-bottom: 0;
+	line-height: 24px;
 }
 
 body#tinymce.wp-editor .signature-title {
-    font-size: 12px;
-    line-height: 14px;
-    color: #878787;
-    margin: 0;
+	font-size: 12px;
+	line-height: 14px;
+	color: #878787;
+	margin: 0;
 }
 
 body#tinymce.wp-editor .callout {
-    border: 1px solid #e5e5e5;
-    margin-bottom: 10px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 5px;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 10px;
+	padding: 15px;
+	background: #fff;
+	border-radius: 5px;
 }
 
 body#tinymce.wp-editor .callout h2,
@@ -180,23 +180,23 @@ body#tinymce.wp-editor .callout p:last-child {
 }
 
 body#tinymce.wp-editor .accordion-header {
-    border: 1px dashed red;
-    margin-bottom: 10px;
+	border: 1px dashed red;
+	margin-bottom: 10px;
 }
 
 body#tinymce.wp-editor .accordion-header p,
 body#tinymce.wp-editor .accordion-header h2,
 body#tinymce.wp-editor .accordion-header h3,
 body#tinymce.wp-editor .accordion-header h4 {
-    padding: 15px;
-    margin: 0;
-    line-height: normal;
+	padding: 15px;
+	margin: 0;
+	line-height: normal;
 }
 
 body#tinymce.wp-editor .accordion-body-text {
 	border: 1px dashed blue;
-    padding: 15px;
-    margin-bottom: 10px;
+	padding: 15px;
+	margin-bottom: 10px;
 }
 
 body#tinymce.wp-editor .accordion-body-text > p {
@@ -206,7 +206,7 @@ body#tinymce.wp-editor .accordion-body-text > p {
 body#tinymce.wp-editor .accordion-body-text > p:last-child,
 body#tinymce.wp-editor .accordion-body-text > ul li:last-child,
 body#tinymce.wp-editor .accordion-body-text > ol li:last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 body#tinymce.wp-editor .accordion-body-text > h2:first-child,
@@ -216,28 +216,28 @@ body#tinymce.wp-editor .accordion-body-text > h4:first-child {
 }
 
 body#tinymce.wp-editor .disclaimer {
-    font-size: 12px;
-    color: #a0a0a0;
+	font-size: 12px;
+	color: #a0a0a0;
 }
 
 body#tinymce.wp-editor .disclaimer p {
-    line-height: 17px;
+	line-height: 17px;
 }
 
 body#tinymce.wp-editor a.wusm-button {
-    display: inline-block;
+	display: inline-block;
 	line-height: 14px;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
-    background: #990000;
-    padding: 15px 25px;
-    border-radius: 3px;
-    letter-spacing: 1px;
-    transition: background 0.1s ease;
-    margin: 0 20px 10px 0;
-    cursor: pointer;
-    font-weight: bold;
+	background: #990000;
+	padding: 15px 25px;
+	border-radius: 3px;
+	letter-spacing: 1px;
+	transition: background 0.1s ease;
+	margin: 0 20px 10px 0;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 body#tinymce.wp-editor a.wusm-button:hover {
