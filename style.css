@@ -144,11 +144,11 @@ input[type=button] {width: auto; overflow: visible;}
 /* https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/ */
 .visuallyhidden,
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 html {
@@ -1210,12 +1210,12 @@ section.white {
 
 h2.headline {
 	font-size: 24px;
-	font-weight: 600;
-	letter-spacing: .5px;
-	margin: -5px auto 0;
-	max-width: 750px;
-	padding-bottom: 20px;
-	text-align: center;
+    font-weight: 600;
+    letter-spacing: .5px;
+    margin: -5px auto 0;
+    max-width: 750px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -1422,8 +1422,8 @@ a.page-numbers:hover {
 
 .pagination .dots {
 	border: 1px solid #e3e3e3;
-	background: transparent;
-	padding: 4px 8px 5px;
+    background: transparent;
+    padding: 4px 8px 5px;
 }
 
 
@@ -1439,17 +1439,17 @@ a.page-numbers:hover {
 .washu-ppi-filter-bar > .current-cat > a,
 .washu-ppi-filter-bar > .current-cat-ancestor > a:hover,
 .washu-ppi-filter-bar > .current-cat > a:hover {
-	background-color: #990000;
-	color: #fff;
+    background-color: #990000;
+    color: #fff;
 }
 
 .cat-with-children .dashicons,
 .washu-ppi-filter-bar li a {
-	color: #990000;
+    color: #990000;
 }
 
 .washu-ppi-filter-bar li a:hover {
-	border-bottom: 2px solid #990000;
+    border-bottom: 2px solid #990000;
 }
 
 /* # Footer
