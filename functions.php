@@ -53,110 +53,118 @@ add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
 
 function create_default_wusm_settings() {
 
-	if (isset($_GET['activated']) && is_admin()) {
-
-		if(!(get_option('show_on_front') === 'page')) {
-
-			$home_page_title = 'Headline capturing the value or service your group provides';
-			$home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="wusm-button">Important Link</a></p>';
-			$home_page = array(
-				'post_type' => 'page',
-				'post_title' => $home_page_title,
-				'post_content' => $home_page_content,
-				'post_status' => 'publish',
-				'post_name' => 'home'
-			);
-			$home_page_id = wp_insert_post($home_page);
-
-			// Add Featured Image to Post
-			$image_url  = 'https://medicine.wustl.edu/wp-content/uploads/tierone-default.jpg';
-			$upload_dir = wp_upload_dir();
-			$image_data = file_get_contents($image_url);
-			$filename   = basename($image_url);
-
-			// Check folder permission and define file location
-			if( wp_mkdir_p( $upload_dir['path'] ) ) {
-				$file = $upload_dir['path'] . '/' . $filename;
-			} else {
-				$file = $upload_dir['basedir'] . '/' . $filename;
-			}
-
-			// Create the image file on the server
-			file_put_contents( $file, $image_data );
-
-			// Check image file type
-			$wp_filetype = wp_check_filetype( $filename, null );
-
-			// Set attachment data
-			$attachment = array(
-				'post_mime_type' => $wp_filetype['type'],
-				'post_title'     => sanitize_file_name( $filename ),
-				'post_content'   => '',
-				'post_status'    => 'inherit'
-			);
-
-			$post_id = get_page_by_title($home_page_title);
-
-			// Create the attachment
-			$attach_id = wp_insert_attachment( $attachment, $file, 0 );
-
-			require_once(ABSPATH . 'wp-admin/includes/image.php');
-
-			// Define attachment metadata
-			$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-
-			// Assign metadata to attachment
-			wp_update_attachment_metadata( $attach_id, $attach_data );
-
-			// Assign featured image to post
-			set_post_thumbnail( $post_id, $attach_id );
-
-			update_option( 'page_on_front', $home_page_id );
-			update_option( 'show_on_front', 'page' );
-		}
+	if ( get_option( 'wusm_theme_setup_done', false ) ) {
+		return;
 	}
 
-	if ( !is_nav_menu( 'Header' )) {
+	if ( ! ( get_option( 'show_on_front' ) === 'page' ) ) {
+
+		$home_page_title   = 'Headline capturing the value or service your group provides';
+		$home_page_content = '<p>Briefly explain who you are, what you do, and – if it isn\'t clear – who you serve. Prepare your website\'s visitors to click on the button that follows. The button should link to the most important action or information on your website. (273 characters max)</p><p><a href="#" class="wusm-button">Important Link</a></p>';
+		$home_page         = array(
+			'post_type'    => 'page',
+			'post_title'   => $home_page_title,
+			'post_content' => $home_page_content,
+			'post_status'  => 'publish',
+			'post_name'    => 'home',
+		);
+		$home_page_id      = wp_insert_post( $home_page );
+
+		// Add Featured Image to Post
+		$image_url  = 'https://medicine.wustl.edu/wp-content/uploads/tierone-default.jpg';
+		$upload_dir = wp_upload_dir();
+		$image_data = file_get_contents( $image_url );
+		$filename   = basename( $image_url );
+
+		// Check folder permission and define file location
+		if ( wp_mkdir_p( $upload_dir['path'] ) ) {
+			$file = $upload_dir['path'] . '/' . $filename;
+		} else {
+			$file = $upload_dir['basedir'] . '/' . $filename;
+		}
+
+		// Create the image file on the server
+		file_put_contents( $file, $image_data );
+
+		// Check image file type
+		$wp_filetype = wp_check_filetype( $filename, null );
+
+		// Set attachment data
+		$attachment = array(
+			'post_mime_type' => $wp_filetype['type'],
+			'post_title'     => sanitize_file_name( $filename ),
+			'post_content'   => '',
+			'post_status'    => 'inherit',
+		);
+
+		$post_id = get_page_by_title( $home_page_title );
+
+		// Create the attachment
+		$attach_id = wp_insert_attachment( $attachment, $file, 0 );
+
+		require_once ABSPATH . 'wp-admin/includes/image.php';
+
+		// Define attachment metadata
+		$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+
+		// Assign metadata to attachment
+		wp_update_attachment_metadata( $attach_id, $attach_data );
+
+		// Assign featured image to post
+		set_post_thumbnail( $post_id, $attach_id );
+
+		update_option( 'page_on_front', $home_page_id );
+		update_option( 'show_on_front', 'page' );
+	}
+
+	if ( ! is_nav_menu( 'Header' ) ) {
 		// Create Header menu, if it doesn't already exist
 		$menu_id = wp_create_nav_menu( 'Header', array( 'slug' => 'header' ) );
 
 		// Add Home to the Header menu
 		$menu_item = array(
-			'menu-item-object-id' => get_option('page_on_front'),
+			'menu-item-object-id' => get_option( 'page_on_front' ),
 			'menu-item-object'    => 'page',
 			'menu-item-type'      => 'post_type',
 			'menu-item-status'    => 'publish',
-			'menu-item-title'	  => 'Home'
+			'menu-item-title'     => 'Home',
 		);
 		wp_update_nav_menu_item( $menu_id, 0, $menu_item );
 
 		// If Sample Page exists, add to the Header menu
-		if ( get_page_by_title( 'Sample Page' )) {
-			$page = get_page_by_title('Sample Page');
+		if ( get_page_by_title( 'Sample Page' ) ) {
+			$page      = get_page_by_title( 'Sample Page' );
 			$menu_item = array(
 				'menu-item-object-id' => $page->ID,
 				'menu-item-object'    => 'page',
 				'menu-item-type'      => 'post_type',
-				'menu-item-status'    => 'publish'
+				'menu-item-status'    => 'publish',
 			);
 			wp_update_nav_menu_item( $menu_id, 0, $menu_item );
 		}
 	}
 
-	if ( !is_nav_menu( 'Footer' )) {
+	if ( ! is_nav_menu( 'Footer' ) ) {
 		// Create Footer menu, if it doesn't already exist
 		wp_create_nav_menu( 'Footer', array( 'slug' => 'footer' ) );
 	}
 
 	// Assign Header and Footer menus to their appropriate theme locations
-	$menu_id = wp_get_nav_menu_object( 'Header' );
-	$header_id = $menu_id->term_id;
+	$menu_id        = wp_get_nav_menu_object( 'Header' );
+	$header_id      = $menu_id->term_id;
 	$footer_menu_id = wp_get_nav_menu_object( 'Footer' );
-	$footer_id = $footer_menu_id->term_id;
-	set_theme_mod('nav_menu_locations', array( 'header-menu' => $header_id, 'footer-menu' => $footer_id ));
+	$footer_id      = $footer_menu_id->term_id;
+	set_theme_mod(
+		'nav_menu_locations',
+		array(
+			'header-menu' => $header_id,
+			'footer-menu' => $footer_id,
+		)
+	);
+	update_option( 'wusm_theme_setup_done', true );
 
 }
-add_action( 'after_switch_theme', 'create_default_wusm_settings');
+add_action( 'init', 'create_default_wusm_settings' );
 
 // Set default timezone
 function set_timezone() {
