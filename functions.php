@@ -52,11 +52,6 @@ function wusm_scripts() {
 add_action( 'wp_enqueue_scripts', 'wusm_scripts' );
 
 function create_default_wusm_settings() {
-
-	if ( get_option( 'wusm_theme_setup_done', false ) ) {
-		return;
-	}
-
 	if ( ! ( get_option( 'show_on_front' ) === 'page' ) ) {
 
 		$home_page_title   = 'Headline capturing the value or service your group provides';
@@ -161,8 +156,6 @@ function create_default_wusm_settings() {
 			'footer-menu' => $footer_id,
 		)
 	);
-	update_option( 'wusm_theme_setup_done', true );
-
 }
 add_action( 'after_switch_theme', 'create_default_wusm_settings');
 
