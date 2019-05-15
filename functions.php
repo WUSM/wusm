@@ -164,7 +164,7 @@ function create_default_wusm_settings() {
 	update_option( 'wusm_theme_setup_done', true );
 
 }
-add_action( 'init', 'create_default_wusm_settings' );
+add_action( 'after_switch_theme', 'create_default_wusm_settings');
 
 // Set default timezone
 function set_timezone() {
