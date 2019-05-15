@@ -157,7 +157,7 @@ function create_default_wusm_settings() {
 		)
 	);
 }
-add_action( 'after_switch_theme', 'create_default_wusm_settings');
+add_action( 'wusm_theme_setup', 'create_default_wusm_settings');
 
 // Set default timezone
 function set_timezone() {
