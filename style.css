@@ -5,7 +5,7 @@ Description: Base theme for School of Medicine sites
 Author:      Medical Public Affairs
 Author URI:  http://medicine.wustl.edu
 Text Domain: wusm
-Version:     2019.05.29.0
+Version:     2019.07.25.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -163,13 +163,13 @@ body {
 }
 
 a {
-	color: #d01c29;
+	color: #990000;
 	text-decoration: none;
 }
 
 a:hover,
 a:focus {
-	color: #a51417;
+	color: #717171;
 }
 
 
@@ -219,7 +219,7 @@ a:focus {
 #utility-nav li {
 	float: left;
 	padding: 7px 15px;
-	border-right: 1px solid #e8e8e8;
+	border-right: 1px solid #bcbcbc;
 }
 
 #utility-nav li.last-child {
@@ -227,13 +227,13 @@ a:focus {
 }
 
 #utility-nav li a {
-	color: #d01c29;
+	color: #990000;
 	font-size: 11px;
 	text-transform: uppercase;
 }
 
 #utility-nav li a:hover {
-	color: #a51417;
+	color: #717171;
 }
 
 #header-text {
@@ -450,7 +450,7 @@ a:focus {
 #mobile-nav .current_page_item > div a:before {
 	content: '';
 	width: 4px;
-	background: #d01c29;
+	background: #990000;
 	position: absolute;
 	left: 0;
 	top: 4px;
@@ -461,7 +461,7 @@ a:focus {
 	font-size: 22px;
 	display: inline-block;
 	padding: 14px 65px 14px 18px;
-	color: #d01c29;
+	color: #990000;
 	width: 100%;
 	position: relative;
 	box-sizing: border-box;
@@ -653,12 +653,11 @@ a:focus {
 
 .featured-banner.dark .featured-button .wusm-button {
 	background-color: #fff;
-	color: #d01c29;
+	color: #990000;
 	transition: background 0.1s ease;
 }
 
 .featured-banner.dark .featured-button .wusm-button:hover {
-	color: #a51417;
 	background-color: #EEEEEE;
 }
 
@@ -850,7 +849,7 @@ article .callout ol li:last-child {
 article blockquote {
 	margin: 35px 0 35px 40px;
 	padding-left: 25px;
-	border-left: 2px solid #d01c29;
+	border-left: 2px solid #990000;
 	font-weight: 300;
 	font-size: 22px;
 	line-height: 32px;
@@ -943,7 +942,7 @@ article .callout p:last-child {
 	margin: 0 0 -1px 0;
 	cursor: pointer;
 	overflow-y: hidden;
-	color: #d01c29;
+	color: #990000;
 	position: relative;
 	font-size: 16px;
 }
@@ -1002,14 +1001,14 @@ article .callout p:last-child {
 	left: 10px;
 	width: 2px;
 	height: 22px;
-	background-color: #d01c29;
+	background-color: #990000;
 }
 
 .d2 {
 	top: 10px;
 	width: 22px;
 	height: 2px;
-	background-color: #d01c29;
+	background-color: #990000;
 }
 
 .accordion-body-text {
@@ -1043,7 +1042,7 @@ article .callout p:last-child {
 
 .expand-all {
 	cursor: pointer;
-	color: #d01c29;
+	color: #990000;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -1283,7 +1282,7 @@ article .disclaimer p {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
-	background: #d01c29;
+	background: #990000;
 	padding: 15px 25px;
 	border: none;
 	border-radius: 3px;
@@ -1294,7 +1293,7 @@ article .disclaimer p {
 }
 
 .wusm-button:hover {
-	background: #a51417;
+	background: #c40000;
 	color: #fff;
 }
 
@@ -1421,7 +1420,7 @@ a.page-numbers:hover {
 
 .current {
 	color: #FFF;
-	background-color: #d01c29;
+	background-color: #990000;
 }
 
 .pagination .dots {
@@ -1443,17 +1442,17 @@ a.page-numbers:hover {
 .washu-ppi-filter-bar > .current-cat > a,
 .washu-ppi-filter-bar > .current-cat-ancestor > a:hover,
 .washu-ppi-filter-bar > .current-cat > a:hover {
-    background-color: #d01c29;
+    background-color: #990000;
     color: #fff;
 }
 
 .cat-with-children .dashicons,
 .washu-ppi-filter-bar li a {
-    color: #d01c29;
+    color: #990000;
 }
 
 .washu-ppi-filter-bar li a:hover {
-    border-bottom: 2px solid #d01c29;
+    border-bottom: 2px solid #990000;
 }
 
 /* # Footer
