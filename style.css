@@ -1438,16 +1438,15 @@ a.page-numbers:hover {
 	background: #ffffff;
 }
 
-.washu-ppi-filter-bar > .current-cat-ancestor > a,
-.washu-ppi-filter-bar > .current-cat > a,
-.washu-ppi-filter-bar > .current-cat-ancestor > a:hover,
-.washu-ppi-filter-bar > .current-cat > a:hover {
-    background-color: #990000;
+.washu-ppi-filter-bar > li.cat-item.current-cat-ancestor > a,
+.washu-ppi-filter-bar > li.cat-item.current-cat > a,
+.washu-ppi-filter-bar > li.cat-item.current-cat-ancestor > a:hover,
+.washu-ppi-filter-bar > li.cat-item.current-cat > a:hover {
     color: #fff;
 }
 
 .cat-with-children .dashicons,
-.washu-ppi-filter-bar li a {
+.washu-ppi-filter-bar li.cat-item a {
     color: #990000;
 }
 
